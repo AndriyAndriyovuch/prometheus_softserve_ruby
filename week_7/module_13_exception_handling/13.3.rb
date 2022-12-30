@@ -5,5 +5,28 @@
 Якщо користувач дасть правильну відповідь, то написати в консолі - Good job.
 Інкаше - дати шанс ще раз дати відповідь для іншого числа. Таких шансів давати не більше трьох.
 Якщо в результаті користувач не справиться з задачею, вивести в консоль повідомлення - Try next time.
+При виклику third_order(1) єдиним числом, яке буде генеруватися для множення, буде тільки 1. 
 """
 
+def third_order(number)
+    count = 0
+    
+    begin
+        count += 1
+
+        puts("What is result #{number} * #{number} * #{number}?")
+        answer = gets.chomp.to_i
+       
+        if answer == (number ** 3)
+            puts("Good job")
+        else
+            raise StandardError
+        end
+    rescue StandardError
+        if count < 3
+            retry
+        else
+            puts("Try next time")
+        end
+    end
+end
