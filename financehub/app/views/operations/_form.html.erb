@@ -29,7 +29,7 @@
   <div>
     <%= form.label :category_id, style: "display: block" %>
     <% categories_array = Category.all.map { | cat | [cat.name, cat.id]} %>
-    <%= form.select :category_id, categories_array, :prompt => 'Select' %>
+    <%= form.select :category_id, categories_array, :prompt => 'Choose category' %>
   </div>
 
   <div>
