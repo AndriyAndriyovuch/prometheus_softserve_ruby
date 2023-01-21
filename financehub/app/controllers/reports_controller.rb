@@ -3,8 +3,11 @@ class ReportsController < ApplicationController
   end
 
   def report_by_category
+    @operations = Operation.
+    render "report_by_category"
   end
 
   def report_by_dates
+    render "report_by_dates"
   end
 end

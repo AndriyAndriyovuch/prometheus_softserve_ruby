@@ -1,2 +1,10 @@
-<h1>Reports#report_by_category</h1>
-<p>Find me in app/views/reports/report_by_category.html.erb</p>
+<h1>Operations</h1>
+
+<div id="operations">
+  <% @operations.each do |operation| %>
+    <%= render operation %>
+    <p>
+      <%= link_to "Show this operation", operation %>
+    </p>
+  <% end %>
+</div>
