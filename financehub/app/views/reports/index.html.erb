@@ -1,4 +1,8 @@
-<div class=container>
-    <%= link_to "Report by category", reports_report_by_category_path, class: "btn btn-primary me-2" %>
-    <%= link_to "Report by date", reports_report_by_dates_path, class: "btn btn-warning" %>
-</div>
+<form action="report_by_category" method="GET">
+  created_at: <input name="start_date" type="date">
+  category: <input name="final_date" type="date">
+  category: <input name="category_id" type="text">
+  <input type="submit" value="report by category">
+</form>
+
+
