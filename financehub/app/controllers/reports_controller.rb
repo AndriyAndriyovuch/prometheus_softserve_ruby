@@ -3,7 +3,7 @@ class ReportsController < ApplicationController
   end
 
   def report_by_category
-    @operations = Operation.
+    @operations = Operation.find(params[:category_id])
     render "report_by_category"
   end
 
