@@ -1,8 +1,10 @@
-<form action="report_by_category" method="GET">
-  created_at: <input name="start_date" type="date" required><br>
-  category: <input name="final_date" type="date" required><br>
-  category: <input name="category_id" type="text">
-  <input type="submit" value="report by category">
-</form>
+<!--<form action="report_by_category" method="GET">-->
+<!--  created_at: <input name="start_date" type="date" required><br>-->
+<!--  category: <input name="final_date" type="date" required><br>-->
+<!--  category: <input name="category_id" type="text">-->
+<!--  <input type="submit" value="report by category">-->
+<!--</form>-->
 
-
+<%= form_with do |form| %>
+  <% %>form.date_field :start_date
+<% end %>

@@ -3903,3 +3903,77 @@ Processing by ReportsController#report_by_category as HTML
 Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.4ms | Allocations: 2596)
 
 
+Started GET "/categories" for ::1 at 2023-01-21 23:54:17 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.2ms | Allocations: 176)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered categories/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 4180)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 6405)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 5.0ms | Allocations: 8525)
+
+
+Started GET "/categories/new" for ::1 at 2023-01-21 23:54:19 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 140.2ms | Allocations: 278187)
+  Rendered categories/new.html.erb within layouts/application (Duration: 140.7ms | Allocations: 278473)
+  Rendered layout layouts/application.html.erb (Duration: 141.2ms | Allocations: 279130)
+Completed 200 OK in 142ms (Views: 141.6ms | ActiveRecord: 0.0ms | Allocations: 279538)
+
+
+Started GET "/categories" for ::1 at 2023-01-21 23:54:35 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1199)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 1817)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 2127)
+
+
+Started GET "/categories/new" for ::1 at 2023-01-21 23:54:37 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 1.0ms | Allocations: 1098)
+  Rendered categories/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1186)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1803)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 2079)
+
+
+Started POST "/categories" for ::1 at 2023-01-21 23:55:29 +0200
+Processing by CategoriesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Health", "description"=>"Pharmacies and hospitals"}, "commit"=>"Create Category"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+  [1m[36mCategory Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE LOWER("categories"."name") = LOWER(?) LIMIT ?[0m  [["name", "Health"], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Health"], ["description", "Pharmacies and hospitals"], ["created_at", "2023-01-21 21:55:29.527491"], ["updated_at", "2023-01-21 21:55:29.527491"]]
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (124.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/categories/3
+Completed 302 Found in 137ms (ActiveRecord: 125.4ms | Allocations: 6225)
+
+
+Started GET "/categories/3" for ::1 at 2023-01-21 23:55:29 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:63:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 983)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1622)
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 0.4ms | Allocations: 3198)
+
+
