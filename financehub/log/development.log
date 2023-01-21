@@ -3443,3 +3443,463 @@ Processing by ReportsController#report_by_category as HTML
 Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1967)
 
 
+Started GET "/reports/report_by_category?start_date=1990-03-08&final_date=1999-03-08&category_id=1" for ::1 at 2023-01-21 23:06:45 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1990-03-08", "final_date"=>"1999-03-08", "category_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."category_id" = ? AND (odate > '1990-03-08') AND (odate < '1999-03-08')[0m  [["category_id", 1]]
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered operations/_operation.html.erb (Duration: 0.5ms | Allocations: 422)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 6.8ms | Allocations: 7266)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 10263)
+Completed 200 OK in 53ms (Views: 12.9ms | ActiveRecord: 0.5ms | Allocations: 16023)
+
+
+Started GET "/reports/report_by_category?start_date=1990-03-08&final_date=1999-03-08&category_id=2" for ::1 at 2023-01-21 23:06:49 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1990-03-08", "final_date"=>"1999-03-08", "category_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."category_id" = ? AND (odate > '1990-03-08') AND (odate < '1999-03-08')[0m  [["category_id", 2]]
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered operations/_operation.html.erb (Duration: 0.3ms | Allocations: 76)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 1.3ms | Allocations: 927)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1865)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 2328)
+
+
+Started GET "/reports/report_by_category?start_date=1990-03-08&final_date=1999-03-08&category_id=2" for ::1 at 2023-01-21 23:08:07 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1990-03-08", "final_date"=>"1999-03-08", "category_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."category_id" = ? AND (odate > '1990-03-08') AND (odate < '1999-03-08')[0m  [["category_id", 2]]
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 97)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2737)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 5242)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.6ms | Allocations: 7706)
+
+
+Started GET "/reports/report_by_category?start_date=1990-03-08&final_date=2222-03-08&category_id=2" for ::1 at 2023-01-21 23:08:10 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1990-03-08", "final_date"=>"2222-03-08", "category_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."category_id" = ? AND (odate > '1990-03-08') AND (odate < '2222-03-08')[0m  [["category_id", 2]]
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered operations/_operation.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 1.3ms | Allocations: 910)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1760)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 2162)
+
+
+Started GET "/reports/report_by_category?start_date=1990-03-08&final_date=1999-03-08&category_id=" for ::1 at 2023-01-21 23:08:26 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1990-03-08", "final_date"=>"1999-03-08", "category_id"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."category_id" = ? AND (odate > '1990-03-08') AND (odate < '1999-03-08')[0m  [["category_id", nil]]
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.7ms | Allocations: 584)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1432)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1787)
+
+
+Started GET "/reports/report_by_category?start_date=1990-03-08&final_date=1999-03-08&category_id=" for ::1 at 2023-01-21 23:13:06 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1990-03-08", "final_date"=>"1999-03-08", "category_id"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.3ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."category_id" = ? AND (odate > '1990-03-08') AND (odate < '1999-03-08')[0m  [["category_id", nil]]
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 2.5ms | Allocations: 891)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2112)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.3ms | Allocations: 3012)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-21 23:13:09 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 89)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 946)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 1287)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-21 23:15:00 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/andrii/prometheus_softserve_ruby/financehub/app/controllers/reports_controller.rb:20: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/reports_controller.rb:20: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/reports_controller.rb:20: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/reports_controller.rb:20: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/reports/index" for ::1 at 2023-01-21 23:15:08 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 115)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 3017)
+Completed 200 OK in 4ms (Views: 2.6ms | Allocations: 5057)
+
+
+Started GET "/reports/report_by_category?start_date=2020-01-01&final_date=2020-02-20&category_id=" for ::1 at 2023-01-21 23:15:27 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"2020-01-01", "final_date"=>"2020-02-20", "category_id"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '2020-01-01') AND (odate < '2020-02-20')[0m
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.9ms | Allocations: 907)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1889)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 4576)
+
+
+Started GET "/reports/report_by_category?start_date=1990-01-01&final_date=2020-02-20&category_id=" for ::1 at 2023-01-21 23:15:51 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1990-01-01", "final_date"=>"2020-02-20", "category_id"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1990-01-01') AND (odate < '2020-02-20')[0m
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered operations/_operation.html.erb (Duration: 0.7ms | Allocations: 407)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 20.3ms | Allocations: 9416)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 10369)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 1.0ms | Allocations: 10727)
+
+
+Started GET "/reports/report_by_category?start_date=1990-01-01&final_date=2020-02-20&category_id=" for ::1 at 2023-01-21 23:17:45 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1990-01-01", "final_date"=>"2020-02-20", "category_id"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1990-01-01') AND (odate < '2020-02-20')[0m
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered operations/_operation.html.erb (Duration: 0.5ms | Allocations: 421)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 7.1ms | Allocations: 6898)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 9914)
+Completed 200 OK in 52ms (Views: 13.3ms | ActiveRecord: 0.5ms | Allocations: 14999)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-21 23:17:50 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1073)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 1485)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-21 23:17:50 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 895)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1155)
+
+
+Started GET "/reports/report_by_category?start_date=0101-01-01&final_date=3030-03-30&category_id=" for ::1 at 2023-01-21 23:17:58 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"0101-01-01", "final_date"=>"3030-03-30", "category_id"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '0101-01-01') AND (odate < '3030-03-30')[0m
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered operations/_operation.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 45)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1484)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2343)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 2682)
+
+
+Started GET "/reports/report_by_category?start_date=0101-01-01&final_date=3030-03-30&category_id=2" for ::1 at 2023-01-21 23:18:12 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"0101-01-01", "final_date"=>"3030-03-30", "category_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '0101-01-01') AND (odate < '3030-03-30')[0m
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1372)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2220)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 2550)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-21 23:18:29 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 2543)
+Completed 200 OK in 2ms (Views: 2.2ms | Allocations: 3149)
+
+
+Started GET "/reports/report_by_category?start_date=0100-01-01&final_date=3030-03-30&category_id=2" for ::1 at 2023-01-21 23:18:38 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"0100-01-01", "final_date"=>"3030-03-30", "category_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '0100-01-01') AND (odate < '3030-03-30')[0m
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 97)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3629)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 4581)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.6ms | Allocations: 6390)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-21 23:19:39 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 290)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3392)
+Completed 200 OK in 43ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 6433)
+
+
+Started GET "/reports/report_by_category?start_date=0101-01-01&final_date=3030-03-30&category_id=2" for ::1 at 2023-01-21 23:19:47 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"0101-01-01", "final_date"=>"3030-03-30", "category_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '0101-01-01') AND (odate < '3030-03-30')[0m
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered operations/_operation.html.erb (Duration: 0.6ms | Allocations: 411)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 45)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 14.6ms | Allocations: 7121)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 8078)
+Completed 200 OK in 28ms (Views: 15.8ms | ActiveRecord: 1.1ms | Allocations: 10601)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-21 23:20:31 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 290)
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | Allocations: 3392)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.0ms | Allocations: 6434)
+
+
+Started GET "/reports/report_by_category?start_date=0101-01-01&final_date=3030-03-30&category_id=2" for ::1 at 2023-01-21 23:20:38 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"0101-01-01", "final_date"=>"3030-03-30", "category_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.3ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '0101-01-01') AND (odate < '3030-03-30')[0m
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered operations/_operation.html.erb (Duration: 0.7ms | Allocations: 409)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 45)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 11.8ms | Allocations: 7123)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 8101)
+Completed 200 OK in 24ms (Views: 13.3ms | ActiveRecord: 0.9ms | Allocations: 10682)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-21 23:21:15 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 866)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 1156)
+
+
+Started GET "/reports/report_by_category?start_date=1111-11-11&final_date=3333-11-11&category_id=1" for ::1 at 2023-01-21 23:21:32 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1111-11-11", "final_date"=>"3333-11-11", "category_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1111-11-11') AND (odate < '3333-11-11')[0m
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2295)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 2646)
+
+
+Started GET "/reports/report_by_category?start_date=1111-11-11&final_date=3333-11-11&category_id=1" for ::1 at 2023-01-21 23:25:45 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1111-11-11", "final_date"=>"3333-11-11", "category_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."category_id" = ? AND (odate > '1111-11-11') AND (odate < '3333-11-11')[0m  [["category_id", 1]]
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered operations/_operation.html.erb (Duration: 0.5ms | Allocations: 422)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 45)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 7.3ms | Allocations: 7574)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 10584)
+Completed 200 OK in 53ms (Views: 13.2ms | ActiveRecord: 0.6ms | Allocations: 16311)
+
+
+Started GET "/reports/report_by_category?start_date=1111-11-11&final_date=3333-11-11&category_id=" for ::1 at 2023-01-21 23:25:51 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1111-11-11", "final_date"=>"3333-11-11", "category_id"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."category_id" = ? AND (odate > '1111-11-11') AND (odate < '3333-11-11')[0m  [["category_id", 0]]
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.7ms | Allocations: 671)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1636)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 2114)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-21 23:25:59 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 969)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 1317)
+
+
+Started GET "/reports/report_by_category?start_date=0101-01-01&final_date=2020-02-20&category_id=" for ::1 at 2023-01-21 23:26:06 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"0101-01-01", "final_date"=>"2020-02-20", "category_id"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."category_id" = ? AND (odate > '0101-01-01') AND (odate < '2020-02-20')[0m  [["category_id", 0]]
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.7ms | Allocations: 590)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1457)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1834)
+
+
+Started GET "/reports/report_by_category?start_date=0101-01-01&final_date=2020-02-20&category_id=" for ::1 at 2023-01-21 23:26:44 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"0101-01-01", "final_date"=>"2020-02-20", "category_id"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.3ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (category_id: '') AND (odate > '0101-01-01') AND (odate < '2020-02-20')[0m
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2949)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 3059)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.3ms | Allocations: 8214)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: unrecognized token: ":"):
+    1: <h1>Operations</h1>
+    2: 
+    3: <div id="operations">
+    4:   <% @operations.each do |operation| %>
+    5:     <%= render operation %>
+    6:     <p>
+    7:       <%= link_to "Show this operation", operation %>
+  
+app/views/reports/report_by_category.html.erb:4
+app/controllers/reports_controller.rb:8:in `report_by_category'
+Started GET "/reports/index" for ::1 at 2023-01-21 23:26:53 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 89)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 2974)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 3385)
+
+
+Started GET "/reports/report_by_category?start_date=0101-01-01&final_date=2202-02-20&category_id=" for ::1 at 2023-01-21 23:27:01 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"0101-01-01", "final_date"=>"2202-02-20", "category_id"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (3.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (category_id: '') AND (odate > '0101-01-01') AND (odate < '2202-02-20')[0m
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2133)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2213)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 3.4ms | Allocations: 2590)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: unrecognized token: ":"):
+    1: <h1>Operations</h1>
+    2: 
+    3: <div id="operations">
+    4:   <% @operations.each do |operation| %>
+    5:     <%= render operation %>
+    6:     <p>
+    7:       <%= link_to "Show this operation", operation %>
+  
+app/views/reports/report_by_category.html.erb:4
+app/controllers/reports_controller.rb:8:in `report_by_category'
+Started GET "/reports/report_by_category?start_date=0101-01-01&final_date=2202-02-20&category_id=" for ::1 at 2023-01-21 23:27:19 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"0101-01-01", "final_date"=>"2202-02-20", "category_id"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '0101-01-01') AND (odate < '2202-02-20')[0m
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered operations/_operation.html.erb (Duration: 0.4ms | Allocations: 409)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 45)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 6.6ms | Allocations: 6879)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 9398)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.6ms | Allocations: 11478)
+
+
+Started GET "/operations" for ::1 at 2023-01-21 23:27:37 +0200
+Processing by OperationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations"[0m
+  ↳ app/views/operations/index.html.erb:6
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 83)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2168)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2923)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 3762)
+
+
+Started GET "/reports/report_by_category?start_date=0101-01-01&final_date=2202-02-20&category_id=" for ::1 at 2023-01-21 23:27:41 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"0101-01-01", "final_date"=>"2202-02-20", "category_id"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '0101-01-01') AND (odate < '2202-02-20')[0m
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered operations/_operation.html.erb (Duration: 0.4ms | Allocations: 41)
+  Rendered operations/_operation.html.erb (Duration: 0.3ms | Allocations: 44)
+  Rendered operations/_operation.html.erb (Duration: 0.3ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.3ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.3ms | Allocations: 40)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1380)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 2224)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.4ms | Allocations: 2596)
+
+
