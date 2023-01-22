@@ -10728,3 +10728,1374 @@ Processing by ReportsController#report_by_dates as HTML
 Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 4661)
 
 
+Started GET "/reports/report_by_dates?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+dates" for ::1 at 2023-01-22 20:38:51 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReportsController#report_by_dates as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by dates"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/reports_controller.rb:14:in `map'
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12')[0m
+  ↳ app/controllers/reports_controller.rb:17:in `report_by_dates'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:18:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:18:in `block in report_by_dates'
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:18:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:18:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:18:in `block in report_by_dates'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_dates.html.erb within layouts/application
+  Rendered reports/report_by_dates.html.erb within layouts/application (Duration: 0.5ms | Allocations: 435)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3480)
+Completed 200 OK in 21ms (Views: 6.5ms | ActiveRecord: 0.8ms | Allocations: 21821)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-22 20:38:56 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 213.2ms | Allocations: 280803)
+  Rendered layout layouts/application.html.erb (Duration: 214.4ms | Allocations: 281780)
+Completed 200 OK in 216ms (Views: 215.2ms | ActiveRecord: 0.1ms | Allocations: 282208)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:38:58 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12')[0m
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered operations/_operation.html.erb (Duration: 0.6ms | Allocations: 387)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 45)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2382)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 3342)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 3832)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:39:23 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/reports_controller.rb:8:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12')[0m
+  ↳ app/views/reports/report_by_category.html.erb:4
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 96)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1659)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 4171)
+Completed 200 OK in 10ms (Views: 4.3ms | ActiveRecord: 0.7ms | Allocations: 9689)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:40:05 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12')[0m
+  ↳ app/controllers/reports_controller.rb:8:in `report_by_category'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 1.1ms | Allocations: 830)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 3349)
+Completed 200 OK in 9ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 8684)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:40:23 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12')[0m
+  ↳ app/controllers/reports_controller.rb:8:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 1.2ms | Allocations: 828)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 3341)
+Completed 200 OK in 9ms (Views: 3.6ms | ActiveRecord: 0.7ms | Allocations: 8700)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:40:32 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms | Allocations: 8272)
+
+
+  [1m[36mCACHE Operation Load (0.0ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `type' for #<ActiveRecord::Relation [#<Operation id: 1, amount: 0.2e3, odate: "2023-01-04 21:08:00.000000000 +0000", description: "Cheese", category_id: 1, created_at: "2023-01-10 19:08:41.691452000 +0000", updated_at: "2023-01-10 19:08:41.691452000 +0000">, #<Operation id: 2, amount: 0.3e3, odate: "2023-01-10 19:11:51.426637000 +0000", description: "Protein", category_id: 1, created_at: "2023-01-10 19:11:51.436025000 +0000", updated_at: "2023-01-10 19:11:51.436025000 +0000">, #<Operation id: 3, amount: 0.2222e4, odate: "2023-01-05 21:13:00.000000000 +0000", description: "Engine oil", category_id: 2, created_at: "2023-01-21 19:13:39.239195000 +0000", updated_at: "2023-01-21 19:13:39.239195000 +0000">, #<Operation id: 4, amount: 0.666e3, odate: "1995-08-21 22:43:00.000000000 +0000", description: "Test date operation", category_id: 2, created_at: "2023-01-21 20:44:11.633856000 +0000", updated_at: "2023-01-21 20:44:11.633856000 +0000">, #<Operation id: 5, amount: 0.6666666666e10, odate: "1996-05-08 23:00:00.000000000 +0000", description: "Test for category 2", category_id: 1, created_at: "2023-01-21 21:01:01.836627000 +0000", updated_at: "2023-01-21 21:01:01.836627000 +0000">]>):
+  
+app/controllers/reports_controller.rb:8:in `report_by_category'
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:40:57 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12')[0m
+  ↳ app/controllers/reports_controller.rb:9:in `report_by_category'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 1.0ms | Allocations: 830)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 3342)
+Completed 200 OK in 10ms (Views: 3.2ms | ActiveRecord: 0.7ms | Allocations: 8670)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:41:23 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12')[0m
+  ↳ app/controllers/reports_controller.rb:11:in `report_by_category'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 1.0ms | Allocations: 830)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 3336)
+Completed 200 OK in 9ms (Views: 3.1ms | ActiveRecord: 0.7ms | Allocations: 8669)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:42:12 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 4904)
+
+
+  
+NameError (undefined local variable or method `odate' for #<ReportsController:0x0000000002cad8>
+
+    puts @operations.sort_by(&odate)
+                              ^^^^^):
+  
+app/controllers/reports_controller.rb:9:in `report_by_category'
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:42:26 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12')[0m
+  ↳ app/controllers/reports_controller.rb:9:in `sort_by'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 3.7ms | Allocations: 826)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3343)
+Completed 200 OK in 12ms (Views: 6.4ms | ActiveRecord: 0.5ms | Allocations: 8772)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:43:05 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 1981)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/reports_controller.rb:9:in `sort_by'
+app/controllers/reports_controller.rb:9:in `report_by_category'
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:45:09 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12')[0m
+  ↳ app/controllers/reports_controller.rb:11:in `report_by_category'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 1.4ms | Allocations: 828)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3358)
+Completed 200 OK in 10ms (Views: 4.2ms | ActiveRecord: 0.6ms | Allocations: 9367)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:46:04 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12')[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 1.0ms | Allocations: 828)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 3346)
+Completed 200 OK in 9ms (Views: 3.1ms | ActiveRecord: 0.7ms | Allocations: 8696)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:46:25 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 1.5ms | Allocations: 828)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 3328)
+Completed 200 OK in 10ms (Views: 4.4ms | ActiveRecord: 0.6ms | Allocations: 8732)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=2&commit=Report+by+category" for ::1 at 2023-01-22 20:46:35 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"2", "commit"=>"Report by category"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 4219)
+
+
+  
+NoMethodError (undefined method `odate' for Operation:Class):
+  
+app/controllers/reports_controller.rb:39:in `check_category_id_exists'
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=2&commit=Report+by+category" for ::1 at 2023-01-22 20:46:43 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"2", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') AND (category_id = '2') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered operations/_operation.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.5ms | Allocations: 450)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2976)
+Completed 200 OK in 7ms (Views: 2.5ms | ActiveRecord: 0.6ms | Allocations: 8053)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=2&commit=Report+by+category" for ::1 at 2023-01-22 20:49:34 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"2", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.5ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') AND (category_id = '2') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 17.1ms | Allocations: 5709)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 5797)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.5ms | Allocations: 7627)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Operation id: 4, amount: 0.666e3, odate: "1995-08-21 22:43:00.000000000 +0000", description: "Test date operation", category_id: 2, created_at: "2023-01-21 20:44:11.633856000 +0000", updated_at: "2023-01-21 20:44:11.633856000 +0000">):
+     8:       <% end %>
+     9: 
+    10:       <% @operations.each do |operation| %>
+    11:         <th><%= operation.name %></th>
+    12:       <% end %>
+    13:     <p>
+    14:       <%= link_to "Show this operation", operation %>
+  
+app/views/reports/report_by_category.html.erb:11
+app/views/reports/report_by_category.html.erb:10
+app/controllers/reports_controller.rb:12:in `report_by_category'
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=2&commit=Report+by+category" for ::1 at 2023-01-22 20:50:13 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"2", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') AND (category_id = '2') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 16.0ms | Allocations: 4981)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 5069)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.4ms | Allocations: 6878)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `operation' for #<ActionView::Base:0x00000000049ed0>
+
+      '.freeze;@output_buffer.append=( link_to "Show this operation", operation );@output_buffer.safe_append='
+                                                                      ^^^^^^^^^
+Did you mean?  @operations):
+    11:         <th><%= operation[3] %></th>
+    12:       <% end %>
+    13:     <p>
+    14:       <%= link_to "Show this operation", operation %>
+    15:     </p>
+    16: 
+    17: </div>
+  
+app/views/reports/report_by_category.html.erb:14
+app/controllers/reports_controller.rb:12:in `report_by_category'
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=2&commit=Report+by+category" for ::1 at 2023-01-22 20:50:24 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"2", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') AND (category_id = '2') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 1.1ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 1493)
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 3337)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=2&commit=Report+by+category" for ::1 at 2023-01-22 20:50:42 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"2", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') AND (category_id = '2') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 1.2ms | Allocations: 252)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1476)
+Completed 200 OK in 15ms (Views: 8.8ms | ActiveRecord: 0.4ms | Allocations: 3323)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=2&commit=Report+by+category" for ::1 at 2023-01-22 20:53:13 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"2", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') AND (category_id = '2') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.8ms | Allocations: 251)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1484)
+Completed 200 OK in 12ms (Views: 6.4ms | ActiveRecord: 0.4ms | Allocations: 3331)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=2&commit=Report+by+category" for ::1 at 2023-01-22 20:53:16 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"2", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') AND (category_id = '2') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.0ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 884)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 2188)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:53:18 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 884)
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 2380)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:54:15 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.4ms | Allocations: 269)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1499)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 3537)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:55:00 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.9ms | Allocations: 270)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1503)
+Completed 200 OK in 16ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 3686)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:55:15 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 1.1ms | Allocations: 269)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1496)
+Completed 200 OK in 17ms (Views: 7.4ms | ActiveRecord: 0.4ms | Allocations: 3677)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:56:06 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.5ms | Allocations: 200)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1445)
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 3626)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:56:12 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.6ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 1.6ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 1422)
+Completed 200 OK in 15ms (Views: 6.7ms | ActiveRecord: 0.6ms | Allocations: 3603)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:56:19 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 3.5ms | Allocations: 5568)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 5656)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms | Allocations: 7807)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Operation id: 4, amount: 0.666e3, odate: "1995-08-21 22:43:00.000000000 +0000", description: "Test date operation", category_id: 2, created_at: "2023-01-21 20:44:11.633856000 +0000", updated_at: "2023-01-21 20:44:11.633856000 +0000">):
+    4:   <table>
+    5:     <% @operations.each do |operation| %>
+    6:       <tr>
+    7:         <th><%= operation.name %></th>
+    8:       <% end %>
+    9:       </tr>
+   10:   </table>
+  
+app/views/reports/report_by_category.html.erb:7
+app/views/reports/report_by_category.html.erb:5
+app/controllers/reports_controller.rb:12:in `report_by_category'
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:56:34 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.4ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1422)
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 3595)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:56:43 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.5ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.3ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1420)
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 0.5ms | Allocations: 3601)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:57:25 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.8ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1437)
+Completed 200 OK in 13ms (Views: 6.3ms | ActiveRecord: 0.4ms | Allocations: 3618)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:57:53 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.3ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.5ms | Allocations: 265)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1486)
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 0.3ms | Allocations: 3668)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:58:00 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.3ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.7ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1497)
+Completed 200 OK in 12ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 3678)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:59:06 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.3ms | Allocations: 302)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1523)
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 3704)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:59:10 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.5ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 1.1ms | Allocations: 302)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1526)
+Completed 200 OK in 13ms (Views: 6.0ms | ActiveRecord: 0.5ms | Allocations: 3707)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:59:14 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.4ms | Allocations: 302)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1535)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 3716)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 20:59:33 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.1ms | Allocations: 69)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 920)
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 2558)
+
+
+Started GET "/reports/report_by_dates?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+dates" for ::1 at 2023-01-22 20:59:34 +0200
+Processing by ReportsController#report_by_dates as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by dates"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/reports_controller.rb:18:in `map'
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:21:in `report_by_dates'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_dates.html.erb within layouts/application
+  Rendered reports/report_by_dates.html.erb within layouts/application (Duration: 0.5ms | Allocations: 233)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1205)
+Completed 200 OK in 15ms (Views: 1.8ms | ActiveRecord: 0.6ms | Allocations: 10359)
+
+
+Started GET "/reports/report_by_dates?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+dates" for ::1 at 2023-01-22 21:00:27 +0200
+Processing by ReportsController#report_by_dates as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by dates"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/reports_controller.rb:18:in `map'
+  [1m[36mOperation Load (0.6ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:21:in `report_by_dates'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_dates.html.erb within layouts/application
+  Rendered reports/report_by_dates.html.erb within layouts/application (Duration: 0.8ms | Allocations: 238)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1445)
+Completed 200 OK in 24ms (Views: 5.6ms | ActiveRecord: 1.3ms | Allocations: 5672)
+
+
+Started GET "/reports/report_by_dates?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+dates" for ::1 at 2023-01-22 21:01:21 +0200
+Processing by ReportsController#report_by_dates as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by dates"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/reports_controller.rb:18:in `map'
+  [1m[36mOperation Load (0.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:21:in `report_by_dates'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_dates.html.erb within layouts/application
+  Rendered reports/report_by_dates.html.erb within layouts/application (Duration: 0.7ms | Allocations: 309)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1539)
+Completed 200 OK in 20ms (Views: 5.7ms | ActiveRecord: 1.1ms | Allocations: 5888)
+
+
+Started GET "/operations" for ::1 at 2023-01-22 21:01:42 +0200
+Processing by OperationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations"[0m
+  ↳ app/views/operations/index.html.erb:6
+  Rendered operations/_operation.html.erb (Duration: 0.7ms | Allocations: 253)
+  Rendered operations/_operation.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2428)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3183)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.2ms | Allocations: 4020)
+
+
+Started GET "/operations/3" for ::1 at 2023-01-22 21:01:46 +0200
+Processing by OperationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/operations_controller.rb:63:in `set_operation'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/show.html.erb within layouts/application
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered operations/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 875)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1484)
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 2977)
+
+
+Started GET "/operations/3/edit" for ::1 at 2023-01-22 21:01:47 +0200
+Processing by OperationsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/operations_controller.rb:63:in `set_operation'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/operations/_form.html.erb:31:in `map'
+  Rendered operations/_form.html.erb (Duration: 9.2ms | Allocations: 3503)
+  Rendered operations/edit.html.erb within layouts/application (Duration: 10.6ms | Allocations: 3839)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 4483)
+Completed 200 OK in 16ms (Views: 12.5ms | ActiveRecord: 0.4ms | Allocations: 5284)
+
+
+Started PATCH "/operations/3" for ::1 at 2023-01-22 21:01:53 +0200
+Processing by OperationsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"amount"=>"132.0", "odate"=>"2023-01-05T21:13", "description"=>"Engine oil", "category_id"=>"2"}, "commit"=>"Update Operation", "id"=>"3"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/operations_controller.rb:63:in `set_operation'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/operations_controller.rb:40:in `block in update'
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/operations_controller.rb:40:in `block in update'
+  [1m[36mOperation Update (0.1ms)[0m  [1m[33mUPDATE "operations" SET "amount" = ?, "updated_at" = ? WHERE "operations"."id" = ?[0m  [["amount", 132.0], ["updated_at", "2023-01-22 19:01:53.056668"], ["id", 3]]
+  ↳ app/controllers/operations_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (253.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/operations_controller.rb:40:in `block in update'
+Redirected to http://localhost:3000/operations/3
+Completed 302 Found in 263ms (ActiveRecord: 253.2ms | Allocations: 7969)
+
+
+Started GET "/operations/3" for ::1 at 2023-01-22 21:01:53 +0200
+Processing by OperationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/operations_controller.rb:63:in `set_operation'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/show.html.erb within layouts/application
+  Rendered operations/_operation.html.erb (Duration: 0.4ms | Allocations: 47)
+  Rendered operations/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 780)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 1420)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.2ms | Allocations: 2204)
+
+
+Started GET "/operations" for ::1 at 2023-01-22 21:01:54 +0200
+Processing by OperationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  [1m[36mOperation Load (0.3ms)[0m  [1m[34mSELECT "operations".* FROM "operations"[0m
+  ↳ app/views/operations/index.html.erb:6
+  Rendered operations/_operation.html.erb (Duration: 0.4ms | Allocations: 41)
+  Rendered operations/_operation.html.erb (Duration: 0.3ms | Allocations: 44)
+  Rendered operations/_operation.html.erb (Duration: 0.3ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.3ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.6ms | Allocations: 40)
+  Rendered operations/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1616)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 2233)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.3ms | Allocations: 2502)
+
+
+Started GET "/operations/5" for ::1 at 2023-01-22 21:01:56 +0200
+Processing by OperationsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/operations_controller.rb:63:in `set_operation'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/show.html.erb within layouts/application
+  Rendered operations/_operation.html.erb (Duration: 0.4ms | Allocations: 41)
+  Rendered operations/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 671)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1280)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 2009)
+
+
+Started GET "/operations/5/edit" for ::1 at 2023-01-22 21:01:58 +0200
+Processing by OperationsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/operations_controller.rb:63:in `set_operation'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/operations/_form.html.erb:31:in `map'
+  Rendered operations/_form.html.erb (Duration: 6.1ms | Allocations: 2396)
+  Rendered operations/edit.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2520)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3129)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.3ms | Allocations: 3858)
+
+
+Started PATCH "/operations/5" for ::1 at 2023-01-22 21:02:07 +0200
+Processing by OperationsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "operation"=>{"amount"=>"135.36", "odate"=>"1996-05-08T23:00", "description"=>"Test for category 2", "category_id"=>"1"}, "commit"=>"Update Operation", "id"=>"5"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/operations_controller.rb:63:in `set_operation'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/operations_controller.rb:40:in `block in update'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/operations_controller.rb:40:in `block in update'
+  [1m[36mOperation Update (0.1ms)[0m  [1m[33mUPDATE "operations" SET "amount" = ?, "updated_at" = ? WHERE "operations"."id" = ?[0m  [["amount", 135.36], ["updated_at", "2023-01-22 19:02:07.178771"], ["id", 5]]
+  ↳ app/controllers/operations_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (172.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/operations_controller.rb:40:in `block in update'
+Redirected to http://localhost:3000/operations/5
+Completed 302 Found in 179ms (ActiveRecord: 172.5ms | Allocations: 3975)
+
+
+Started GET "/operations/5" for ::1 at 2023-01-22 21:02:07 +0200
+Processing by OperationsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mOperation Load (0.3ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE "operations"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/operations_controller.rb:63:in `set_operation'
+  Rendering layout layouts/application.html.erb
+  Rendering operations/show.html.erb within layouts/application
+  Rendered operations/_operation.html.erb (Duration: 0.3ms | Allocations: 44)
+  Rendered operations/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 695)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1304)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.3ms | Allocations: 2033)
+
+
+Started GET "/reports/report_by_category?start_date=1990-03-08&final_date=1999-03-08&category_id=2" for ::1 at 2023-01-22 21:02:16 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1990-03-08", "final_date"=>"1999-03-08", "category_id"=>"2"}
+  [1m[36mOperation Load (0.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1990-03-08') AND (odate < '1999-03-08') AND (category_id = '2') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 1.2ms | Allocations: 243)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 1115)
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 2258)
+
+
+Started GET "/reports" for ::1 at 2023-01-22 21:02:28 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 3860)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 4715)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms | Allocations: 5027)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 21:02:30 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.1ms | Allocations: 69)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 938)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 2434)
+
+
+Started GET "/reports/report_by_dates?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+dates" for ::1 at 2023-01-22 21:02:35 +0200
+Processing by ReportsController#report_by_dates as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by dates"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/reports_controller.rb:18:in `map'
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:21:in `report_by_dates'
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_dates.html.erb within layouts/application
+  Rendered reports/report_by_dates.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 889)
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 4556)
+
+
+Started GET "/reports/report_by_dates?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+dates" for ::1 at 2023-01-22 21:03:18 +0200
+Processing by ReportsController#report_by_dates as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by dates"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/reports_controller.rb:18:in `map'
+  [1m[36mOperation Load (0.3ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:21:in `report_by_dates'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_dates.html.erb within layouts/application
+  Rendered reports/report_by_dates.html.erb within layouts/application (Duration: 0.8ms | Allocations: 308)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1529)
+Completed 200 OK in 16ms (Views: 5.0ms | ActiveRecord: 0.9ms | Allocations: 5735)
+
+
+Started GET "/reports/report_by_dates?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+dates" for ::1 at 2023-01-22 21:03:36 +0200
+Processing by ReportsController#report_by_dates as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by dates"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/reports_controller.rb:18:in `map'
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:21:in `report_by_dates'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_dates.html.erb within layouts/application
+  Rendered reports/report_by_dates.html.erb within layouts/application (Duration: 0.4ms | Allocations: 208)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1429)
+Completed 200 OK in 11ms (Views: 3.6ms | ActiveRecord: 0.8ms | Allocations: 5776)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 21:03:40 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.8ms | Allocations: 268)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1122)
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 2814)
+
+
+Started GET "/reports/report_by_dates?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+dates" for ::1 at 2023-01-22 21:03:43 +0200
+Processing by ReportsController#report_by_dates as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by dates"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/reports_controller.rb:18:in `map'
+  [1m[36mOperation Load (0.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:21:in `report_by_dates'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_dates.html.erb within layouts/application
+  Rendered reports/report_by_dates.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 901)
+Completed 200 OK in 16ms (Views: 2.7ms | ActiveRecord: 1.1ms | Allocations: 4590)
+
+
+Started GET "/reports/report_by_dates?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+dates" for ::1 at 2023-01-22 21:03:55 +0200
+Processing by ReportsController#report_by_dates as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by dates"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/reports_controller.rb:18:in `map'
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:21:in `report_by_dates'
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_dates.html.erb within layouts/application
+  Rendered reports/report_by_dates.html.erb within layouts/application (Duration: 0.4ms | Allocations: 208)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1432)
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 5637)
+
+
+Started GET "/reports/report_by_dates?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+dates" for ::1 at 2023-01-22 21:04:16 +0200
+Processing by ReportsController#report_by_dates as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by dates"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/reports_controller.rb:18:in `map'
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:21:in `report_by_dates'
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_dates.html.erb within layouts/application
+  Rendered reports/report_by_dates.html.erb within layouts/application (Duration: 0.0ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 883)
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 4689)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 21:04:18 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 1.3ms | Allocations: 268)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 1125)
+Completed 200 OK in 12ms (Views: 5.0ms | ActiveRecord: 0.4ms | Allocations: 2701)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 21:04:53 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1835)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1923)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms | Allocations: 3931)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+'.freeze;     @categories.each do |category| 
+                         ^^^^^):
+    2: 
+    3: <div id="operations">
+    4:   <table>
+    5:     <% @categories.each do |category| %>
+    6:       <tr>
+    7:         <th><%= category[0] %></th>
+    8:         <th><%= category[1] %></th>
+  
+app/views/reports/report_by_category.html.erb:5
+app/controllers/reports_controller.rb:12:in `report_by_category'
+Started GET "/reports" for ::1 at 2023-01-22 21:05:13 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 3408)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 4561)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.2ms | Allocations: 4898)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 21:05:14 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1619)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1698)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 3232)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+'.freeze;     @categories.each do |category| 
+                         ^^^^^):
+    2: 
+    3: <div id="operations">
+    4:   <table>
+    5:     <% @categories.each do |category| %>
+    6:       <tr>
+    7:         <th><%= category[0] %></th>
+    8:         <th><%= category[1] %></th>
+  
+app/views/reports/report_by_category.html.erb:5
+app/controllers/reports_controller.rb:12:in `report_by_category'
+Started GET "/reports/report_by_dates?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+dates" for ::1 at 2023-01-22 21:05:16 +0200
+Processing by ReportsController#report_by_dates as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by dates"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/reports_controller.rb:18:in `map'
+  [1m[36mOperation Load (0.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:21:in `report_by_dates'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_dates.html.erb within layouts/application
+  Rendered reports/report_by_dates.html.erb within layouts/application (Duration: 1.2ms | Allocations: 351)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1211)
+Completed 200 OK in 16ms (Views: 3.4ms | ActiveRecord: 1.0ms | Allocations: 4952)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 21:05:18 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1620)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 1699)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms | Allocations: 3169)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+'.freeze;     @categories.each do |category| 
+                         ^^^^^):
+    2: 
+    3: <div id="operations">
+    4:   <table>
+    5:     <% @categories.each do |category| %>
+    6:       <tr>
+    7:         <th><%= category[0] %></th>
+    8:         <th><%= category[1] %></th>
+  
+app/views/reports/report_by_category.html.erb:5
+app/controllers/reports_controller.rb:12:in `report_by_category'
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 21:06:12 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mOperation Load (0.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1827)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1915)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms | Allocations: 3922)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+'.freeze;     @categories.each do |category| 
+                         ^^^^^):
+    2: 
+    3: <div id="operations">
+    4:   <table>
+    5:     <% @categories.each do |category| %>
+    6:       <tr>
+    7:         <th><%= category[0] %></th>
+    8:         <th><%= category[1] %></th>
+  
+app/views/reports/report_by_category.html.erb:5
+app/controllers/reports_controller.rb:12:in `report_by_category'
+Started GET "/reports/report_by_dates?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+dates" for ::1 at 2023-01-22 21:06:14 +0200
+Processing by ReportsController#report_by_dates as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by dates"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/reports_controller.rb:18:in `map'
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:21:in `report_by_dates'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_dates.html.erb within layouts/application
+  Rendered reports/report_by_dates.html.erb within layouts/application (Duration: 0.7ms | Allocations: 370)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1526)
+Completed 200 OK in 11ms (Views: 2.4ms | ActiveRecord: 0.7ms | Allocations: 5391)
+
+
+Started GET "/reports/report_by_dates?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+dates" for ::1 at 2023-01-22 21:06:32 +0200
+Processing by ReportsController#report_by_dates as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by dates"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/reports_controller.rb:18:in `map'
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:21:in `report_by_dates'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_dates'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_dates.html.erb within layouts/application
+  Rendered reports/report_by_dates.html.erb within layouts/application (Duration: 0.3ms | Allocations: 148)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1023)
+Completed 200 OK in 11ms (Views: 2.5ms | ActiveRecord: 0.6ms | Allocations: 4686)
+
+
+Started GET "/reports" for ::1 at 2023-01-22 21:06:59 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 6941)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 9460)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.5ms | Allocations: 10203)
+
+
+Started GET "/reports/report_by_dates?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+dates" for ::1 at 2023-01-22 21:07:00 +0200
+Processing by ReportsController#report_by_dates as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by dates"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1646)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1727)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 6335)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+'.freeze;     @categories.each do |category| 
+                         ^^^^^):
+    2: 
+    3: <div id="operations">
+    4:   <table>
+    5:     <% @categories.each do |category| %>
+    6:       <tr>
+    7:         <th><%= category[0] %></th>
+    8:         <th><%= category[1] %></th>
+  
+app/views/reports/report_by_category.html.erb:5
+app/controllers/reports_controller.rb:12:in `report_by_dates'
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 21:07:02 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/reports_controller.rb:18:in `map'
+  [1m[36mOperation Load (0.6ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:21:in `report_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_dates.html.erb within layouts/application
+  Rendered reports/report_by_dates.html.erb within layouts/application (Duration: 0.4ms | Allocations: 151)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1069)
+Completed 200 OK in 18ms (Views: 2.7ms | ActiveRecord: 1.2ms | Allocations: 5417)
+
+
+Started GET "/reports/report_by_dates?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+dates" for ::1 at 2023-01-22 21:07:13 +0200
+Processing by ReportsController#report_by_dates as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by dates"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_dates.html.erb within layouts/application
+  Rendered reports/report_by_dates.html.erb within layouts/application (Duration: 0.1ms | Allocations: 77)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 2627)
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 8055)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 21:07:25 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/reports_controller.rb:18:in `map'
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:21:in `report_by_category'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.1ms | Allocations: 12068)
+
+
+  
+ActionView::MissingTemplate (Missing template reports/report_by_categories, application/report_by_categories with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/andrii/prometheus_softserve_ruby/financehub/app/views"
+  * "/home/andrii/.rvm/gems/ruby-3.1.2/gems/actiontext-7.0.4/app/views"
+  * "/home/andrii/.rvm/gems/ruby-3.1.2/gems/actionmailbox-7.0.4/app/views"
+
+Did you mean?  reports/report_by_category
+               reports/report_by_dates
+               reports/index
+               operations/edit
+               operations/new
+               operations/show):
+  
+app/controllers/reports_controller.rb:27:in `report_by_category'
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 21:07:35 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/reports_controller.rb:18:in `map'
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:21:in `report_by_category'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.1ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 2555)
+Completed 200 OK in 13ms (Views: 2.3ms | ActiveRecord: 1.2ms | Allocations: 13150)
+
+
+Started GET "/reports" for ::1 at 2023-01-22 21:07:44 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 3759)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 4624)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.1ms | Allocations: 4901)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 21:07:45 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/reports_controller.rb:18:in `map'
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:21:in `report_by_category'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 0.0ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 877)
+Completed 200 OK in 7ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 4602)
+
+
+Started GET "/reports/report_by_dates?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+dates" for ::1 at 2023-01-22 21:07:48 +0200
+Processing by ReportsController#report_by_dates as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by dates"}
+  [1m[36mOperation Load (0.1ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:9:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_dates.html.erb within layouts/application
+  Rendered reports/report_by_dates.html.erb within layouts/application (Duration: 0.1ms | Allocations: 72)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 923)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 2459)
+
+

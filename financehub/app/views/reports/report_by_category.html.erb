@@ -1,10 +1,12 @@
-<h1>Operations</h1>
+<h1>Report by categories</h1>
 
 <div id="operations">
-  <% @operations.each do |operation| %>
-    <%= render operation %>
-    <p>
-      <%= link_to "Show this operation", operation %>
-    </p>
-  <% end %>
+  <table>
+    <% @categories.each do |category| %>
+      <tr>
+        <th><%= category[0] %></th>
+        <th><%= category[1] %></th>
+      </tr>
+    <% end %>
+  </table>
 </div>

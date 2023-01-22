@@ -4,11 +4,15 @@ class ReportsController < ApplicationController
   def index
   end
 
-  def report_by_category
-    render "report_by_category"
+  def report_by_dates
+    puts('=' * 50)
+    puts @operations
+    puts('=' * 50)
+    @operations.each { |operation| p operation}
+    render "report_by_dates"
   end
 
-  def report_by_dates
+  def report_by_category
     #add hash for representable it in html
     @categories = {}
     Category.all.map { |cat| @categories[cat.name] = 0 }
@@ -20,17 +24,17 @@ class ReportsController < ApplicationController
     end
 
     puts @categories
-    render "report_by_dates"
+    render "report_by_category"
   end
 
   private
 
   def check_category_id_exists
     if params[:category_id] == ""
-      @operations = Operation.filter_by_start_date(params[:start_date])
+      @operations = Operation.order(:odate).filter_by_start_date(params[:start_date])
                              .filter_by_final_date(params[:final_date])
     else
-      @operations = Operation.filter_by_start_date(params[:start_date])
+      @operations = Operation.order(:odate).filter_by_start_date(params[:start_date])
                              .filter_by_final_date(params[:final_date])
                              .filter_by_category_id(params[:category_id])
     end

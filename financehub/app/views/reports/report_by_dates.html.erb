@@ -1,9 +1,19 @@
-<h1>Operations</h1>
+<h1>Report by dates</h1>
 
 <div id="operations">
-  <h1> Report from <%= params[:start_date] %> to <%= params[:final_date] %></h1><br>
-  <% @categories.each do |category| %>
-    <%= category[0] %>
-    <%= category[1] %><br>
-  <% end %>
+  <table>
+    <tr>
+      <% @operations.each do |operation| %>
+        <th><%= operation[:amount] %></th>
+      <% end %>
+    </tr>
+
+    <tr>
+      <% @operations.each do |operation| %>
+        <th><%= operation[:odate].strftime("%F") %></th>
+      <% end %>
+    </tr>
+  </table>
 </div>
+
+
