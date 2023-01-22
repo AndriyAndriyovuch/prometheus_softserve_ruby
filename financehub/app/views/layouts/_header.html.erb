@@ -1,17 +1,17 @@
 <header class="p-3 mb-3 border-bottom">
-    <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <%= link_to root_path do %>
-          <%= image_tag("logo.svg", width: '60px') %>
-        <% end %>
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <%= link_to root_path do %>
+        <%= image_tag("logo.svg", width: '60px') %>
+      <% end %>
 
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><%= link_to "Reports", reports_index_path, class: "nav-link px-2 link-dark" %></li>
-          <li><%= link_to "Operations", operations_path, class: "nav-link px-2 link-dark" %></li>
-          <li><%= link_to "Categories", categories_path, class: "nav-link px-2 link-dark" %></li>
-        </ul>
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><%= link_to "Reports", reports_index_path, class: "nav-link px-2 link-dark" %></li>
+        <li><%= link_to "Operations", operations_path, class: "nav-link px-2 link-dark" %></li>
+        <li><%= link_to "Categories", categories_path, class: "nav-link px-2 link-dark" %></li>
+      </ul>
 
-        <%#- if user_signed_in? %>
+      <%#- if user_signed_in? %>
 <!--          <div class="dropdown text-end">-->
 <!--            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">-->
 <!--              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
@@ -22,17 +22,16 @@
 <!--              <li><%#= link_to t("dropdown.profile"), edit_user_registration_path, class: "dropdown-item" %></li>-->
 <!--              <li><hr class="dropdown-divider"></li>-->
 <!--              <li>-->
-                <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+              <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
 <!--              </li>-->
 <!--            </ul>-->
 <!--          </div>-->
 
-        <%#- else %>
-          <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
-          <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
-        <%# end %>
-      </div>
+      <%#- else %>
+        <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
+        <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+      <%# end %>
     </div>
-      
+  </div>
+</header>
 
-  </header>
