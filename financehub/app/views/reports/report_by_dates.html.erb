@@ -1,0 +1,19 @@
+<h1>Report by dates</h1>
+
+<div id="operations">
+  <table>
+    <tr>
+      <% @operations.each do |operation| %>
+        <th><%= operation[:amount] %></th>
+      <% end %>
+    </tr>
+
+    <tr>
+      <% @operations.each do |operation| %>
+        <th><%= operation[:odate].strftime("%F") %></th>
+      <% end %>
+    </tr>
+  </table>
+</div>
+
+
