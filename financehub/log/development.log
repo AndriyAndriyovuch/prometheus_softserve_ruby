@@ -12099,3 +12099,1614 @@ Processing by ReportsController#report_by_dates as HTML
 Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 2459)
 
 
+Started GET "/reports" for ::1 at 2023-01-22 21:11:56 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 3485)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 4678)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.2ms | Allocations: 5488)
+
+
+Started GET "/reports" for ::1 at 2023-01-22 21:11:57 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2962)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3829)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.2ms | Allocations: 4104)
+
+
+Started GET "/reports" for ::1 at 2023-01-22 21:12:54 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 3480)
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 2381)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 7278)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms | Allocations: 8046)
+
+
+  
+ActionView::Template::Error (The asset "logo.svg" is not present in the asset pipeline.
+):
+    2:     <div class="container">
+    3:       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+    4:         <%= link_to root_path do %>
+    5:           <%= image_tag("logo.svg", width: '60px') %>
+    6:         <% end %>
+    7: 
+    8:         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+  
+app/views/layouts/_header.html.erb:5
+app/views/layouts/_header.html.erb:4
+app/views/layouts/application.html.erb:67
+Started GET "/reports" for ::1 at 2023-01-22 21:15:44 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 2963)
+  Rendered layouts/_header.html.erb (Duration: 46.8ms | Allocations: 27032)
+  Rendered layout layouts/application.html.erb (Duration: 49.7ms | Allocations: 30921)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.1ms | Allocations: 31171)
+
+
+  
+LoadError (cannot load such file -- sassc):
+  
+bootsnap (1.15.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:17:in `require'
+bootsnap (1.15.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:17:in `require'
+zeitwerk (2.6.6) lib/zeitwerk/kernel.rb:38:in `require'
+sprockets (4.2.0) lib/sprockets/autoload/sassc.rb:2:in `<main>'
+bootsnap (1.15.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+bootsnap (1.15.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+zeitwerk (2.6.6) lib/zeitwerk/kernel.rb:38:in `require'
+sprockets (4.2.0) lib/sprockets/sassc_processor.rb:42:in `initialize'
+sprockets (4.2.0) lib/sprockets/sassc_processor.rb:27:in `new'
+sprockets (4.2.0) lib/sprockets/sassc_processor.rb:27:in `instance'
+sprockets (4.2.0) lib/sprockets/sassc_processor.rb:35:in `cache_key'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:102:in `processor_cache_key'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `block in processors_cache_keys'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `map'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `processors_cache_keys'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:37:in `cache_key'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:102:in `processor_cache_key'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:49:in `block in processor_cache_key'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:203:in `block in fetch_or_store'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:182:in `fetch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:202:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:49:in `processor_cache_key'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `block in processors_cache_keys'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `map'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `processors_cache_keys'
+sprockets (4.2.0) lib/sprockets/processing.rb:165:in `resolve_processors_cache_key_uri'
+sprockets (4.2.0) lib/sprockets.rb:216:in `block in <module:Sprockets>'
+sprockets (4.2.0) lib/sprockets/dependencies.rb:68:in `resolve_dependency'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:54:in `block in resolve_dependency'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:203:in `block in fetch_or_store'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:182:in `fetch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:202:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:54:in `resolve_dependency'
+sprockets (4.2.0) lib/sprockets/loader.rb:288:in `block in resolve_dependencies'
+sprockets (4.2.0) lib/sprockets/loader.rb:288:in `map'
+sprockets (4.2.0) lib/sprockets/loader.rb:288:in `resolve_dependencies'
+sprockets (4.2.0) lib/sprockets/loader.rb:54:in `block in load'
+sprockets (4.2.0) lib/sprockets/loader.rb:331:in `block in fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:327:in `each'
+sprockets (4.2.0) lib/sprockets/loader.rb:327:in `each_with_index'
+sprockets (4.2.0) lib/sprockets/loader.rb:327:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:203:in `block in fetch_or_store'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:182:in `fetch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:202:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.0) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.0) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `block in synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+Started GET "/reports" for ::1 at 2023-01-22 21:17:38 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 3480)
+  Rendered layouts/_header.html.erb (Duration: 25.6ms | Allocations: 19788)
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | Allocations: 24681)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.2ms | Allocations: 25428)
+
+
+  
+LoadError (cannot load such file -- sassc):
+  
+bootsnap (1.15.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:17:in `require'
+bootsnap (1.15.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:17:in `require'
+zeitwerk (2.6.6) lib/zeitwerk/kernel.rb:38:in `require'
+sprockets (4.2.0) lib/sprockets/autoload/sassc.rb:2:in `<main>'
+bootsnap (1.15.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+bootsnap (1.15.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+zeitwerk (2.6.6) lib/zeitwerk/kernel.rb:38:in `require'
+sprockets (4.2.0) lib/sprockets/sassc_processor.rb:42:in `initialize'
+sprockets (4.2.0) lib/sprockets/sassc_processor.rb:27:in `new'
+sprockets (4.2.0) lib/sprockets/sassc_processor.rb:27:in `instance'
+sprockets (4.2.0) lib/sprockets/sassc_processor.rb:35:in `cache_key'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:102:in `processor_cache_key'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `block in processors_cache_keys'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `map'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `processors_cache_keys'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:37:in `cache_key'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:102:in `processor_cache_key'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:49:in `block in processor_cache_key'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:203:in `block in fetch_or_store'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:182:in `fetch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:202:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:49:in `processor_cache_key'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `block in processors_cache_keys'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `map'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `processors_cache_keys'
+sprockets (4.2.0) lib/sprockets/processing.rb:165:in `resolve_processors_cache_key_uri'
+sprockets (4.2.0) lib/sprockets.rb:216:in `block in <module:Sprockets>'
+sprockets (4.2.0) lib/sprockets/dependencies.rb:68:in `resolve_dependency'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:54:in `block in resolve_dependency'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:203:in `block in fetch_or_store'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:182:in `fetch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:202:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:54:in `resolve_dependency'
+sprockets (4.2.0) lib/sprockets/loader.rb:288:in `block in resolve_dependencies'
+sprockets (4.2.0) lib/sprockets/loader.rb:288:in `map'
+sprockets (4.2.0) lib/sprockets/loader.rb:288:in `resolve_dependencies'
+sprockets (4.2.0) lib/sprockets/loader.rb:54:in `block in load'
+sprockets (4.2.0) lib/sprockets/loader.rb:331:in `block in fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:327:in `each'
+sprockets (4.2.0) lib/sprockets/loader.rb:327:in `each_with_index'
+sprockets (4.2.0) lib/sprockets/loader.rb:327:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:203:in `block in fetch_or_store'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:182:in `fetch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:202:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.0) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.0) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `block in synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+Started GET "/reports" for ::1 at 2023-01-22 21:21:13 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 3480)
+  Rendered layouts/_header.html.erb (Duration: 17.2ms | Allocations: 19626)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 25987)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.1ms | Allocations: 26753)
+
+
+  
+LoadError (cannot load such file -- sassc):
+  
+bootsnap (1.15.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:17:in `require'
+bootsnap (1.15.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:17:in `require'
+zeitwerk (2.6.6) lib/zeitwerk/kernel.rb:38:in `require'
+sprockets (4.2.0) lib/sprockets/autoload/sassc.rb:2:in `<main>'
+bootsnap (1.15.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+bootsnap (1.15.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+zeitwerk (2.6.6) lib/zeitwerk/kernel.rb:38:in `require'
+sprockets (4.2.0) lib/sprockets/sassc_processor.rb:42:in `initialize'
+sprockets (4.2.0) lib/sprockets/sassc_processor.rb:27:in `new'
+sprockets (4.2.0) lib/sprockets/sassc_processor.rb:27:in `instance'
+sprockets (4.2.0) lib/sprockets/sassc_processor.rb:35:in `cache_key'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:102:in `processor_cache_key'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `block in processors_cache_keys'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `map'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `processors_cache_keys'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:37:in `cache_key'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:102:in `processor_cache_key'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:49:in `block in processor_cache_key'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:203:in `block in fetch_or_store'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:182:in `fetch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:202:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:49:in `processor_cache_key'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `block in processors_cache_keys'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `map'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `processors_cache_keys'
+sprockets (4.2.0) lib/sprockets/processing.rb:165:in `resolve_processors_cache_key_uri'
+sprockets (4.2.0) lib/sprockets.rb:216:in `block in <module:Sprockets>'
+sprockets (4.2.0) lib/sprockets/dependencies.rb:68:in `resolve_dependency'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:54:in `block in resolve_dependency'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:203:in `block in fetch_or_store'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:182:in `fetch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:202:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:54:in `resolve_dependency'
+sprockets (4.2.0) lib/sprockets/loader.rb:288:in `block in resolve_dependencies'
+sprockets (4.2.0) lib/sprockets/loader.rb:288:in `map'
+sprockets (4.2.0) lib/sprockets/loader.rb:288:in `resolve_dependencies'
+sprockets (4.2.0) lib/sprockets/loader.rb:54:in `block in load'
+sprockets (4.2.0) lib/sprockets/loader.rb:331:in `block in fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:327:in `each'
+sprockets (4.2.0) lib/sprockets/loader.rb:327:in `each_with_index'
+sprockets (4.2.0) lib/sprockets/loader.rb:327:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:203:in `block in fetch_or_store'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:182:in `fetch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:202:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.0) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.0) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `block in synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+Started GET "/reports" for ::1 at 2023-01-22 21:21:26 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2963)
+  Rendered layouts/_header.html.erb (Duration: 23.9ms | Allocations: 15431)
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | Allocations: 19704)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.2ms | Allocations: 20326)
+
+
+  
+LoadError (cannot load such file -- sassc):
+  
+bootsnap (1.15.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:17:in `require'
+bootsnap (1.15.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:17:in `require'
+zeitwerk (2.6.6) lib/zeitwerk/kernel.rb:38:in `require'
+sprockets (4.2.0) lib/sprockets/autoload/sassc.rb:2:in `<main>'
+bootsnap (1.15.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+bootsnap (1.15.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+zeitwerk (2.6.6) lib/zeitwerk/kernel.rb:38:in `require'
+sprockets (4.2.0) lib/sprockets/sassc_processor.rb:42:in `initialize'
+sprockets (4.2.0) lib/sprockets/sassc_processor.rb:27:in `new'
+sprockets (4.2.0) lib/sprockets/sassc_processor.rb:27:in `instance'
+sprockets (4.2.0) lib/sprockets/sassc_processor.rb:35:in `cache_key'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:102:in `processor_cache_key'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `block in processors_cache_keys'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `map'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `processors_cache_keys'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:37:in `cache_key'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:102:in `processor_cache_key'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:49:in `block in processor_cache_key'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:203:in `block in fetch_or_store'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:182:in `fetch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:202:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:49:in `processor_cache_key'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `block in processors_cache_keys'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `map'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:111:in `processors_cache_keys'
+sprockets (4.2.0) lib/sprockets/processing.rb:165:in `resolve_processors_cache_key_uri'
+sprockets (4.2.0) lib/sprockets.rb:216:in `block in <module:Sprockets>'
+sprockets (4.2.0) lib/sprockets/dependencies.rb:68:in `resolve_dependency'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:54:in `block in resolve_dependency'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:203:in `block in fetch_or_store'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:182:in `fetch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:202:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:54:in `resolve_dependency'
+sprockets (4.2.0) lib/sprockets/loader.rb:288:in `block in resolve_dependencies'
+sprockets (4.2.0) lib/sprockets/loader.rb:288:in `map'
+sprockets (4.2.0) lib/sprockets/loader.rb:288:in `resolve_dependencies'
+sprockets (4.2.0) lib/sprockets/loader.rb:54:in `block in load'
+sprockets (4.2.0) lib/sprockets/loader.rb:331:in `block in fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:327:in `each'
+sprockets (4.2.0) lib/sprockets/loader.rb:327:in `each_with_index'
+sprockets (4.2.0) lib/sprockets/loader.rb:327:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:203:in `block in fetch_or_store'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:182:in `fetch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:202:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.0) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.0) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `block in synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+Started GET "/reports" for ::1 at 2023-01-22 21:21:34 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 143.0ms | Allocations: 286470)
+  Rendered layouts/_header.html.erb (Duration: 2911.9ms | Allocations: 98134)
+  Rendered layout layouts/application.html.erb (Duration: 3058.9ms | Allocations: 387926)
+Completed 500 Internal Server Error in 3063ms (ActiveRecord: 0.4ms | Allocations: 390928)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `news_path' for #<ActionView::Base:0x0000000000cb98>
+
+          <li>'.freeze;@output_buffer.append=( link_to t("header.menu.news"), news_path, class: current_link_class(news_path) );@output_buffer.safe_append='</li>
+                                                                              ^^^^^^^^^):
+     6:         <% end %>
+     7: 
+     8:         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+     9:           <li><%= link_to t("header.menu.news"), news_path, class: current_link_class(news_path) %></li>
+    10:           <li><%= link_to t("header.menu.articles"), articles_path, class: current_link_class(articles_path) %></li>
+    11:           <li><%= link_to t("header.menu.gyms"), gyms_path, class: current_link_class(gyms_path) %></li>
+    12:           <li><%= link_to t("header.menu.other"), other_path, class: current_link_class(other_path) %></li>
+  
+app/views/layouts/_header.html.erb:9
+app/views/layouts/application.html.erb:67
+Started GET "/reports" for ::1 at 2023-01-22 21:22:42 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3498)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 1270)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 6181)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms | Allocations: 6969)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <%= link_to root_path do %>
+          <%= image_tag("logo.svg", width: '60px') %>
+        <% end %>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><%= Reports, reports_path, class: current_link_class(news_path) %></li>
+
+        </ul>
+
+        <%#- if user_signed_in? %>
+<!--          <div class="dropdown text-end">-->
+<!--            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
+<!--            </a>-->
+
+<!--            <ul class="dropdown-menu text-small">-->
+<!--              <li><%#= link_to t("article.new"), new_article_path, class: "dropdown-item" %></li>-->
+<!--              <li><%#= link_to t("dropdown.profile"), edit_user_registration_path, class: "dropdown-item" %></li>-->
+<!--              <li><hr class="dropdown-divider"></li>-->
+<!--              <li>-->
+                <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </div>-->
+
+        <%#- else %>
+          <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
+          <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+        <%# end %>
+      </div>
+    </div>
+      
+
+  </header>
+
+):
+1:    <header class="p-3 mb-3 border-bottom">
+2:        <div class="container">
+3:          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+4:            <%= link_to root_path do %>
+5:              <%= image_tag("logo.svg", width: '60px') %>
+6:            <% end %>
+7:    
+8:            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+9:              <li><%= Reports, reports_path, class: current_link_class(news_path) %></li>
+10:    
+11:            </ul>
+12:    
+13:            <%#- if user_signed_in? %>
+14:    <!--          <div class="dropdown text-end">-->
+15:    <!--            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">-->
+16:    <!--              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
+17:    <!--            </a>-->
+18:    
+19:    <!--            <ul class="dropdown-menu text-small">-->
+20:    <!--              <li><%#= link_to t("article.new"), new_article_path, class: "dropdown-item" %></li>-->
+21:    <!--              <li><%#= link_to t("dropdown.profile"), edit_user_registration_path, class: "dropdown-item" %></li>-->
+22:    <!--              <li><hr class="dropdown-divider"></li>-->
+23:    <!--              <li>-->
+24:                    <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+25:    <!--              </li>-->
+26:    <!--            </ul>-->
+27:    <!--          </div>-->
+28:    
+29:            <%#- else %>
+30:              <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
+31:              <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+32:            <%# end %>
+33:          </div>
+34:        </div>
+35:          
+36:    
+37:      </header>
+  
+app/views/layouts/_header.html.erb:9: dynamic constant assignment
+app/views/layouts/_header.html.erb:9: syntax error, unexpected label, expecting '='
+app/views/layouts/_header.html.erb:9: dynamic constant assignment
+app/views/layouts/_header.html.erb:9: syntax error, unexpected label, expecting '='
+app/views/layouts/_header.html.erb:9: dynamic constant assignment
+app/views/layouts/_header.html.erb:9: syntax error, unexpected label, expecting '='
+app/views/layouts/_header.html.erb:9: dynamic constant assignment
+app/views/layouts/_header.html.erb:9: syntax error, unexpected label, expecting '='
+app/views/layouts/_header.html.erb:9: dynamic constant assignment
+app/views/layouts/_header.html.erb:9: syntax error, unexpected label, expecting '='
+app/views/layouts/_header.html.erb:9: dynamic constant assignment
+app/views/layouts/_header.html.erb:9: syntax error, unexpected label, expecting '='
+app/views/layouts/application.html.erb:67
+Started GET "/reports" for ::1 at 2023-01-22 21:23:11 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3480)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 1257)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 6149)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms | Allocations: 6922)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <%= link_to root_path do %>
+          <%= image_tag("logo.svg", width: '60px') %>
+        <% end %>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><%= Reports, reports_path %></li>
+
+        </ul>
+
+        <%#- if user_signed_in? %>
+<!--          <div class="dropdown text-end">-->
+<!--            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
+<!--            </a>-->
+
+<!--            <ul class="dropdown-menu text-small">-->
+<!--              <li><%#= link_to t("article.new"), new_article_path, class: "dropdown-item" %></li>-->
+<!--              <li><%#= link_to t("dropdown.profile"), edit_user_registration_path, class: "dropdown-item" %></li>-->
+<!--              <li><hr class="dropdown-divider"></li>-->
+<!--              <li>-->
+                <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </div>-->
+
+        <%#- else %>
+          <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
+          <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+        <%# end %>
+      </div>
+    </div>
+      
+
+  </header>
+
+):
+1:    <header class="p-3 mb-3 border-bottom">
+2:        <div class="container">
+3:          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+4:            <%= link_to root_path do %>
+5:              <%= image_tag("logo.svg", width: '60px') %>
+6:            <% end %>
+7:    
+8:            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+9:              <li><%= Reports, reports_path %></li>
+10:    
+11:            </ul>
+12:    
+13:            <%#- if user_signed_in? %>
+14:    <!--          <div class="dropdown text-end">-->
+15:    <!--            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">-->
+16:    <!--              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
+17:    <!--            </a>-->
+18:    
+19:    <!--            <ul class="dropdown-menu text-small">-->
+20:    <!--              <li><%#= link_to t("article.new"), new_article_path, class: "dropdown-item" %></li>-->
+21:    <!--              <li><%#= link_to t("dropdown.profile"), edit_user_registration_path, class: "dropdown-item" %></li>-->
+22:    <!--              <li><hr class="dropdown-divider"></li>-->
+23:    <!--              <li>-->
+24:                    <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+25:    <!--              </li>-->
+26:    <!--            </ul>-->
+27:    <!--          </div>-->
+28:    
+29:            <%#- else %>
+30:              <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
+31:              <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+32:            <%# end %>
+33:          </div>
+34:        </div>
+35:          
+36:    
+37:      </header>
+  
+app/views/layouts/_header.html.erb:9: dynamic constant assignment
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ')', expecting '='
+app/views/layouts/_header.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_header.html.erb:9: dynamic constant assignment
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ')', expecting '='
+app/views/layouts/_header.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_header.html.erb:9: dynamic constant assignment
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ')', expecting '='
+app/views/layouts/_header.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_header.html.erb:9: dynamic constant assignment
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ')', expecting '='
+app/views/layouts/_header.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_header.html.erb:9: dynamic constant assignment
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ')', expecting '='
+app/views/layouts/_header.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_header.html.erb:9: dynamic constant assignment
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ')', expecting '='
+app/views/layouts/_header.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:67
+Started GET "/" for ::1 at 2023-01-22 21:23:15 +0200
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 105)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 1315)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 2566)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 3330)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <%= link_to root_path do %>
+          <%= image_tag("logo.svg", width: '60px') %>
+        <% end %>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><%= Reports, reports_path %></li>
+
+        </ul>
+
+        <%#- if user_signed_in? %>
+<!--          <div class="dropdown text-end">-->
+<!--            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
+<!--            </a>-->
+
+<!--            <ul class="dropdown-menu text-small">-->
+<!--              <li><%#= link_to t("article.new"), new_article_path, class: "dropdown-item" %></li>-->
+<!--              <li><%#= link_to t("dropdown.profile"), edit_user_registration_path, class: "dropdown-item" %></li>-->
+<!--              <li><hr class="dropdown-divider"></li>-->
+<!--              <li>-->
+                <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </div>-->
+
+        <%#- else %>
+          <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
+          <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+        <%# end %>
+      </div>
+    </div>
+      
+
+  </header>
+
+):
+1:    <header class="p-3 mb-3 border-bottom">
+2:        <div class="container">
+3:          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+4:            <%= link_to root_path do %>
+5:              <%= image_tag("logo.svg", width: '60px') %>
+6:            <% end %>
+7:    
+8:            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+9:              <li><%= Reports, reports_path %></li>
+10:    
+11:            </ul>
+12:    
+13:            <%#- if user_signed_in? %>
+14:    <!--          <div class="dropdown text-end">-->
+15:    <!--            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">-->
+16:    <!--              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
+17:    <!--            </a>-->
+18:    
+19:    <!--            <ul class="dropdown-menu text-small">-->
+20:    <!--              <li><%#= link_to t("article.new"), new_article_path, class: "dropdown-item" %></li>-->
+21:    <!--              <li><%#= link_to t("dropdown.profile"), edit_user_registration_path, class: "dropdown-item" %></li>-->
+22:    <!--              <li><hr class="dropdown-divider"></li>-->
+23:    <!--              <li>-->
+24:                    <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+25:    <!--              </li>-->
+26:    <!--            </ul>-->
+27:    <!--          </div>-->
+28:    
+29:            <%#- else %>
+30:              <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
+31:              <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+32:            <%# end %>
+33:          </div>
+34:        </div>
+35:          
+36:    
+37:      </header>
+  
+app/views/layouts/_header.html.erb:9: dynamic constant assignment
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ')', expecting '='
+app/views/layouts/_header.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_header.html.erb:9: dynamic constant assignment
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ')', expecting '='
+app/views/layouts/_header.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_header.html.erb:9: dynamic constant assignment
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ')', expecting '='
+app/views/layouts/_header.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_header.html.erb:9: dynamic constant assignment
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ')', expecting '='
+app/views/layouts/_header.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_header.html.erb:9: dynamic constant assignment
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ')', expecting '='
+app/views/layouts/_header.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_header.html.erb:9: dynamic constant assignment
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ')', expecting '='
+app/views/layouts/_header.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:67
+Started GET "/" for ::1 at 2023-01-22 21:23:34 +0200
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 105)
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 1376)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2926)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 3715)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <%= link_to root_path do %>
+          <%= image_tag("logo.svg", width: '60px') %>
+        <% end %>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><%= "Reports" reports_path %></li>
+        </ul>
+
+        <%#- if user_signed_in? %>
+<!--          <div class="dropdown text-end">-->
+<!--            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
+<!--            </a>-->
+
+<!--            <ul class="dropdown-menu text-small">-->
+<!--              <li><%#= link_to t("article.new"), new_article_path, class: "dropdown-item" %></li>-->
+<!--              <li><%#= link_to t("dropdown.profile"), edit_user_registration_path, class: "dropdown-item" %></li>-->
+<!--              <li><hr class="dropdown-divider"></li>-->
+<!--              <li>-->
+                <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </div>-->
+
+        <%#- else %>
+          <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
+          <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+        <%# end %>
+      </div>
+    </div>
+      
+
+  </header>
+
+):
+1:    <header class="p-3 mb-3 border-bottom">
+2:        <div class="container">
+3:          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+4:            <%= link_to root_path do %>
+5:              <%= image_tag("logo.svg", width: '60px') %>
+6:            <% end %>
+7:    
+8:            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+9:              <li><%= "Reports" reports_path %></li>
+10:            </ul>
+11:    
+12:            <%#- if user_signed_in? %>
+13:    <!--          <div class="dropdown text-end">-->
+14:    <!--            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">-->
+15:    <!--              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
+16:    <!--            </a>-->
+17:    
+18:    <!--            <ul class="dropdown-menu text-small">-->
+19:    <!--              <li><%#= link_to t("article.new"), new_article_path, class: "dropdown-item" %></li>-->
+20:    <!--              <li><%#= link_to t("dropdown.profile"), edit_user_registration_path, class: "dropdown-item" %></li>-->
+21:    <!--              <li><hr class="dropdown-divider"></li>-->
+22:    <!--              <li>-->
+23:                    <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+24:    <!--              </li>-->
+25:    <!--            </ul>-->
+26:    <!--          </div>-->
+27:    
+28:            <%#- else %>
+29:              <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
+30:              <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+31:            <%# end %>
+32:          </div>
+33:        </div>
+34:          
+35:    
+36:      </header>
+  
+app/views/layouts/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:67
+Started GET "/reports" for ::1 at 2023-01-22 21:23:40 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 3479)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 1249)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 5831)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 6411)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <%= link_to root_path do %>
+          <%= image_tag("logo.svg", width: '60px') %>
+        <% end %>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><%= "Reports" reports_path %></li>
+        </ul>
+
+        <%#- if user_signed_in? %>
+<!--          <div class="dropdown text-end">-->
+<!--            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
+<!--            </a>-->
+
+<!--            <ul class="dropdown-menu text-small">-->
+<!--              <li><%#= link_to t("article.new"), new_article_path, class: "dropdown-item" %></li>-->
+<!--              <li><%#= link_to t("dropdown.profile"), edit_user_registration_path, class: "dropdown-item" %></li>-->
+<!--              <li><hr class="dropdown-divider"></li>-->
+<!--              <li>-->
+                <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </div>-->
+
+        <%#- else %>
+          <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
+          <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+        <%# end %>
+      </div>
+    </div>
+      
+
+  </header>
+
+):
+1:    <header class="p-3 mb-3 border-bottom">
+2:        <div class="container">
+3:          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+4:            <%= link_to root_path do %>
+5:              <%= image_tag("logo.svg", width: '60px') %>
+6:            <% end %>
+7:    
+8:            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+9:              <li><%= "Reports" reports_path %></li>
+10:            </ul>
+11:    
+12:            <%#- if user_signed_in? %>
+13:    <!--          <div class="dropdown text-end">-->
+14:    <!--            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">-->
+15:    <!--              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
+16:    <!--            </a>-->
+17:    
+18:    <!--            <ul class="dropdown-menu text-small">-->
+19:    <!--              <li><%#= link_to t("article.new"), new_article_path, class: "dropdown-item" %></li>-->
+20:    <!--              <li><%#= link_to t("dropdown.profile"), edit_user_registration_path, class: "dropdown-item" %></li>-->
+21:    <!--              <li><hr class="dropdown-divider"></li>-->
+22:    <!--              <li>-->
+23:                    <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+24:    <!--              </li>-->
+25:    <!--            </ul>-->
+26:    <!--          </div>-->
+27:    
+28:            <%#- else %>
+29:              <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
+30:              <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+31:            <%# end %>
+32:          </div>
+33:        </div>
+34:          
+35:    
+36:      </header>
+  
+app/views/layouts/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:67
+Started GET "/reports" for ::1 at 2023-01-22 21:23:59 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 3495)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 1258)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 6166)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms | Allocations: 6947)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <%= link_to root_path do %>
+          <%= image_tag("logo.svg", width: '60px') %>
+        <% end %>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><%= "Reports", reports_path %></li>
+        </ul>
+
+        <%#- if user_signed_in? %>
+<!--          <div class="dropdown text-end">-->
+<!--            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
+<!--            </a>-->
+
+<!--            <ul class="dropdown-menu text-small">-->
+<!--              <li><%#= link_to t("article.new"), new_article_path, class: "dropdown-item" %></li>-->
+<!--              <li><%#= link_to t("dropdown.profile"), edit_user_registration_path, class: "dropdown-item" %></li>-->
+<!--              <li><hr class="dropdown-divider"></li>-->
+<!--              <li>-->
+                <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </div>-->
+
+        <%#- else %>
+          <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
+          <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+        <%# end %>
+      </div>
+    </div>
+      
+
+  </header>
+
+):
+1:    <header class="p-3 mb-3 border-bottom">
+2:        <div class="container">
+3:          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+4:            <%= link_to root_path do %>
+5:              <%= image_tag("logo.svg", width: '60px') %>
+6:            <% end %>
+7:    
+8:            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+9:              <li><%= "Reports", reports_path %></li>
+10:            </ul>
+11:    
+12:            <%#- if user_signed_in? %>
+13:    <!--          <div class="dropdown text-end">-->
+14:    <!--            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">-->
+15:    <!--              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
+16:    <!--            </a>-->
+17:    
+18:    <!--            <ul class="dropdown-menu text-small">-->
+19:    <!--              <li><%#= link_to t("article.new"), new_article_path, class: "dropdown-item" %></li>-->
+20:    <!--              <li><%#= link_to t("dropdown.profile"), edit_user_registration_path, class: "dropdown-item" %></li>-->
+21:    <!--              <li><hr class="dropdown-divider"></li>-->
+22:    <!--              <li>-->
+23:                    <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+24:    <!--              </li>-->
+25:    <!--            </ul>-->
+26:    <!--          </div>-->
+27:    
+28:            <%#- else %>
+29:              <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
+30:              <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+31:            <%# end %>
+32:          </div>
+33:        </div>
+34:          
+35:    
+36:      </header>
+  
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/layouts/application.html.erb:67
+Started GET "/reports" for ::1 at 2023-01-22 21:24:13 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 3494)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 1258)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 6164)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms | Allocations: 6937)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <%= link_to root_path do %>
+          <%= image_tag("logo.svg", width: '60px') %>
+        <% end %>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><%= "Reports", reports_index %></li>
+        </ul>
+
+        <%#- if user_signed_in? %>
+<!--          <div class="dropdown text-end">-->
+<!--            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
+<!--            </a>-->
+
+<!--            <ul class="dropdown-menu text-small">-->
+<!--              <li><%#= link_to t("article.new"), new_article_path, class: "dropdown-item" %></li>-->
+<!--              <li><%#= link_to t("dropdown.profile"), edit_user_registration_path, class: "dropdown-item" %></li>-->
+<!--              <li><hr class="dropdown-divider"></li>-->
+<!--              <li>-->
+                <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </div>-->
+
+        <%#- else %>
+          <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
+          <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+        <%# end %>
+      </div>
+    </div>
+      
+
+  </header>
+
+):
+1:    <header class="p-3 mb-3 border-bottom">
+2:        <div class="container">
+3:          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+4:            <%= link_to root_path do %>
+5:              <%= image_tag("logo.svg", width: '60px') %>
+6:            <% end %>
+7:    
+8:            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+9:              <li><%= "Reports", reports_index %></li>
+10:            </ul>
+11:    
+12:            <%#- if user_signed_in? %>
+13:    <!--          <div class="dropdown text-end">-->
+14:    <!--            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">-->
+15:    <!--              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
+16:    <!--            </a>-->
+17:    
+18:    <!--            <ul class="dropdown-menu text-small">-->
+19:    <!--              <li><%#= link_to t("article.new"), new_article_path, class: "dropdown-item" %></li>-->
+20:    <!--              <li><%#= link_to t("dropdown.profile"), edit_user_registration_path, class: "dropdown-item" %></li>-->
+21:    <!--              <li><hr class="dropdown-divider"></li>-->
+22:    <!--              <li>-->
+23:                    <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+24:    <!--              </li>-->
+25:    <!--            </ul>-->
+26:    <!--          </div>-->
+27:    
+28:            <%#- else %>
+29:              <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
+30:              <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+31:            <%# end %>
+32:          </div>
+33:        </div>
+34:          
+35:    
+36:      </header>
+  
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/layouts/application.html.erb:67
+Started GET "/reports" for ::1 at 2023-01-22 21:24:24 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 3494)
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 993)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 6133)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.1ms | Allocations: 6973)
+
+
+Started GET "/reports" for ::1 at 2023-01-22 21:24:41 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 3479)
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 1258)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 6137)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.3ms | Allocations: 6916)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <%= link_to root_path do %>
+          <%= image_tag("logo.svg", width: '60px') %>
+        <% end %>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><%= "Reports", reports_index_path %></li>
+        </ul>
+
+        <%#- if user_signed_in? %>
+<!--          <div class="dropdown text-end">-->
+<!--            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
+<!--            </a>-->
+
+<!--            <ul class="dropdown-menu text-small">-->
+<!--              <li><%#= link_to t("article.new"), new_article_path, class: "dropdown-item" %></li>-->
+<!--              <li><%#= link_to t("dropdown.profile"), edit_user_registration_path, class: "dropdown-item" %></li>-->
+<!--              <li><hr class="dropdown-divider"></li>-->
+<!--              <li>-->
+                <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </div>-->
+
+        <%#- else %>
+          <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
+          <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+        <%# end %>
+      </div>
+    </div>
+      
+
+  </header>
+
+):
+1:    <header class="p-3 mb-3 border-bottom">
+2:        <div class="container">
+3:          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+4:            <%= link_to root_path do %>
+5:              <%= image_tag("logo.svg", width: '60px') %>
+6:            <% end %>
+7:    
+8:            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+9:              <li><%= "Reports", reports_index_path %></li>
+10:            </ul>
+11:    
+12:            <%#- if user_signed_in? %>
+13:    <!--          <div class="dropdown text-end">-->
+14:    <!--            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">-->
+15:    <!--              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
+16:    <!--            </a>-->
+17:    
+18:    <!--            <ul class="dropdown-menu text-small">-->
+19:    <!--              <li><%#= link_to t("article.new"), new_article_path, class: "dropdown-item" %></li>-->
+20:    <!--              <li><%#= link_to t("dropdown.profile"), edit_user_registration_path, class: "dropdown-item" %></li>-->
+21:    <!--              <li><hr class="dropdown-divider"></li>-->
+22:    <!--              <li>-->
+23:                    <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+24:    <!--              </li>-->
+25:    <!--            </ul>-->
+26:    <!--          </div>-->
+27:    
+28:            <%#- else %>
+29:              <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
+30:              <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+31:            <%# end %>
+32:          </div>
+33:        </div>
+34:          
+35:    
+36:      </header>
+  
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/layouts/application.html.erb:67
+Started GET "/reports" for ::1 at 2023-01-22 21:25:51 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 3480)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 1260)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 6140)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms | Allocations: 6913)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <%= link_to root_path do %>
+          <%= image_tag("logo.svg", width: '60px') %>
+        <% end %>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><%= link_to "Reports", reports_index_path, class="nav-link px-2 link-dark" %></li>
+        </ul>
+
+        <%#- if user_signed_in? %>
+<!--          <div class="dropdown text-end">-->
+<!--            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
+<!--            </a>-->
+
+<!--            <ul class="dropdown-menu text-small">-->
+<!--              <li><%#= link_to t("article.new"), new_article_path, class: "dropdown-item" %></li>-->
+<!--              <li><%#= link_to t("dropdown.profile"), edit_user_registration_path, class: "dropdown-item" %></li>-->
+<!--              <li><hr class="dropdown-divider"></li>-->
+<!--              <li>-->
+                <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </div>-->
+
+        <%#- else %>
+          <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
+          <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+        <%# end %>
+      </div>
+    </div>
+      
+
+  </header>
+
+):
+1:    <header class="p-3 mb-3 border-bottom">
+2:        <div class="container">
+3:          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+4:            <%= link_to root_path do %>
+5:              <%= image_tag("logo.svg", width: '60px') %>
+6:            <% end %>
+7:    
+8:            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+9:              <li><%= link_to "Reports", reports_index_path, class="nav-link px-2 link-dark" %></li>
+10:            </ul>
+11:    
+12:            <%#- if user_signed_in? %>
+13:    <!--          <div class="dropdown text-end">-->
+14:    <!--            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">-->
+15:    <!--              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
+16:    <!--            </a>-->
+17:    
+18:    <!--            <ul class="dropdown-menu text-small">-->
+19:    <!--              <li><%#= link_to t("article.new"), new_article_path, class: "dropdown-item" %></li>-->
+20:    <!--              <li><%#= link_to t("dropdown.profile"), edit_user_registration_path, class: "dropdown-item" %></li>-->
+21:    <!--              <li><hr class="dropdown-divider"></li>-->
+22:    <!--              <li>-->
+23:                    <%#= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+24:    <!--              </li>-->
+25:    <!--            </ul>-->
+26:    <!--          </div>-->
+27:    
+28:            <%#- else %>
+29:              <%#= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
+30:              <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+31:            <%# end %>
+32:          </div>
+33:        </div>
+34:          
+35:    
+36:      </header>
+  
+app/views/layouts/_header.html.erb:9: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:9: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:9: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:9: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:9: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:9: syntax error, unexpected '='
+app/views/layouts/application.html.erb:67
+Started GET "/reports" for ::1 at 2023-01-22 21:26:12 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3480)
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 1051)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 6158)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.1ms | Allocations: 6959)
+
+
+Started GET "/" for ::1 at 2023-01-22 21:26:28 +0200
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 785)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2094)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 2721)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-22 21:26:31 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 3082)
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 638)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 4702)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 4978)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-22 21:27:11 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 143.9ms | Allocations: 286465)
+  Rendered layouts/_header.html.erb (Duration: 22.1ms | Allocations: 22449)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 170.3ms | Allocations: 312469)
+Completed 200 OK in 174ms (Views: 171.1ms | ActiveRecord: 0.4ms | Allocations: 315525)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-22 21:27:13 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 3132)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 723)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 4944)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms | Allocations: 5266)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-22 21:27:14 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2975)
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 638)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 4620)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 4880)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-22 21:27:54 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3479)
+  Rendered layouts/_header.html.erb (Duration: 3.0ms | Allocations: 1165)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 6281)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.2ms | Allocations: 7089)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-22 22:01:48 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3162)
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 714)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 4874)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 1.1ms | Allocations: 5152)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-22 22:02:54 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 147.8ms | Allocations: 286465)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 152.6ms | Allocations: 290623)
+Completed 200 OK in 156ms (Views: 153.5ms | ActiveRecord: 0.4ms | Allocations: 293679)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-22 22:02:55 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 3131)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 206)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 4420)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 4741)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-22 22:12:54 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 152.2ms | Allocations: 286466)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 157.5ms | Allocations: 290913)
+Completed 200 OK in 161ms (Views: 158.3ms | ActiveRecord: 0.4ms | Allocations: 293969)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-22 22:15:13 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 143.7ms | Allocations: 286466)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 149.1ms | Allocations: 290904)
+Completed 200 OK in 153ms (Views: 149.9ms | ActiveRecord: 0.4ms | Allocations: 293960)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-22 22:15:16 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 3132)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 206)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 4603)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 4925)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-22 22:17:22 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 144.4ms | Allocations: 286476)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 149.2ms | Allocations: 290738)
+Completed 200 OK in 153ms (Views: 150.1ms | ActiveRecord: 0.4ms | Allocations: 293794)
+
+
+Started GET "/" for ::1 at 2023-01-22 22:17:47 +0200
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 108)
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 612)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2479)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 3474)
+
+
+Started GET "/" for ::1 at 2023-01-22 22:18:31 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 283)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 707)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4688)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 7723)
+
+
+Started GET "/" for ::1 at 2023-01-22 22:19:13 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 283)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 707)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 4694)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 7729)
+
+
+Started GET "/" for ::1 at 2023-01-22 22:21:28 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 283)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 707)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 4681)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 7716)
+
+
+Started GET "/" for ::1 at 2023-01-22 22:24:57 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 283)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 707)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 4711)
+Completed 200 OK in 40ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 7747)
+
+
+Started GET "/" for ::1 at 2023-01-22 22:24:58 +0200
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 228)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 1421)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 1743)
+
+
+Started GET "/" for ::1 at 2023-01-22 22:26:29 +0200
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 210)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 1276)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 1536)
+
+
+Started GET "/" for ::1 at 2023-01-22 22:26:34 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 283)
+  Rendered layouts/_header.html.erb (Duration: 7.2ms | Allocations: 707)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 4700)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.0ms | Allocations: 7736)
+
+
+Started GET "/" for ::1 at 2023-01-22 22:26:35 +0200
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 228)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1442)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 1764)
+
+
+Started GET "/" for ::1 at 2023-01-22 22:26:49 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 283)
+  Rendered layouts/_header.html.erb (Duration: 7.8ms | Allocations: 707)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 4700)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.0ms | Allocations: 7736)
+
+
+Started GET "/operations" for ::1 at 2023-01-22 22:26:54 +0200
+Processing by OperationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering operations/index.html.erb within layouts/application
+  [1m[36mOperation Load (0.2ms)[0m  [1m[34mSELECT "operations".* FROM "operations"[0m
+  ↳ app/views/operations/index.html.erb:6
+  Rendered operations/_operation.html.erb (Duration: 0.8ms | Allocations: 407)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 45)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered operations/_operation.html.erb (Duration: 0.1ms | Allocations: 45)
+  Rendered operations/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 7482)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 229)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 8668)
+Completed 200 OK in 24ms (Views: 15.3ms | ActiveRecord: 0.8ms | Allocations: 11435)
+
+
