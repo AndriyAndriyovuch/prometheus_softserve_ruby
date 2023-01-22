@@ -1,6 +1,7 @@
 <h1>Operations</h1>
 
 <div id="operations">
+  <h1> Report from <%= params[:start_date] %> to <%= params[:final_date] %></h1><br>
   <% @categories.each do |category| %>
     <%= category[0] %>
     <%= category[1] %><br>
