@@ -1,10 +1,14 @@
-<!--<form action="report_by_category" method="GET">-->
-<!--  created_at: <input name="start_date" type="date" required><br>-->
-<!--  category: <input name="final_date" type="date" required><br>-->
-<!--  category: <input name="category_id" type="text">-->
-<!--  <input type="submit" value="report by category">-->
-<!--</form>-->
+<%= form_with method: :get do |form| %>
+  <%= form.date_field :start_date, value: '1970-01-01' %>
+  <%= form.date_field :final_date, value: '2030-12-12' %>
 
-<%= form_with do |form| %>
-  <% %>form.date_field :start_date
+  <%= form.label :category_id, style: "display: block" %>
+  <% categories_array = Category.all.map { |cat| [cat.name, cat.id] } %>
+  <%= form.select :category_id, categories_array, :prompt => 'Choose category' %>
+
+  <%= form.submit 'Report by category', formaction: reports_report_by_category_path %>
+  <%= form.submit 'Report by dates', formaction: reports_report_by_dates_path %>
 <% end %>
+
+
+

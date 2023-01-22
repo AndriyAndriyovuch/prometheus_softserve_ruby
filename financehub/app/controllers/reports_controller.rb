@@ -14,16 +14,15 @@ class ReportsController < ApplicationController
   end
 
   private
+
   def check_category_id_exists
-    puts params
-    if params[:category_id] == ''
+    if params[:category_id] == ""
       @operations = Operation.filter_by_start_date(params[:start_date])
                              .filter_by_final_date(params[:final_date])
     else
-      @operations = Operation.filter_by_category_id(params[:category_id])
-                             .filter_by_start_date(params[:start_date])
+      @operations = Operation.filter_by_start_date(params[:start_date])
                              .filter_by_final_date(params[:final_date])
+                             .filter_by_category_id(params[:category_id])
     end
   end
-
 end
