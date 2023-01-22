@@ -13710,3 +13710,90 @@ Processing by OperationsController#index as HTML
 Completed 200 OK in 24ms (Views: 15.3ms | ActiveRecord: 0.8ms | Allocations: 11435)
 
 
+Started GET "/" for ::1 at 2023-01-22 22:40:24 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 283)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 707)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 4691)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 7727)
+
+
+Started GET "/" for ::1 at 2023-01-22 22:41:31 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 392)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 707)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 8309)
+Completed 200 OK in 93ms (Views: 35.5ms | ActiveRecord: 0.0ms | Allocations: 12577)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-22 22:41:32 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 2025.3ms | Allocations: 963238)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 234)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 2030.2ms | Allocations: 964761)
+Completed 200 OK in 2033ms (Views: 2030.4ms | ActiveRecord: 1.2ms | Allocations: 965580)
+
+
+Started GET "/reports/index" for ::1 at 2023-01-22 22:43:32 +0200
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/reports/index.html.erb:6:in `map'
+  Rendered reports/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 3064)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 201)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 4332)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.1ms | Allocations: 4627)
+
+
+Started GET "/reports/report_by_category?start_date=1970-01-01&final_date=2030-12-12&category_id=&commit=Report+by+category" for ::1 at 2023-01-22 22:43:33 +0200
+Processing by ReportsController#report_by_category as HTML
+  Parameters: {"start_date"=>"1970-01-01", "final_date"=>"2030-12-12", "category_id"=>"", "commit"=>"Report by category"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/reports_controller.rb:18:in `map'
+  [1m[36mOperation Load (0.4ms)[0m  [1m[34mSELECT "operations".* FROM "operations" WHERE (odate > '1970-01-01') AND (odate < '2030-12-12') ORDER BY "operations"."odate" ASC[0m
+  ↳ app/controllers/reports_controller.rb:21:in `report_by_category'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:22:in `block in report_by_category'
+  Rendering layout layouts/application.html.erb
+  Rendering reports/report_by_category.html.erb within layouts/application
+  Rendered reports/report_by_category.html.erb within layouts/application (Duration: 1.1ms | Allocations: 211)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 230)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1613)
+Completed 200 OK in 203ms (Views: 6.3ms | ActiveRecord: 2.6ms | Allocations: 14928)
+
+
+Started GET "/" for ::1 at 2023-01-22 22:43:35 +0200
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 210)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1273)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 1534)
+
+
