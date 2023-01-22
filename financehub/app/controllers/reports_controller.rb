@@ -1,15 +1,25 @@
 class ReportsController < ApplicationController
+  before_action :check_category_id_exists, only: %i[report_by_category report_by_dates]
 
   def index
   end
 
   def report_by_category
-    check_category_id_exists
     render "report_by_category"
   end
 
   def report_by_dates
-    check_category_id_exists
+    #add hash for representable it in html
+    @categories = {}
+    Category.all.map { |cat| @categories[cat.name] = 0 }
+
+    #add amount to each category
+    @operations.each do | operation |
+      current_category = Category.find(operation.category_id).name
+      @categories[current_category] += operation.amount.to_i
+    end
+
+    puts @categories
     render "report_by_dates"
   end
 
