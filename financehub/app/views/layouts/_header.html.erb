@@ -1,14 +1,13 @@
-<header class="p-3 mb-3 border-bottom">
-  <div class="container">
+<header class="px-3 py-2 text-bg-dark">
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
       <%= link_to root_path do %>
         <%= image_tag("logo.svg", width: '60px') %>
       <% end %>
 
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><%= link_to "Reports", reports_index_path, class: "nav-link px-2 link-dark" %></li>
-        <li><%= link_to "Operations", operations_path, class: "nav-link px-2 link-dark" %></li>
-        <li><%= link_to "Categories", categories_path, class: "nav-link px-2 link-dark" %></li>
+        <li><%= link_to "Reports", reports_index_path, class: "nav-link text-white" %></li>
+        <li><%= link_to "Operations", operations_path, class: "nav-link text-white" %></li>
+        <li><%= link_to "Categories", categories_path, class: "nav-link text-white" %></li>
       </ul>
 
       <%#- if user_signed_in? %>
@@ -32,6 +31,6 @@
         <%#= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
       <%# end %>
     </div>
-  </div>
+
 </header>
 
