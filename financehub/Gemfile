@@ -45,6 +45,9 @@ gem "bootsnap", require: false
 # Generating SQL data
 gem "faker"
 
+# Kaminari (pagination)
+gem 'kaminari'
+
 # Bootstrap
 # gem 'bootstrap-sass'
 # gem 'bootstrap', '~> 5.2.3'
