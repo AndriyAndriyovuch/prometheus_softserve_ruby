@@ -5,10 +5,11 @@ class ReportsController < ApplicationController
   end
 
   def report_by_dates
-    puts('=' * 50)
-    puts @operations
-    puts('=' * 50)
-    @operations.each { |operation| p operation}
+    @operations_data = @operations.all.map { |operation| [operation.odate.strftime("%F"), operation.amount.to_f] }
+
+    @operations_date = @operations_data.map { | operation | operation[0] }
+    @operations_amount = @operations_data.map { | operation| operation[1] }
+
     render "report_by_dates"
   end
 
