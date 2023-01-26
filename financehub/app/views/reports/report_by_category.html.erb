@@ -5,7 +5,7 @@
 
 <div class="d-flex justify-content-center">
 
-  <div  class="align-self-center" id="operations">
+  <div class="align-self-center" id="operations">
     <table class="table">
       <thead>
       <tr>
@@ -20,32 +20,26 @@
           <td><%= category[1].round(2) %></td>
         </tr>
       <% end %>
-    </table>
+      </table>
   </div>
 
   <div>
     <canvas id="myChart" width="500"></canvas>
     <script>
-        const ctx = document.getElementById('myChart');
-
-        const my_data = {
-            labels: <%= raw @categories_title  %>,
-            datasets: [{
-                label: 'Report by categories',
-                data: <%= @categories_sum  %>,
-                backgroundColor: <%= raw @background_colors %>
-            }]
-        };
-
-        const config = {
+        new Chart(document.getElementById('myChart'), {
             type: 'polarArea',
-            data: my_data,
+            data: {
+                labels: <%= raw @categories_title  %>,
+                datasets: [{
+                    label: 'Report by categories',
+                    data: <%= @categories_sum  %>,
+                    backgroundColor: <%= raw @background_colors %>
+                }]
+            },
             options: {
                 responsive: false
             }
-        };
-
-        const myChart = new Chart(ctx, config);
+        });
     </script>
   </div>
 
