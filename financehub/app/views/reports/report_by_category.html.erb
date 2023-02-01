@@ -1,12 +1,46 @@
-<h1>Report by categories</h1>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<div class="d-flex justify-content-center">
+  <h1>Report by categories</h1>
+</div>
 
-<div id="operations">
-  <table>
-    <% @categories.each do |category| %>
+<div class="d-flex justify-content-center">
+
+  <div class="align-self-center" id="operations">
+    <table class="table">
+      <thead>
       <tr>
-        <th><%= category[0] %></th>
-        <th><%= category[1] %></th>
+        <th scope="col">Category</th>
+        <th scope="col">Total Sum</th>
       </tr>
-    <% end %>
-  </table>
+      </thead>
+      <tbody class="table-group-divider">
+      <% @categories.each do |category| %>
+        <tr>
+          <td><%= category[0] %></td>
+          <td><%= category[1].round(2) %></td>
+        </tr>
+      <% end %>
+      </table>
+  </div>
+
+  <div>
+    <canvas id="myChart" width="500"></canvas>
+    <script>
+        new Chart(document.getElementById('myChart'), {
+            type: 'polarArea',
+            data: {
+                labels: <%= raw @categories_title  %>,
+                datasets: [{
+                    label: 'Report by categories',
+                    data: <%= @categories_sum  %>,
+                    backgroundColor: <%= raw @background_colors %>
+                }]
+            },
+            options: {
+                responsive: false
+            }
+        });
+    </script>
+  </div>
+
 </div>

@@ -5,25 +5,33 @@ class ReportsController < ApplicationController
   end
 
   def report_by_dates
-    puts('=' * 50)
-    puts @operations
-    puts('=' * 50)
-    @operations.each { |operation| p operation}
+    @operations_data = @operations.all.map { |operation| [operation.odate.strftime("%F"), operation.amount] }
+
+    @operations_date = @operations_data.map { | operation | operation[0] }
+    @operations_amount = @operations_data.map { | operation| operation[1] }
+
     render "report_by_dates"
   end
 
   def report_by_category
     #add hash for representable it in html
     @categories = {}
-    Category.all.map { |cat| @categories[cat.name] = 0 }
+    Category.all.map { |cat| @categories[cat.name] = 0.0 }
 
     #add amount to each category
     @operations.each do | operation |
       current_category = Category.find(operation.category_id).name
-      @categories[current_category] += operation.amount.to_i
+      @categories[current_category] += operation.amount.to_f
     end
 
-    puts @categories
+    @categories_title = @categories.map { |cat | cat[0]}
+    @categories_sum = @categories.map { |cat | cat[1].round(2)}
+
+    @background_colors = []
+    @categories.length.times do
+      @background_colors.append("rgb(#{rand 255}, #{rand 255}, #{rand 255})")
+    end
+
     render "report_by_category"
   end
 
