@@ -6,8 +6,26 @@
 
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
         <li><%= link_to "Reports", reports_index_path, class: "nav-link text-white" %></li>
-        <li><%= link_to "Operations", operations_path, class: "nav-link text-white" %></li>
-        <li><%= link_to "Categories", categories_path, class: "nav-link text-white" %></li>
+
+        <div class="nav-item dropdown">
+          <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Opertaions
+          </button>
+          <ul class="dropdown-menu">
+            <li><%= link_to "New operation", new_operation_path, class:"dropdown-item" %></li>
+            <li><%= link_to "Show operations", operations_path, class:"dropdown-item" %></li>
+          </ul>
+        </div>
+
+        <div class="nav-item dropdown">
+          <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categories
+          </button>
+          <ul class="dropdown-menu">
+            <li><%= link_to "New category", new_category_path, class:"dropdown-item" %></li>
+            <li><%= link_to "Show categories", categories_path, class:"dropdown-item" %></li>
+          </ul>
+        </div>
       </ul>
 
       <%- if user_signed_in? %>
