@@ -1,35 +1,33 @@
 <div class="container px-4 py-5">
-  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
 
-      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" >
-        <div class="d flex-column h-100 p-5 pb-3 text-shadow-1">
+  <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" >
+    <div class="d flex-column h-100 p-5 pb-3 text-shadow-1">
 
-          <h2 class="display-6 lh-1 fw-bold"><%= operation.amount %></h2>
-          <h3 class="display-6 lh-1 fw-bold"><%= operation.description %></h3>
+      <h2 class="display-6 lh-1 fw-bold"><%= operation.amount %></h2>
+      <h3 class="display-6 lh-1 fw-bold"><%= operation.description %></h3>
 
-          <ul class="d-flex list-unstyled mt-auto">
-            <li class="d-flex align-items-center me-3">
-              <small><%= operation.odate.strftime("%Y-%m-%d") %></small>
-            </li>
-            <li class="d-flex align-items-center">
-              <small><%= distance_of_time_in_words((Time.now - operation.odate).to_i) %> ago</small>
-            </li>
-          </ul>
+      <ul class="d-flex list-unstyled mt-auto">
+        <li class="d-flex align-items-center me-3">
+          <small><%= operation.odate.strftime("%Y-%m-%d") %></small>
+        </li>
+        <li class="d-flex align-items-center">
+          <small><%= distance_of_time_in_words((Time.now - operation.odate).to_i) %> ago</small>
+        </li>
+      </ul>
 
-          <small><%= Category.find(operation.category_id).name %></small>
-        
-          <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-            <div class="btn-group me-2" role="group" aria-label="First group">         
-              <%= link_to "Show", operation, class:"btn btn-primary"%>
-              <%= link_to "Edit", edit_operation_path(operation), class:"btn btn-primary"%>
-            </div>
+      <small><%= Category.find(operation.category_id).name %></small>
+    
+      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group me-2" role="group" aria-label="First group">         
+          <%= link_to "Show", operation, class:"btn btn-primary"%>
+          <%= link_to "Edit", edit_operation_path(operation), class:"btn btn-primary"%>
+        </div>
 
-            <div class="btn-group me-2" role="group" aria-label="Second group">         
-              <%= button_to "Delete", operation, method: :delete, class:"btn btn-danger"%>
-            </div>
-          </div>
-
+        <div class="btn-group me-2" role="group" aria-label="Second group">         
+          <%= button_to "Delete", operation, method: :delete, class:"btn btn-danger"%>
+        </div>
       </div>
+
     </div>
-  </div>       
+  </div>      
 </div>
