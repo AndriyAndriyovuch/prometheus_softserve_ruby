@@ -1,4 +1,5 @@
 class ReportsController < ApplicationController
+  before_action :check_signed_in
   before_action :check_category_id_exists, only: %i[report_by_category report_by_dates]
 
   def index
@@ -46,5 +47,9 @@ class ReportsController < ApplicationController
                              .filter_by_final_date(params[:final_date])
                              .filter_by_category_id(params[:category_id])
     end
+  end
+
+  def check_signed_in
+    redirect_to new_user_session_path unless signed_in?
   end
 end

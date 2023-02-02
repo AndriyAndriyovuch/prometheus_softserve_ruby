@@ -1,4 +1,5 @@
 class OperationsController < ApplicationController
+  before_action :check_signed_in
   before_action :set_operation, only: %i[ show edit update destroy ]
 
   # GET /operations or /operations.json
@@ -66,5 +67,9 @@ class OperationsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def operation_params
       params.require(:operation).permit(:amount, :odate, :description, :category_id)
+    end
+
+    def check_signed_in
+      redirect_to new_user_session_path unless signed_in?
     end
 end
