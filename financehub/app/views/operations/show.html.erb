@@ -1,10 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
+<div class="d-grid gap-2 col-6 mx-auto">
+  <%= link_to "Back to operations", operations_path, class:"btn btn-outline-primary"%>
+</div>
+
+
 <%= render @operation %>
 
-<div>
-  <%= link_to "Edit this operation", edit_operation_path(@operation) %> |
-  <%= link_to "Back to operations", operations_path %>
-
-  <%= button_to "Destroy this operation", @operation, method: :delete %>
-</div>
