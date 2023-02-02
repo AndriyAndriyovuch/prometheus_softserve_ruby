@@ -3,12 +3,17 @@
 <h1>Categories</h1>
 
 <div id="categories">
-  <% @categories.each do |category| %>
-    <%= render category %>
-    <p>
-      <%= link_to "Show this category", category %>
-    </p>
-  <% end %>
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        <% @categories.each do |category| %>
+            <%= render category %>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
 </div>
 
 <%= link_to "New category", new_category_path %>
