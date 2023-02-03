@@ -315,3 +315,28 @@ F, [2023-02-03T17:02:14.006394 #6599] FATAL -- : [3d04f25e-e029-453e-a673-c2fabf
 [3d04f25e-e029-453e-a673-c2fabffdc4f9]   
 I, [2023-02-03T17:02:14.007717 #6599]  INFO -- : [3d04f25e-e029-453e-a673-c2fabffdc4f9] Processing by ErrorsController#not_found as CSS
 I, [2023-02-03T17:02:14.014001 #6599]  INFO -- : [3d04f25e-e029-453e-a673-c2fabffdc4f9] Completed 500 Internal Server Error in 6ms (Allocations: 1800)
+I, [2023-02-03T17:04:53.237229 #6599]  INFO -- : [1df9980c-0d23-4d82-8b0c-abb55b82cb0a] Started GET "/operations/new" for 127.0.0.1 at 2023-02-03 17:04:53 +0200
+I, [2023-02-03T17:04:53.238895 #6599]  INFO -- : [1df9980c-0d23-4d82-8b0c-abb55b82cb0a] Processing by OperationsController#new as HTML
+I, [2023-02-03T17:04:53.240116 #6599]  INFO -- : [1df9980c-0d23-4d82-8b0c-abb55b82cb0a] Redirected to http://0.0.0.0:3000/users/sign_in
+I, [2023-02-03T17:04:53.240277 #6599]  INFO -- : [1df9980c-0d23-4d82-8b0c-abb55b82cb0a] Filter chain halted as :check_signed_in rendered or redirected
+I, [2023-02-03T17:04:53.240458 #6599]  INFO -- : [1df9980c-0d23-4d82-8b0c-abb55b82cb0a] Completed 302 Found in 1ms (Allocations: 551)
+I, [2023-02-03T17:04:53.252876 #6599]  INFO -- : [1e03cfd5-5aad-4b6c-8f1b-89ec9c750087] Started GET "/users/sign_in" for 127.0.0.1 at 2023-02-03 17:04:53 +0200
+I, [2023-02-03T17:04:53.254774 #6599]  INFO -- : [1e03cfd5-5aad-4b6c-8f1b-89ec9c750087] Processing by Devise::SessionsController#new as HTML
+I, [2023-02-03T17:04:53.368241 #6599]  INFO -- : [1e03cfd5-5aad-4b6c-8f1b-89ec9c750087]   Rendered /home/user/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 30.2ms | Allocations: 3177)
+I, [2023-02-03T17:04:53.371705 #6599]  INFO -- : [1e03cfd5-5aad-4b6c-8f1b-89ec9c750087]   Rendered layout layouts/application.html.erb (Duration: 33.8ms | Allocations: 4526)
+I, [2023-02-03T17:04:53.372198 #6599]  INFO -- : [1e03cfd5-5aad-4b6c-8f1b-89ec9c750087] Completed 200 OK in 117ms (Views: 39.5ms | ActiveRecord: 8.1ms | Allocations: 12231)
+I, [2023-02-03T17:04:55.400314 #6599]  INFO -- : [7faa0278-add2-4abc-b303-2eb9480fa850] Started GET "/categories/new" for 127.0.0.1 at 2023-02-03 17:04:55 +0200
+I, [2023-02-03T17:04:55.401493 #6599]  INFO -- : [7faa0278-add2-4abc-b303-2eb9480fa850] Processing by CategoriesController#new as HTML
+I, [2023-02-03T17:04:55.402613 #6599]  INFO -- : [7faa0278-add2-4abc-b303-2eb9480fa850] Redirected to http://0.0.0.0:3000/users/sign_in
+I, [2023-02-03T17:04:55.402730 #6599]  INFO -- : [7faa0278-add2-4abc-b303-2eb9480fa850] Filter chain halted as :check_signed_in rendered or redirected
+I, [2023-02-03T17:04:55.402898 #6599]  INFO -- : [7faa0278-add2-4abc-b303-2eb9480fa850] Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 576)
+I, [2023-02-03T17:04:55.415507 #6599]  INFO -- : [5fbdb1c1-5bb1-4ece-a06e-4657c6b43ffb] Started GET "/users/sign_in" for 127.0.0.1 at 2023-02-03 17:04:55 +0200
+I, [2023-02-03T17:04:55.416839 #6599]  INFO -- : [5fbdb1c1-5bb1-4ece-a06e-4657c6b43ffb] Processing by Devise::SessionsController#new as HTML
+I, [2023-02-03T17:04:55.425170 #6599]  INFO -- : [5fbdb1c1-5bb1-4ece-a06e-4657c6b43ffb]   Rendered /home/user/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1279)
+I, [2023-02-03T17:04:55.429144 #6599]  INFO -- : [5fbdb1c1-5bb1-4ece-a06e-4657c6b43ffb]   Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 2433)
+I, [2023-02-03T17:04:55.429479 #6599]  INFO -- : [5fbdb1c1-5bb1-4ece-a06e-4657c6b43ffb] Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 3043)
+I, [2023-02-03T17:04:56.849260 #6599]  INFO -- : [0b739bc1-8b3b-47cc-84f9-48b46d043202] Started GET "/" for 127.0.0.1 at 2023-02-03 17:04:56 +0200
+I, [2023-02-03T17:04:56.850647 #6599]  INFO -- : [0b739bc1-8b3b-47cc-84f9-48b46d043202] Processing by MainController#index as HTML
+I, [2023-02-03T17:04:56.884906 #6599]  INFO -- : [0b739bc1-8b3b-47cc-84f9-48b46d043202]   Rendered main/index.html.erb within layouts/application (Duration: 32.1ms | Allocations: 101)
+I, [2023-02-03T17:04:56.893141 #6599]  INFO -- : [0b739bc1-8b3b-47cc-84f9-48b46d043202]   Rendered layout layouts/application.html.erb (Duration: 40.4ms | Allocations: 1817)
+I, [2023-02-03T17:04:56.894535 #6599]  INFO -- : [0b739bc1-8b3b-47cc-84f9-48b46d043202] Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.0ms | Allocations: 2481)

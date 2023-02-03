@@ -11,29 +11,38 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :amount, style: "display: block" %>
-    <%= form.text_field :amount %>
-  </div>
 
-  <div>
-    <%= form.label :odate, style: "display: block" %>
-    <%= form.datetime_field :odate %>
-  </div>
+  <div class="container">
+    <div class="col">
+      <%= form.label :amount,style: "display: block" %>
+      <%= form.text_field :amount, class:"form-control " %>
+    </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
-  </div>
+    <div class="col">    
+      <%= form.label :odate, style: "display: block" %>
+      <%= form.datetime_field :odate %>
+    </div>
 
-  <div>
-    <%= form.label :category_id, style: "display: block" %>
-    <% categories_array = Category.all.map { | cat | [cat.name, cat.id]} %>
-    <%= form.select :category_id, categories_array, :prompt => 'Choose category' %>
-  </div>
+    <div class="col">    
+      <%= form.label :description, style: "display: block" %>
+      <%= form.text_field :description, class:"form-control"   %>
+    </div>
 
-  <div>
-    <%= form.submit %>
+    <div class="col">
+      <%= form.label :category_id, style: "display: block"%>
+    </div>
+
+    <div class="col">
+      <% categories_array = Category.all.map { | cat | [cat.name, cat.id]} %>
+      <%= form.select(:category_id, categories_array, {include_blank: 'Choose category'}, {:class => 'btn btn-primary dropdown-toggle'}) %>
+    </div>
+    
+    <hr class="border border border-3 opacity-100">
+
+
+    <div class="col">
+        <%= form.submit class:"btn btn-success" %>
+    </div>
   </div>
 <% end %>
 
