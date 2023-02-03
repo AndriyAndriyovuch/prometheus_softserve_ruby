@@ -14769,3 +14769,71 @@ Processing by OperationsController#index as HTML
 Completed 200 OK in 204ms (Views: 148.1ms | ActiveRecord: 24.9ms | Allocations: 17393)
 
 
+Started GET "/reports/index" for 127.0.0.1 at 2023-02-03 16:22:36 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReportsController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :check_signed_in rendered or redirected
+Completed 302 Found in 34ms (ActiveRecord: 0.0ms | Allocations: 1889)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-02-03 16:22:37 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/user/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/user/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 12.0ms | Allocations: 684)
+  Rendered /home/user/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2108.9ms | Allocations: 280997)
+  Rendered layouts/_header.html.erb (Duration: 19.4ms | Allocations: 1519)
+  Rendered layouts/_footer.html.erb (Duration: 2.7ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 2463.9ms | Allocations: 317622)
+Completed 200 OK in 2803ms (Views: 2691.3ms | ActiveRecord: 0.9ms | Allocations: 326123)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-03 16:22:49 +0200
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 14.9ms | Allocations: 112)
+  Rendered layouts/_header.html.erb (Duration: 4.2ms | Allocations: 1113)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 4063)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.0ms | Allocations: 4911)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-02-03 16:22:53 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/user/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/user/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 131)
+  Rendered /home/user/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1281)
+  Rendered layouts/_header.html.erb (Duration: 4.3ms | Allocations: 941)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 4535)
+Completed 200 OK in 22ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 5182)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-02-03 16:22:55 +0200
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"a@a.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (17.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 684ms (ActiveRecord: 17.6ms | Allocations: 5691)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-03 16:22:56 +0200
+Processing by MainController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:31
+  Rendered layouts/_header.html.erb (Duration: 6.2ms | Allocations: 2066)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 4811)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.3ms | Allocations: 5173)
+
+
+Started GET "/sdfds" for 127.0.0.1 at 2023-02-03 16:23:02 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/sdfds"):
+  

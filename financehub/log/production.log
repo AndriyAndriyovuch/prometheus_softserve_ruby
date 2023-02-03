@@ -1,0 +1,317 @@
+W, [2023-02-03T16:27:38.499687 #2950]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2023-02-03T16:27:39.352161 #2950]  INFO -- : Migrating to CreateCategories (20230110185844)
+I, [2023-02-03T16:27:39.467424 #2950]  INFO -- : Migrating to CreateOperations (20230110190119)
+I, [2023-02-03T16:27:39.567971 #2950]  INFO -- : Migrating to DeviseCreateUsers (20230201170152)
+W, [2023-02-03T16:29:14.447743 #3040]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2023-02-03T16:29:34.151761 #3040]  INFO -- : [b1126c86-ef3d-4b24-bf2a-6b96b58980db] Started GET "/" for 127.0.0.1 at 2023-02-03 16:29:34 +0200
+I, [2023-02-03T16:29:34.162433 #3040]  INFO -- : [b1126c86-ef3d-4b24-bf2a-6b96b58980db] Processing by MainController#index as HTML
+I, [2023-02-03T16:29:34.215252 #3040]  INFO -- : [b1126c86-ef3d-4b24-bf2a-6b96b58980db]   Rendered main/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 179)
+I, [2023-02-03T16:29:34.258448 #3040]  INFO -- : [b1126c86-ef3d-4b24-bf2a-6b96b58980db]   Rendered layout layouts/application.html.erb (Duration: 56.6ms | Allocations: 2012)
+I, [2023-02-03T16:29:34.258880 #3040]  INFO -- : [b1126c86-ef3d-4b24-bf2a-6b96b58980db] Completed 500 Internal Server Error in 96ms (Allocations: 3310)
+F, [2023-02-03T16:29:34.260202 #3040] FATAL -- : [b1126c86-ef3d-4b24-bf2a-6b96b58980db]   
+[b1126c86-ef3d-4b24-bf2a-6b96b58980db] ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.
+):
+[b1126c86-ef3d-4b24-bf2a-6b96b58980db]      9:     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+[b1126c86-ef3d-4b24-bf2a-6b96b58980db]     10:     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+[b1126c86-ef3d-4b24-bf2a-6b96b58980db]     11: 
+[b1126c86-ef3d-4b24-bf2a-6b96b58980db]     12:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+[b1126c86-ef3d-4b24-bf2a-6b96b58980db]     13: 
+[b1126c86-ef3d-4b24-bf2a-6b96b58980db]     14:     <%= javascript_importmap_tags %>
+[b1126c86-ef3d-4b24-bf2a-6b96b58980db]     15: 
+[b1126c86-ef3d-4b24-bf2a-6b96b58980db]   
+[b1126c86-ef3d-4b24-bf2a-6b96b58980db] app/views/layouts/application.html.erb:12
+I, [2023-02-03T16:29:35.430253 #3040]  INFO -- : [40c68494-5e04-47d5-b532-32f676ae882c] Started GET "/favicon.ico" for 127.0.0.1 at 2023-02-03 16:29:35 +0200
+F, [2023-02-03T16:29:35.431526 #3040] FATAL -- : [40c68494-5e04-47d5-b532-32f676ae882c]   
+[40c68494-5e04-47d5-b532-32f676ae882c] ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+[40c68494-5e04-47d5-b532-32f676ae882c]   
+I, [2023-02-03T16:29:51.704544 #3040]  INFO -- : [3d22a37a-80e4-4364-85d1-504c1a32bf73] Started GET "/" for 127.0.0.1 at 2023-02-03 16:29:51 +0200
+I, [2023-02-03T16:29:51.706115 #3040]  INFO -- : [3d22a37a-80e4-4364-85d1-504c1a32bf73] Processing by MainController#index as HTML
+I, [2023-02-03T16:29:51.707188 #3040]  INFO -- : [3d22a37a-80e4-4364-85d1-504c1a32bf73]   Rendered main/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+I, [2023-02-03T16:29:51.708136 #3040]  INFO -- : [3d22a37a-80e4-4364-85d1-504c1a32bf73]   Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 358)
+I, [2023-02-03T16:29:51.708354 #3040]  INFO -- : [3d22a37a-80e4-4364-85d1-504c1a32bf73] Completed 500 Internal Server Error in 2ms (Allocations: 558)
+F, [2023-02-03T16:29:51.710134 #3040] FATAL -- : [3d22a37a-80e4-4364-85d1-504c1a32bf73]   
+[3d22a37a-80e4-4364-85d1-504c1a32bf73] ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.
+):
+[3d22a37a-80e4-4364-85d1-504c1a32bf73]      9:     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+[3d22a37a-80e4-4364-85d1-504c1a32bf73]     10:     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+[3d22a37a-80e4-4364-85d1-504c1a32bf73]     11: 
+[3d22a37a-80e4-4364-85d1-504c1a32bf73]     12:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+[3d22a37a-80e4-4364-85d1-504c1a32bf73]     13: 
+[3d22a37a-80e4-4364-85d1-504c1a32bf73]     14:     <%= javascript_importmap_tags %>
+[3d22a37a-80e4-4364-85d1-504c1a32bf73]     15: 
+[3d22a37a-80e4-4364-85d1-504c1a32bf73]   
+[3d22a37a-80e4-4364-85d1-504c1a32bf73] app/views/layouts/application.html.erb:12
+I, [2023-02-03T16:29:52.065771 #3040]  INFO -- : [71fee76d-9b26-4c2d-8692-a28efbd0899b] Started GET "/favicon.ico" for 127.0.0.1 at 2023-02-03 16:29:52 +0200
+F, [2023-02-03T16:29:52.066676 #3040] FATAL -- : [71fee76d-9b26-4c2d-8692-a28efbd0899b]   
+[71fee76d-9b26-4c2d-8692-a28efbd0899b] ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+[71fee76d-9b26-4c2d-8692-a28efbd0899b]   
+I, [2023-02-03T16:30:38.771626 #3040]  INFO -- : [6232e9d0-542f-484d-8611-1416155624a9] Started GET "/" for 127.0.0.1 at 2023-02-03 16:30:38 +0200
+I, [2023-02-03T16:30:38.773047 #3040]  INFO -- : [6232e9d0-542f-484d-8611-1416155624a9] Processing by MainController#index as HTML
+I, [2023-02-03T16:30:38.775555 #3040]  INFO -- : [6232e9d0-542f-484d-8611-1416155624a9]   Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+I, [2023-02-03T16:30:38.776742 #3040]  INFO -- : [6232e9d0-542f-484d-8611-1416155624a9]   Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 358)
+I, [2023-02-03T16:30:38.777012 #3040]  INFO -- : [6232e9d0-542f-484d-8611-1416155624a9] Completed 500 Internal Server Error in 4ms (Allocations: 539)
+F, [2023-02-03T16:30:38.897721 #3040] FATAL -- : [6232e9d0-542f-484d-8611-1416155624a9]   
+[6232e9d0-542f-484d-8611-1416155624a9] ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.
+):
+[6232e9d0-542f-484d-8611-1416155624a9]      9:     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+[6232e9d0-542f-484d-8611-1416155624a9]     10:     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+[6232e9d0-542f-484d-8611-1416155624a9]     11: 
+[6232e9d0-542f-484d-8611-1416155624a9]     12:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+[6232e9d0-542f-484d-8611-1416155624a9]     13: 
+[6232e9d0-542f-484d-8611-1416155624a9]     14:     <%= javascript_importmap_tags %>
+[6232e9d0-542f-484d-8611-1416155624a9]     15: 
+[6232e9d0-542f-484d-8611-1416155624a9]   
+[6232e9d0-542f-484d-8611-1416155624a9] app/views/layouts/application.html.erb:12
+W, [2023-02-03T16:31:37.491618 #3275]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+W, [2023-02-03T16:31:43.535310 #3285]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2023-02-03T16:31:50.004886 #3285]  INFO -- : [9c100db2-279f-4eac-a8a3-277f01fdedf4] Started GET "/" for 127.0.0.1 at 2023-02-03 16:31:50 +0200
+I, [2023-02-03T16:31:50.016427 #3285]  INFO -- : [9c100db2-279f-4eac-a8a3-277f01fdedf4] Processing by MainController#index as HTML
+I, [2023-02-03T16:31:50.035057 #3285]  INFO -- : [9c100db2-279f-4eac-a8a3-277f01fdedf4]   Rendered main/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 179)
+I, [2023-02-03T16:31:50.068396 #3285]  INFO -- : [9c100db2-279f-4eac-a8a3-277f01fdedf4]   Rendered layout layouts/application.html.erb (Duration: 40.2ms | Allocations: 5014)
+I, [2023-02-03T16:31:50.069065 #3285]  INFO -- : [9c100db2-279f-4eac-a8a3-277f01fdedf4] Completed 200 OK in 52ms (Views: 44.0ms | Allocations: 6321)
+I, [2023-02-03T16:31:50.124830 #3285]  INFO -- : [d051ff35-32f7-4bf5-8d6c-0d2b6a14d67c] Started GET "/assets/application-04024382391bb910584145d8113cf35ef376b55d125bb4516cebeb14ce788597.css" for 127.0.0.1 at 2023-02-03 16:31:50 +0200
+I, [2023-02-03T16:31:50.127062 #3285]  INFO -- : [dc6ac3e2-16e3-4ca3-8ad7-e641d39f7030] Started GET "/assets/es-module-shims.min-d89e73202ec09dede55fb74115af9c5f9f2bb965433de1c2446e1faa6dac2470.js" for 127.0.0.1 at 2023-02-03 16:31:50 +0200
+I, [2023-02-03T16:31:50.462806 #3285]  INFO -- : [d466b0de-2138-42f5-8bcc-9c22d14e7341] Started GET "/assets/logo-5a863e59cb8676b9237bc8b0140bf31228182acdb8ad08834fa6979e429959ef.svg" for 127.0.0.1 at 2023-02-03 16:31:50 +0200
+I, [2023-02-03T16:31:50.582654 #3285]  INFO -- : [bbf8c032-ecc5-4482-b599-b3b7b0212cdf] Started GET "/assets/application-8260fb42a874fbab7610dd3741b3696ff7a837bad87f4b33c312f4324ceb48e2.js" for 127.0.0.1 at 2023-02-03 16:31:50 +0200
+I, [2023-02-03T16:31:50.852454 #3285]  INFO -- : [c5820ba3-002d-4158-af5f-23afae734a54] Started GET "/assets/turbo.min-7ab2ea9f35bae4a4d65b552f9b93524099f267a8ba3a2e07002aaa7bff8ae4cf.js" for 127.0.0.1 at 2023-02-03 16:31:50 +0200
+I, [2023-02-03T16:31:50.857562 #3285]  INFO -- : [fe4f1fdb-ae90-4a9b-9de1-bbb1ac857a48] Started GET "/assets/controllers/index-2db729dddcc5b979110e98de4b6720f83f91a123172e87281d5a58410fc43806.js" for 127.0.0.1 at 2023-02-03 16:31:50 +0200
+I, [2023-02-03T16:31:50.873132 #3285]  INFO -- : [c395bd76-d0f9-4ea3-9f66-659df43cebf4] Started GET "/assets/controllers/application-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js" for 127.0.0.1 at 2023-02-03 16:31:50 +0200
+I, [2023-02-03T16:31:50.876343 #3285]  INFO -- : [c50d37ba-ebb0-4708-b6d3-442fe908b0bf] Started GET "/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js" for 127.0.0.1 at 2023-02-03 16:31:50 +0200
+I, [2023-02-03T16:31:50.926451 #3285]  INFO -- : [52784413-a06f-4a18-84dc-75719279d4ec] Started GET "/assets/stimulus.min-d03cf1dff41d6c5698ec2c5d6a501615a7a33754dbeef8d1edd31c928d17c652.js" for 127.0.0.1 at 2023-02-03 16:31:50 +0200
+I, [2023-02-03T16:31:50.959163 #3285]  INFO -- : [305eda50-eb6a-44b8-ae30-40f1840d4ee0] Started GET "/assets/controllers/hello_controller-549135e8e7c683a538c3d6d517339ba470fcfb79d62f738a0a089ba41851a554.js" for 127.0.0.1 at 2023-02-03 16:31:50 +0200
+I, [2023-02-03T16:31:54.465894 #3285]  INFO -- : [b8615b95-8492-4801-8ca1-69eb77c48b99] Started GET "/dfdf" for 127.0.0.1 at 2023-02-03 16:31:54 +0200
+F, [2023-02-03T16:31:54.467079 #3285] FATAL -- : [b8615b95-8492-4801-8ca1-69eb77c48b99]   
+[b8615b95-8492-4801-8ca1-69eb77c48b99] ActionController::RoutingError (No route matches [GET] "/dfdf"):
+[b8615b95-8492-4801-8ca1-69eb77c48b99]   
+I, [2023-02-03T16:37:55.390874 #3285]  INFO -- : [029d4d51-332a-41d8-9e00-25dbbb7be11b] Started GET "/dfdf" for 127.0.0.1 at 2023-02-03 16:37:55 +0200
+F, [2023-02-03T16:37:55.410736 #3285] FATAL -- : [029d4d51-332a-41d8-9e00-25dbbb7be11b]   
+[029d4d51-332a-41d8-9e00-25dbbb7be11b] ActionController::RoutingError (No route matches [GET] "/dfdf"):
+[029d4d51-332a-41d8-9e00-25dbbb7be11b]   
+I, [2023-02-03T16:37:55.450068 #3285]  INFO -- : [4cd70421-c7fd-42a3-b5ce-3477250834b4] Started GET "/app/assets/stylesheets/404.css" for 127.0.0.1 at 2023-02-03 16:37:55 +0200
+F, [2023-02-03T16:37:55.452196 #3285] FATAL -- : [4cd70421-c7fd-42a3-b5ce-3477250834b4]   
+[4cd70421-c7fd-42a3-b5ce-3477250834b4] ActionController::RoutingError (No route matches [GET] "/app/assets/stylesheets/404.css"):
+[4cd70421-c7fd-42a3-b5ce-3477250834b4]   
+I, [2023-02-03T16:38:16.723516 #3285]  INFO -- : [9bec7322-891a-4b69-abaa-594a709668df] Started GET "/dfdf" for 127.0.0.1 at 2023-02-03 16:38:16 +0200
+F, [2023-02-03T16:38:16.724167 #3285] FATAL -- : [9bec7322-891a-4b69-abaa-594a709668df]   
+[9bec7322-891a-4b69-abaa-594a709668df] ActionController::RoutingError (No route matches [GET] "/dfdf"):
+[9bec7322-891a-4b69-abaa-594a709668df]   
+I, [2023-02-03T16:38:16.772792 #3285]  INFO -- : [9ba819a1-3ca7-46f4-a0fa-7acdd3630241] Started GET "/app/assets/stylesheets/404.css" for 127.0.0.1 at 2023-02-03 16:38:16 +0200
+F, [2023-02-03T16:38:16.773413 #3285] FATAL -- : [9ba819a1-3ca7-46f4-a0fa-7acdd3630241]   
+[9ba819a1-3ca7-46f4-a0fa-7acdd3630241] ActionController::RoutingError (No route matches [GET] "/app/assets/stylesheets/404.css"):
+[9ba819a1-3ca7-46f4-a0fa-7acdd3630241]   
+I, [2023-02-03T16:39:27.404309 #3285]  INFO -- : [dd50eb75-e3f4-4e2a-9598-7f20ba9449d9] Started GET "/dfdf" for 127.0.0.1 at 2023-02-03 16:39:27 +0200
+F, [2023-02-03T16:39:27.405667 #3285] FATAL -- : [dd50eb75-e3f4-4e2a-9598-7f20ba9449d9]   
+[dd50eb75-e3f4-4e2a-9598-7f20ba9449d9] ActionController::RoutingError (No route matches [GET] "/dfdf"):
+[dd50eb75-e3f4-4e2a-9598-7f20ba9449d9]   
+I, [2023-02-03T16:39:27.479875 #3285]  INFO -- : [2ce8eb70-4179-4274-b4ae-0d7a975fc315] Started GET "/app/assets/stylesheets/404.css" for 127.0.0.1 at 2023-02-03 16:39:27 +0200
+F, [2023-02-03T16:39:27.480786 #3285] FATAL -- : [2ce8eb70-4179-4274-b4ae-0d7a975fc315]   
+[2ce8eb70-4179-4274-b4ae-0d7a975fc315] ActionController::RoutingError (No route matches [GET] "/app/assets/stylesheets/404.css"):
+[2ce8eb70-4179-4274-b4ae-0d7a975fc315]   
+I, [2023-02-03T16:39:47.653451 #3285]  INFO -- : [451c809a-0640-4b59-92a9-04a455fc4b0a] Started GET "/dfdf" for 127.0.0.1 at 2023-02-03 16:39:47 +0200
+F, [2023-02-03T16:39:47.654662 #3285] FATAL -- : [451c809a-0640-4b59-92a9-04a455fc4b0a]   
+[451c809a-0640-4b59-92a9-04a455fc4b0a] ActionController::RoutingError (No route matches [GET] "/dfdf"):
+[451c809a-0640-4b59-92a9-04a455fc4b0a]   
+I, [2023-02-03T16:39:47.699348 #3285]  INFO -- : [cc11c728-9f08-4019-af74-c29657b17623] Started GET "/app/assets/stylesheets/404.css" for 127.0.0.1 at 2023-02-03 16:39:47 +0200
+F, [2023-02-03T16:39:47.699905 #3285] FATAL -- : [cc11c728-9f08-4019-af74-c29657b17623]   
+[cc11c728-9f08-4019-af74-c29657b17623] ActionController::RoutingError (No route matches [GET] "/app/assets/stylesheets/404.css"):
+[cc11c728-9f08-4019-af74-c29657b17623]   
+I, [2023-02-03T16:40:02.294786 #3285]  INFO -- : [07ad2e3f-54fd-4c8f-a20b-72f6d467ad08] Started GET "/dfdf" for 127.0.0.1 at 2023-02-03 16:40:02 +0200
+F, [2023-02-03T16:40:02.295575 #3285] FATAL -- : [07ad2e3f-54fd-4c8f-a20b-72f6d467ad08]   
+[07ad2e3f-54fd-4c8f-a20b-72f6d467ad08] ActionController::RoutingError (No route matches [GET] "/dfdf"):
+[07ad2e3f-54fd-4c8f-a20b-72f6d467ad08]   
+I, [2023-02-03T16:40:02.398437 #3285]  INFO -- : [f5b2fe7a-e153-43ed-a20d-dd04f37040cd] Started GET "/app/assets/stylesheets/404.css" for 127.0.0.1 at 2023-02-03 16:40:02 +0200
+F, [2023-02-03T16:40:02.399670 #3285] FATAL -- : [f5b2fe7a-e153-43ed-a20d-dd04f37040cd]   
+[f5b2fe7a-e153-43ed-a20d-dd04f37040cd] ActionController::RoutingError (No route matches [GET] "/app/assets/stylesheets/404.css"):
+[f5b2fe7a-e153-43ed-a20d-dd04f37040cd]   
+I, [2023-02-03T16:40:24.050493 #3285]  INFO -- : [8824f4d2-2389-4f4b-8db0-731a12da1f40] Started GET "/dfdf" for 127.0.0.1 at 2023-02-03 16:40:24 +0200
+F, [2023-02-03T16:40:24.051355 #3285] FATAL -- : [8824f4d2-2389-4f4b-8db0-731a12da1f40]   
+[8824f4d2-2389-4f4b-8db0-731a12da1f40] ActionController::RoutingError (No route matches [GET] "/dfdf"):
+[8824f4d2-2389-4f4b-8db0-731a12da1f40]   
+I, [2023-02-03T16:40:24.093641 #3285]  INFO -- : [13b49f7b-0098-4ecb-aece-fb6b0d55753d] Started GET "/app/assets/stylesheets/404.css" for 127.0.0.1 at 2023-02-03 16:40:24 +0200
+F, [2023-02-03T16:40:24.094501 #3285] FATAL -- : [13b49f7b-0098-4ecb-aece-fb6b0d55753d]   
+[13b49f7b-0098-4ecb-aece-fb6b0d55753d] ActionController::RoutingError (No route matches [GET] "/app/assets/stylesheets/404.css"):
+[13b49f7b-0098-4ecb-aece-fb6b0d55753d]   
+I, [2023-02-03T16:40:27.536644 #3285]  INFO -- : [b79c2f47-6c50-41df-b0f9-5f13b43d3dcb] Started GET "/dfdf" for 127.0.0.1 at 2023-02-03 16:40:27 +0200
+F, [2023-02-03T16:40:27.537224 #3285] FATAL -- : [b79c2f47-6c50-41df-b0f9-5f13b43d3dcb]   
+[b79c2f47-6c50-41df-b0f9-5f13b43d3dcb] ActionController::RoutingError (No route matches [GET] "/dfdf"):
+[b79c2f47-6c50-41df-b0f9-5f13b43d3dcb]   
+I, [2023-02-03T16:40:27.578517 #3285]  INFO -- : [cd581374-d911-4c1c-864e-fd090d540947] Started GET "/app/assets/stylesheets/404.css" for 127.0.0.1 at 2023-02-03 16:40:27 +0200
+F, [2023-02-03T16:40:27.579743 #3285] FATAL -- : [cd581374-d911-4c1c-864e-fd090d540947]   
+[cd581374-d911-4c1c-864e-fd090d540947] ActionController::RoutingError (No route matches [GET] "/app/assets/stylesheets/404.css"):
+[cd581374-d911-4c1c-864e-fd090d540947]   
+I, [2023-02-03T16:40:41.819864 #3285]  INFO -- : [6c6fec54-c718-43b9-af14-1170f000e919] Started GET "/dfdf" for 127.0.0.1 at 2023-02-03 16:40:41 +0200
+F, [2023-02-03T16:40:41.820657 #3285] FATAL -- : [6c6fec54-c718-43b9-af14-1170f000e919]   
+[6c6fec54-c718-43b9-af14-1170f000e919] ActionController::RoutingError (No route matches [GET] "/dfdf"):
+[6c6fec54-c718-43b9-af14-1170f000e919]   
+I, [2023-02-03T16:40:41.860036 #3285]  INFO -- : [5a3c5a8d-a9d3-430f-863d-2a8dc90ad1d9] Started GET "/app/assets/stylesheets/404.css" for 127.0.0.1 at 2023-02-03 16:40:41 +0200
+F, [2023-02-03T16:40:41.860652 #3285] FATAL -- : [5a3c5a8d-a9d3-430f-863d-2a8dc90ad1d9]   
+[5a3c5a8d-a9d3-430f-863d-2a8dc90ad1d9] ActionController::RoutingError (No route matches [GET] "/app/assets/stylesheets/404.css"):
+[5a3c5a8d-a9d3-430f-863d-2a8dc90ad1d9]   
+I, [2023-02-03T16:40:59.220889 #3285]  INFO -- : [7cac7353-9cc5-4eff-88a5-bbf48569b786] Started GET "/dfdf" for 127.0.0.1 at 2023-02-03 16:40:59 +0200
+F, [2023-02-03T16:40:59.221702 #3285] FATAL -- : [7cac7353-9cc5-4eff-88a5-bbf48569b786]   
+[7cac7353-9cc5-4eff-88a5-bbf48569b786] ActionController::RoutingError (No route matches [GET] "/dfdf"):
+[7cac7353-9cc5-4eff-88a5-bbf48569b786]   
+I, [2023-02-03T16:40:59.717732 #3285]  INFO -- : [16631136-dec2-44f3-ab77-0fc664a4ba54] Started GET "/app/assets/stylesheets/404.css" for 127.0.0.1 at 2023-02-03 16:40:59 +0200
+F, [2023-02-03T16:40:59.718482 #3285] FATAL -- : [16631136-dec2-44f3-ab77-0fc664a4ba54]   
+[16631136-dec2-44f3-ab77-0fc664a4ba54] ActionController::RoutingError (No route matches [GET] "/app/assets/stylesheets/404.css"):
+[16631136-dec2-44f3-ab77-0fc664a4ba54]   
+I, [2023-02-03T16:41:22.346453 #3285]  INFO -- : [9abe5165-bbd5-453a-8a44-f7d9656a93e5] Started GET "/dfdf" for 127.0.0.1 at 2023-02-03 16:41:22 +0200
+F, [2023-02-03T16:41:22.347048 #3285] FATAL -- : [9abe5165-bbd5-453a-8a44-f7d9656a93e5]   
+[9abe5165-bbd5-453a-8a44-f7d9656a93e5] ActionController::RoutingError (No route matches [GET] "/dfdf"):
+[9abe5165-bbd5-453a-8a44-f7d9656a93e5]   
+I, [2023-02-03T16:41:22.434797 #3285]  INFO -- : [2e0c5d1e-e4bc-43c4-bf06-e62f5826f342] Started GET "/financehub/app/assets/stylesheets/404.css" for 127.0.0.1 at 2023-02-03 16:41:22 +0200
+F, [2023-02-03T16:41:22.435436 #3285] FATAL -- : [2e0c5d1e-e4bc-43c4-bf06-e62f5826f342]   
+[2e0c5d1e-e4bc-43c4-bf06-e62f5826f342] ActionController::RoutingError (No route matches [GET] "/financehub/app/assets/stylesheets/404.css"):
+[2e0c5d1e-e4bc-43c4-bf06-e62f5826f342]   
+I, [2023-02-03T16:41:35.236095 #3285]  INFO -- : [367369ca-dca1-413c-a7af-13a184190344] Started GET "/app" for 127.0.0.1 at 2023-02-03 16:41:35 +0200
+F, [2023-02-03T16:41:35.236910 #3285] FATAL -- : [367369ca-dca1-413c-a7af-13a184190344]   
+[367369ca-dca1-413c-a7af-13a184190344] ActionController::RoutingError (No route matches [GET] "/app"):
+[367369ca-dca1-413c-a7af-13a184190344]   
+I, [2023-02-03T16:41:35.356026 #3285]  INFO -- : [8c44de4f-cb44-48b0-b1a4-f1c5b4c46cdb] Started GET "/financehub/app/assets/stylesheets/404.css" for 127.0.0.1 at 2023-02-03 16:41:35 +0200
+F, [2023-02-03T16:41:35.356922 #3285] FATAL -- : [8c44de4f-cb44-48b0-b1a4-f1c5b4c46cdb]   
+[8c44de4f-cb44-48b0-b1a4-f1c5b4c46cdb] ActionController::RoutingError (No route matches [GET] "/financehub/app/assets/stylesheets/404.css"):
+[8c44de4f-cb44-48b0-b1a4-f1c5b4c46cdb]   
+I, [2023-02-03T16:43:00.848149 #3285]  INFO -- : [5959219f-7659-4a2d-b70b-e47ecfac9c64] Started GET "/appsdsd" for 127.0.0.1 at 2023-02-03 16:43:00 +0200
+F, [2023-02-03T16:43:00.890722 #3285] FATAL -- : [5959219f-7659-4a2d-b70b-e47ecfac9c64]   
+[5959219f-7659-4a2d-b70b-e47ecfac9c64] ActionController::RoutingError (No route matches [GET] "/appsdsd"):
+[5959219f-7659-4a2d-b70b-e47ecfac9c64]   
+I, [2023-02-03T16:43:02.557359 #3285]  INFO -- : [997aa052-bb9c-40ad-acd7-aadc88fce2c9] Started GET "/favicon.ico" for 127.0.0.1 at 2023-02-03 16:43:02 +0200
+F, [2023-02-03T16:43:02.559506 #3285] FATAL -- : [997aa052-bb9c-40ad-acd7-aadc88fce2c9]   
+[997aa052-bb9c-40ad-acd7-aadc88fce2c9] ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+[997aa052-bb9c-40ad-acd7-aadc88fce2c9]   
+I, [2023-02-03T16:52:47.676820 #3285]  INFO -- : [801f5abf-4509-4b34-962e-857e2974a49e] Started GET "/appsdsd" for 127.0.0.1 at 2023-02-03 16:52:47 +0200
+F, [2023-02-03T16:52:47.911217 #3285] FATAL -- : [801f5abf-4509-4b34-962e-857e2974a49e]   
+[801f5abf-4509-4b34-962e-857e2974a49e] ActionController::RoutingError (No route matches [GET] "/appsdsd"):
+[801f5abf-4509-4b34-962e-857e2974a49e]   
+I, [2023-02-03T16:52:48.200614 #3285]  INFO -- : [ad615747-6f43-4e16-83c2-d634c04bb404] Started GET "/favicon.ico" for 127.0.0.1 at 2023-02-03 16:52:48 +0200
+F, [2023-02-03T16:52:48.201734 #3285] FATAL -- : [ad615747-6f43-4e16-83c2-d634c04bb404]   
+[ad615747-6f43-4e16-83c2-d634c04bb404] ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+[ad615747-6f43-4e16-83c2-d634c04bb404]   
+I, [2023-02-03T16:52:49.956942 #3285]  INFO -- : [0004a4dc-3928-404b-bc22-d06568aa6cf9] Started GET "/appsdsd" for 127.0.0.1 at 2023-02-03 16:52:49 +0200
+F, [2023-02-03T16:52:49.957890 #3285] FATAL -- : [0004a4dc-3928-404b-bc22-d06568aa6cf9]   
+[0004a4dc-3928-404b-bc22-d06568aa6cf9] ActionController::RoutingError (No route matches [GET] "/appsdsd"):
+[0004a4dc-3928-404b-bc22-d06568aa6cf9]   
+I, [2023-02-03T16:52:51.496558 #3285]  INFO -- : [01a9e95d-ff6d-45c9-b9d8-663bcffe3011] Started GET "/appsdsd" for 127.0.0.1 at 2023-02-03 16:52:51 +0200
+F, [2023-02-03T16:52:51.497458 #3285] FATAL -- : [01a9e95d-ff6d-45c9-b9d8-663bcffe3011]   
+[01a9e95d-ff6d-45c9-b9d8-663bcffe3011] ActionController::RoutingError (No route matches [GET] "/appsdsd"):
+[01a9e95d-ff6d-45c9-b9d8-663bcffe3011]   
+W, [2023-02-03T16:53:39.421540 #5735]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+W, [2023-02-03T16:53:46.724415 #5742]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+W, [2023-02-03T16:54:14.928748 #5847]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2023-02-03T16:54:21.535451 #5847]  INFO -- : [c018ee08-dc87-4c85-a287-2b446be1499e] Started GET "/appsdsd" for 127.0.0.1 at 2023-02-03 16:54:21 +0200
+F, [2023-02-03T16:54:21.536835 #5847] FATAL -- : [c018ee08-dc87-4c85-a287-2b446be1499e]   
+[c018ee08-dc87-4c85-a287-2b446be1499e] ActionController::RoutingError (No route matches [GET] "/appsdsd"):
+[c018ee08-dc87-4c85-a287-2b446be1499e]   
+I, [2023-02-03T16:54:24.293949 #5847]  INFO -- : [576f2920-fc45-47db-b9d8-de80b5b06282] Started GET "/appsdsd" for 127.0.0.1 at 2023-02-03 16:54:24 +0200
+F, [2023-02-03T16:54:24.294582 #5847] FATAL -- : [576f2920-fc45-47db-b9d8-de80b5b06282]   
+[576f2920-fc45-47db-b9d8-de80b5b06282] ActionController::RoutingError (No route matches [GET] "/appsdsd"):
+[576f2920-fc45-47db-b9d8-de80b5b06282]   
+I, [2023-02-03T16:54:28.503519 #5847]  INFO -- : [eb81310c-de71-41e2-8972-9a515996c95b] Started GET "/" for 127.0.0.1 at 2023-02-03 16:54:28 +0200
+I, [2023-02-03T16:54:28.506161 #5847]  INFO -- : [eb81310c-de71-41e2-8972-9a515996c95b] Processing by MainController#index as HTML
+I, [2023-02-03T16:54:28.573071 #5847]  INFO -- : [eb81310c-de71-41e2-8972-9a515996c95b]   Rendered main/index.html.erb within layouts/application (Duration: 13.4ms | Allocations: 179)
+I, [2023-02-03T16:54:28.614548 #5847]  INFO -- : [eb81310c-de71-41e2-8972-9a515996c95b]   Rendered layout layouts/application.html.erb (Duration: 55.1ms | Allocations: 5144)
+I, [2023-02-03T16:54:28.615394 #5847]  INFO -- : [eb81310c-de71-41e2-8972-9a515996c95b] Completed 200 OK in 109ms (Views: 74.4ms | Allocations: 6452)
+I, [2023-02-03T16:54:28.681174 #5847]  INFO -- : [1a701f18-a469-4010-b010-4249666dca64] Started GET "/assets/application-345ef29b0b8aa83a4ac76f10f88a9a0b58eff7f24bb9cb166adf9e2ec7e8c6c8.css" for 127.0.0.1 at 2023-02-03 16:54:28 +0200
+I, [2023-02-03T16:54:28.706486 #5847]  INFO -- : [55a0d3cd-ef6b-4513-b8fe-1443d3d9608c] Started GET "/assets/es-module-shims.min-d89e73202ec09dede55fb74115af9c5f9f2bb965433de1c2446e1faa6dac2470.js" for 127.0.0.1 at 2023-02-03 16:54:28 +0200
+I, [2023-02-03T16:54:28.842750 #5847]  INFO -- : [23de9da7-ef72-4e02-90cf-22b4d7f59ef1] Started GET "/assets/application-8260fb42a874fbab7610dd3741b3696ff7a837bad87f4b33c312f4324ceb48e2.js" for 127.0.0.1 at 2023-02-03 16:54:28 +0200
+I, [2023-02-03T16:54:28.960301 #5847]  INFO -- : [21f87987-9399-422c-b24d-a2c8b763e5f2] Started GET "/assets/turbo.min-7ab2ea9f35bae4a4d65b552f9b93524099f267a8ba3a2e07002aaa7bff8ae4cf.js" for 127.0.0.1 at 2023-02-03 16:54:28 +0200
+I, [2023-02-03T16:54:28.963737 #5847]  INFO -- : [4e4f36d5-b1dd-430a-98ce-ea957a2cf481] Started GET "/assets/controllers/index-2db729dddcc5b979110e98de4b6720f83f91a123172e87281d5a58410fc43806.js" for 127.0.0.1 at 2023-02-03 16:54:28 +0200
+I, [2023-02-03T16:54:29.004110 #5847]  INFO -- : [17342804-a256-40cd-bb43-50a2219c3e24] Started GET "/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js" for 127.0.0.1 at 2023-02-03 16:54:29 +0200
+I, [2023-02-03T16:54:29.005056 #5847]  INFO -- : [e341cdaf-a28e-427a-a370-80929e405f63] Started GET "/assets/controllers/application-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js" for 127.0.0.1 at 2023-02-03 16:54:29 +0200
+I, [2023-02-03T16:54:29.044467 #5847]  INFO -- : [82a6c5c8-1f8c-4191-8f3a-7eb3d0b0387b] Started GET "/assets/stimulus.min-d03cf1dff41d6c5698ec2c5d6a501615a7a33754dbeef8d1edd31c928d17c652.js" for 127.0.0.1 at 2023-02-03 16:54:29 +0200
+I, [2023-02-03T16:54:29.078424 #5847]  INFO -- : [e389072c-593d-48dd-8e26-536d6a6acad4] Started GET "/assets/controllers/hello_controller-549135e8e7c683a538c3d6d517339ba470fcfb79d62f738a0a089ba41851a554.js" for 127.0.0.1 at 2023-02-03 16:54:29 +0200
+I, [2023-02-03T16:54:34.192108 #5847]  INFO -- : [3d67a7f5-7833-4c7b-8924-018f902c2af9] Started GET "/44" for 127.0.0.1 at 2023-02-03 16:54:34 +0200
+F, [2023-02-03T16:54:34.193250 #5847] FATAL -- : [3d67a7f5-7833-4c7b-8924-018f902c2af9]   
+[3d67a7f5-7833-4c7b-8924-018f902c2af9] ActionController::RoutingError (No route matches [GET] "/44"):
+[3d67a7f5-7833-4c7b-8924-018f902c2af9]   
+I, [2023-02-03T16:55:19.496962 #5847]  INFO -- : [7014c1e7-3fe1-4f54-9a97-f0fd533f235b] Started GET "/44" for 127.0.0.1 at 2023-02-03 16:55:19 +0200
+F, [2023-02-03T16:55:19.497558 #5847] FATAL -- : [7014c1e7-3fe1-4f54-9a97-f0fd533f235b]   
+[7014c1e7-3fe1-4f54-9a97-f0fd533f235b] ActionController::RoutingError (No route matches [GET] "/44"):
+[7014c1e7-3fe1-4f54-9a97-f0fd533f235b]   
+I, [2023-02-03T16:55:20.341393 #5847]  INFO -- : [bf856ab5-4f72-47c8-9ec0-b3836c1c8030] Started GET "/44" for 127.0.0.1 at 2023-02-03 16:55:20 +0200
+F, [2023-02-03T16:55:20.342221 #5847] FATAL -- : [bf856ab5-4f72-47c8-9ec0-b3836c1c8030]   
+[bf856ab5-4f72-47c8-9ec0-b3836c1c8030] ActionController::RoutingError (No route matches [GET] "/44"):
+[bf856ab5-4f72-47c8-9ec0-b3836c1c8030]   
+W, [2023-02-03T16:56:10.272257 #6112]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+W, [2023-02-03T17:00:33.376954 #6500]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2023-02-03T17:00:44.291451 #6500]  INFO -- : [7ee334a0-8824-416f-b824-6f6a471a34ee] Started GET "/44" for 127.0.0.1 at 2023-02-03 17:00:44 +0200
+F, [2023-02-03T17:00:44.292789 #6500] FATAL -- : [7ee334a0-8824-416f-b824-6f6a471a34ee]   
+[7ee334a0-8824-416f-b824-6f6a471a34ee] ActionController::RoutingError (No route matches [GET] "/44"):
+[7ee334a0-8824-416f-b824-6f6a471a34ee]   
+I, [2023-02-03T17:00:44.302237 #6500]  INFO -- : [7ee334a0-8824-416f-b824-6f6a471a34ee] Processing by ErrorsController#not_found as HTML
+I, [2023-02-03T17:00:44.356870 #6500]  INFO -- : [7ee334a0-8824-416f-b824-6f6a471a34ee] Completed 500 Internal Server Error in 54ms (Allocations: 2959)
+I, [2023-02-03T17:00:44.418257 #6500]  INFO -- : [9033a8e8-1394-428a-b672-b6bcbb0f60b4] Started GET "/favicon.ico" for 127.0.0.1 at 2023-02-03 17:00:44 +0200
+F, [2023-02-03T17:00:44.419412 #6500] FATAL -- : [9033a8e8-1394-428a-b672-b6bcbb0f60b4]   
+[9033a8e8-1394-428a-b672-b6bcbb0f60b4] ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+[9033a8e8-1394-428a-b672-b6bcbb0f60b4]   
+I, [2023-02-03T17:00:44.420812 #6500]  INFO -- : [9033a8e8-1394-428a-b672-b6bcbb0f60b4] Processing by ErrorsController#not_found as HTML
+I, [2023-02-03T17:00:44.429213 #6500]  INFO -- : [9033a8e8-1394-428a-b672-b6bcbb0f60b4] Completed 500 Internal Server Error in 8ms (Allocations: 2101)
+I, [2023-02-03T17:00:45.272445 #6500]  INFO -- : [63926464-5f42-405b-af02-f13082088180] Started GET "/44" for 127.0.0.1 at 2023-02-03 17:00:45 +0200
+F, [2023-02-03T17:00:45.272972 #6500] FATAL -- : [63926464-5f42-405b-af02-f13082088180]   
+[63926464-5f42-405b-af02-f13082088180] ActionController::RoutingError (No route matches [GET] "/44"):
+[63926464-5f42-405b-af02-f13082088180]   
+I, [2023-02-03T17:00:45.273650 #6500]  INFO -- : [63926464-5f42-405b-af02-f13082088180] Processing by ErrorsController#not_found as HTML
+I, [2023-02-03T17:00:45.310509 #6500]  INFO -- : [63926464-5f42-405b-af02-f13082088180] Completed 500 Internal Server Error in 37ms (Allocations: 2090)
+I, [2023-02-03T17:00:47.709114 #6500]  INFO -- : [72531621-b584-4325-8370-1bad3b5c733f] Started GET "/" for 127.0.0.1 at 2023-02-03 17:00:47 +0200
+I, [2023-02-03T17:00:47.709966 #6500]  INFO -- : [72531621-b584-4325-8370-1bad3b5c733f] Processing by MainController#index as HTML
+I, [2023-02-03T17:00:47.732007 #6500]  INFO -- : [72531621-b584-4325-8370-1bad3b5c733f]   Rendered main/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 179)
+I, [2023-02-03T17:00:47.773998 #6500]  INFO -- : [72531621-b584-4325-8370-1bad3b5c733f]   Rendered layout layouts/application.html.erb (Duration: 50.9ms | Allocations: 5138)
+I, [2023-02-03T17:00:47.774445 #6500]  INFO -- : [72531621-b584-4325-8370-1bad3b5c733f] Completed 200 OK in 64ms (Views: 53.1ms | Allocations: 6116)
+I, [2023-02-03T17:00:47.844150 #6500]  INFO -- : [fe3cf4b0-7cb2-4ec7-89d4-fbd3ca34cc45] Started GET "/assets/es-module-shims.min-d89e73202ec09dede55fb74115af9c5f9f2bb965433de1c2446e1faa6dac2470.js" for 127.0.0.1 at 2023-02-03 17:00:47 +0200
+I, [2023-02-03T17:00:47.847731 #6500]  INFO -- : [1d9dc5b5-a59f-4353-8a68-fba0f924a766] Started GET "/assets/logo-5a863e59cb8676b9237bc8b0140bf31228182acdb8ad08834fa6979e429959ef.svg" for 127.0.0.1 at 2023-02-03 17:00:47 +0200
+I, [2023-02-03T17:00:47.895096 #6500]  INFO -- : [e9aad98f-6b60-4b47-bb29-33eede58cd74] Started GET "/assets/application-8260fb42a874fbab7610dd3741b3696ff7a837bad87f4b33c312f4324ceb48e2.js" for 127.0.0.1 at 2023-02-03 17:00:47 +0200
+I, [2023-02-03T17:00:47.978079 #6500]  INFO -- : [e4f08b03-8901-4faa-a016-64fd5763f3c3] Started GET "/assets/turbo.min-7ab2ea9f35bae4a4d65b552f9b93524099f267a8ba3a2e07002aaa7bff8ae4cf.js" for 127.0.0.1 at 2023-02-03 17:00:47 +0200
+I, [2023-02-03T17:00:47.982782 #6500]  INFO -- : [9998582d-45a9-47f5-ab21-44654d7c280e] Started GET "/assets/controllers/index-2db729dddcc5b979110e98de4b6720f83f91a123172e87281d5a58410fc43806.js" for 127.0.0.1 at 2023-02-03 17:00:47 +0200
+I, [2023-02-03T17:00:48.039571 #6500]  INFO -- : [a67a0161-9e69-4374-b355-62fbf84113ca] Started GET "/assets/controllers/application-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js" for 127.0.0.1 at 2023-02-03 17:00:48 +0200
+I, [2023-02-03T17:00:48.040259 #6500]  INFO -- : [faf024e3-c1ab-49ca-8ea3-4a33e4bb6cc5] Started GET "/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js" for 127.0.0.1 at 2023-02-03 17:00:48 +0200
+I, [2023-02-03T17:00:48.118973 #6500]  INFO -- : [ed3bcf44-3723-43ef-b0ce-0cc7a92acc83] Started GET "/assets/stimulus.min-d03cf1dff41d6c5698ec2c5d6a501615a7a33754dbeef8d1edd31c928d17c652.js" for 127.0.0.1 at 2023-02-03 17:00:48 +0200
+I, [2023-02-03T17:00:48.189959 #6500]  INFO -- : [f7a168d2-1885-4300-8a13-6a50d0cfbb92] Started GET "/assets/controllers/hello_controller-549135e8e7c683a538c3d6d517339ba470fcfb79d62f738a0a089ba41851a554.js" for 127.0.0.1 at 2023-02-03 17:00:48 +0200
+I, [2023-02-03T17:00:49.075929 #6500]  INFO -- : [91cdadf2-cd76-4693-bdff-1be2132e4fb9] Started GET "/reports/index" for 127.0.0.1 at 2023-02-03 17:00:49 +0200
+I, [2023-02-03T17:00:49.076985 #6500]  INFO -- : [91cdadf2-cd76-4693-bdff-1be2132e4fb9] Processing by ReportsController#index as HTML
+I, [2023-02-03T17:00:49.078390 #6500]  INFO -- : [91cdadf2-cd76-4693-bdff-1be2132e4fb9] Redirected to http://0.0.0.0:3000/users/sign_in
+I, [2023-02-03T17:00:49.078535 #6500]  INFO -- : [91cdadf2-cd76-4693-bdff-1be2132e4fb9] Filter chain halted as :check_signed_in rendered or redirected
+I, [2023-02-03T17:00:49.078729 #6500]  INFO -- : [91cdadf2-cd76-4693-bdff-1be2132e4fb9] Completed 302 Found in 2ms (Allocations: 546)
+I, [2023-02-03T17:00:49.089304 #6500]  INFO -- : [fed2c850-4450-44b7-801f-eeeb87444b37] Started GET "/users/sign_in" for 127.0.0.1 at 2023-02-03 17:00:49 +0200
+I, [2023-02-03T17:00:49.090653 #6500]  INFO -- : [fed2c850-4450-44b7-801f-eeeb87444b37] Processing by Devise::SessionsController#new as HTML
+I, [2023-02-03T17:00:49.393223 #6500]  INFO -- : [fed2c850-4450-44b7-801f-eeeb87444b37]   Rendered /home/user/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 39.2ms | Allocations: 3175)
+I, [2023-02-03T17:00:49.396843 #6500]  INFO -- : [fed2c850-4450-44b7-801f-eeeb87444b37]   Rendered layout layouts/application.html.erb (Duration: 43.0ms | Allocations: 4524)
+I, [2023-02-03T17:00:49.397286 #6500]  INFO -- : [fed2c850-4450-44b7-801f-eeeb87444b37] Completed 200 OK in 306ms (Views: 45.4ms | ActiveRecord: 30.4ms | Allocations: 12238)
+I, [2023-02-03T17:00:53.116624 #6500]  INFO -- : [b52845c8-ecad-4813-ae66-588e35587d88] Started GET "/users/sign_indwd" for 127.0.0.1 at 2023-02-03 17:00:53 +0200
+F, [2023-02-03T17:00:53.117331 #6500] FATAL -- : [b52845c8-ecad-4813-ae66-588e35587d88]   
+[b52845c8-ecad-4813-ae66-588e35587d88] ActionController::RoutingError (No route matches [GET] "/users/sign_indwd"):
+[b52845c8-ecad-4813-ae66-588e35587d88]   
+I, [2023-02-03T17:00:53.118247 #6500]  INFO -- : [b52845c8-ecad-4813-ae66-588e35587d88] Processing by ErrorsController#not_found as HTML
+I, [2023-02-03T17:00:53.123270 #6500]  INFO -- : [b52845c8-ecad-4813-ae66-588e35587d88] Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2137)
+I, [2023-02-03T17:01:41.857198 #6500]  INFO -- : [0cb2e2d2-9245-4ae4-b403-0fafaa98ba73] Started GET "/users/sign_indwd" for 127.0.0.1 at 2023-02-03 17:01:41 +0200
+F, [2023-02-03T17:01:41.857796 #6500] FATAL -- : [0cb2e2d2-9245-4ae4-b403-0fafaa98ba73]   
+[0cb2e2d2-9245-4ae4-b403-0fafaa98ba73] ActionController::RoutingError (No route matches [GET] "/users/sign_indwd"):
+[0cb2e2d2-9245-4ae4-b403-0fafaa98ba73]   
+I, [2023-02-03T17:01:41.858611 #6500]  INFO -- : [0cb2e2d2-9245-4ae4-b403-0fafaa98ba73] Processing by ErrorsController#not_found as HTML
+I, [2023-02-03T17:01:41.865005 #6500]  INFO -- : [0cb2e2d2-9245-4ae4-b403-0fafaa98ba73] Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1802)
+I, [2023-02-03T17:01:42.634735 #6500]  INFO -- : [c9bfcc8d-14b0-4255-b0b8-3c57f5bcc5bf] Started GET "/users/sign_indwd" for 127.0.0.1 at 2023-02-03 17:01:42 +0200
+F, [2023-02-03T17:01:42.635450 #6500] FATAL -- : [c9bfcc8d-14b0-4255-b0b8-3c57f5bcc5bf]   
+[c9bfcc8d-14b0-4255-b0b8-3c57f5bcc5bf] ActionController::RoutingError (No route matches [GET] "/users/sign_indwd"):
+[c9bfcc8d-14b0-4255-b0b8-3c57f5bcc5bf]   
+I, [2023-02-03T17:01:42.636297 #6500]  INFO -- : [c9bfcc8d-14b0-4255-b0b8-3c57f5bcc5bf] Processing by ErrorsController#not_found as HTML
+I, [2023-02-03T17:01:42.640760 #6500]  INFO -- : [c9bfcc8d-14b0-4255-b0b8-3c57f5bcc5bf] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1814)
+W, [2023-02-03T17:02:07.980187 #6599]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2023-02-03T17:02:13.869584 #6599]  INFO -- : [fa18b019-ee2b-44eb-9575-049827514c67] Started GET "/users/sign_indwd" for 127.0.0.1 at 2023-02-03 17:02:13 +0200
+F, [2023-02-03T17:02:13.870479 #6599] FATAL -- : [fa18b019-ee2b-44eb-9575-049827514c67]   
+[fa18b019-ee2b-44eb-9575-049827514c67] ActionController::RoutingError (No route matches [GET] "/users/sign_indwd"):
+[fa18b019-ee2b-44eb-9575-049827514c67]   
+I, [2023-02-03T17:02:13.872739 #6599]  INFO -- : [fa18b019-ee2b-44eb-9575-049827514c67] Processing by ErrorsController#not_found as HTML
+I, [2023-02-03T17:02:13.880318 #6599]  INFO -- : [fa18b019-ee2b-44eb-9575-049827514c67]   Rendered errors/not_found.html.erb within layouts/application (Duration: 0.8ms | Allocations: 224)
+I, [2023-02-03T17:02:13.911002 #6599]  INFO -- : [fa18b019-ee2b-44eb-9575-049827514c67]   Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 5216)
+I, [2023-02-03T17:02:13.911503 #6599]  INFO -- : [fa18b019-ee2b-44eb-9575-049827514c67] Completed 404 Not Found in 38ms (Views: 36.6ms | Allocations: 6490)
+I, [2023-02-03T17:02:13.953231 #6599]  INFO -- : [7e8ff62b-109c-4a9b-a806-aa1011bdec03] Started GET "/static/css/404.css" for 127.0.0.1 at 2023-02-03 17:02:13 +0200
+F, [2023-02-03T17:02:13.954055 #6599] FATAL -- : [7e8ff62b-109c-4a9b-a806-aa1011bdec03]   
+[7e8ff62b-109c-4a9b-a806-aa1011bdec03] ActionController::RoutingError (No route matches [GET] "/static/css/404.css"):
+[7e8ff62b-109c-4a9b-a806-aa1011bdec03]   
+I, [2023-02-03T17:02:13.954912 #6599]  INFO -- : [7e8ff62b-109c-4a9b-a806-aa1011bdec03] Processing by ErrorsController#not_found as CSS
+I, [2023-02-03T17:02:13.965288 #6599]  INFO -- : [7e8ff62b-109c-4a9b-a806-aa1011bdec03] Completed 500 Internal Server Error in 10ms (Allocations: 2081)
+I, [2023-02-03T17:02:14.005297 #6599]  INFO -- : [3d04f25e-e029-453e-a673-c2fabffdc4f9] Started GET "/static/css/404.css" for 127.0.0.1 at 2023-02-03 17:02:14 +0200
+F, [2023-02-03T17:02:14.006394 #6599] FATAL -- : [3d04f25e-e029-453e-a673-c2fabffdc4f9]   
+[3d04f25e-e029-453e-a673-c2fabffdc4f9] ActionController::RoutingError (No route matches [GET] "/static/css/404.css"):
+[3d04f25e-e029-453e-a673-c2fabffdc4f9]   
+I, [2023-02-03T17:02:14.007717 #6599]  INFO -- : [3d04f25e-e029-453e-a673-c2fabffdc4f9] Processing by ErrorsController#not_found as CSS
+I, [2023-02-03T17:02:14.014001 #6599]  INFO -- : [3d04f25e-e029-453e-a673-c2fabffdc4f9] Completed 500 Internal Server Error in 6ms (Allocations: 1800)
