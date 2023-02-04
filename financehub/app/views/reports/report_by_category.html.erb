@@ -29,10 +29,10 @@
         new Chart(document.getElementById('myChart'), {
             type: 'polarArea',
             data: {
-                labels: <%= raw @categories_title  %>,
+                labels: <%= raw @categories.keys  %>,
                 datasets: [{
                     label: 'Report by categories',
-                    data: <%= @categories_sum  %>,
+                    data: <%= @categories.values  %>,
                     backgroundColor: <%= raw @background_colors %>
                 }]
             },
