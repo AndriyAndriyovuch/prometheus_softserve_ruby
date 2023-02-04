@@ -3,8 +3,9 @@ class OperationsController < ApplicationController
   before_action :set_operation, only: %i[ show edit update destroy ]
 
   # GET /operations or /operations.json
-  def index
-    @operations = Operation.all.where('user_id = ?', current_user.id).page params[:page]
+  def index()
+    @operations = Operation.all.where("user_id = ? AND income = #{params[:o_type] == "true" ? true : false}",
+                                       current_user.id).page params[:page]
   end
 
   # GET /operations/1 or /operations/1.json
