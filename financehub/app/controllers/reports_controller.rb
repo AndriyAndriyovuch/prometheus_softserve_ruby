@@ -32,10 +32,12 @@ class ReportsController < ApplicationController
   private
   def check_category_id_exists
     if params[:category_id] == ""
-      @operations = Operation.filter_by_start_date(params[:start_date])
+      @operations = Operation.all.where('user_id = ?', current_user.id)
+                             .filter_by_start_date(params[:start_date])
                              .filter_by_final_date(params[:final_date]).order(:odate)
     else
-      @operations = Operation.filter_by_start_date(params[:start_date])
+      @operations = Operation.all.where('user_id = ?', current_user.id)
+                             .filter_by_start_date(params[:start_date])
                              .filter_by_final_date(params[:final_date])
                              .filter_by_category_id(params[:category_id]).order(:odate)
     end
