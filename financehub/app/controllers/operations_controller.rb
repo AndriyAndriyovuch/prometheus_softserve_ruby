@@ -4,7 +4,7 @@ class OperationsController < ApplicationController
 
   # GET /operations or /operations.json
   def index
-    @operations = Operation.page params[:page]
+    @operations = Operation.all.where('user_id = ?', current_user.id).page params[:page]
   end
 
   # GET /operations/1 or /operations/1.json
@@ -23,6 +23,7 @@ class OperationsController < ApplicationController
   # POST /operations or /operations.json
   def create
     @operation = Operation.new(operation_params)
+    @operation.user_id = current_user.id
 
     respond_to do |format|
       if @operation.save
