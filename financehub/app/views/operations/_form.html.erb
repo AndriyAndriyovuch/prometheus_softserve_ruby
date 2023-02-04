@@ -33,7 +33,7 @@
     </div>
 
     <div class="col">
-      <% categories_array = Category.all.map { | cat | [cat.name, cat.id]} %>
+      <% categories_array = Category.all.where('user_id = ?', current_user.id).map { | cat | [cat.name, cat.id]} %>
       <%= form.select(:category_id, categories_array, {include_blank: 'Choose category'}, {:class => 'btn btn-primary dropdown-toggle'}) %>
     </div>
     
