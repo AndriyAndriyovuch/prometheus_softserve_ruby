@@ -6,28 +6,21 @@ class ReportsController < ApplicationController
   end
 
   def report_by_dates
-    @operations_data = @operations.all.map { |operation| [operation.odate.strftime("%F"), operation.amount] }
-
-    @operations_date = @operations_data.map { | operation | operation[0] }
-    @operations_amount = @operations_data.map { | operation| operation[1] }
+    # Hash which contains {operation date => operation amount}
+    @operation_data  = {}
+    @operations.all.map { | oper | @operation_data[oper.odate.strftime("%Y-%m-%d")] = 0 }
+    @operations.all.map { | oper | @operation_data[oper.odate.strftime("%Y-%m-%d")] += oper.amount.to_f }
 
     render "report_by_dates"
   end
 
   def report_by_category
-    #add hash for representable it in html
+    # Hash which contains {category name => sum of all operations in category}
     @categories = {}
-    Category.all.map { |cat| @categories[cat.name] = 0.0 }
+    @operations.all.map { | oper | @categories[(Category.find(oper.category_id)).name] = 0.0 }
+    @operations.all.map { | oper | @categories[(Category.find(oper.category_id)).name] += oper.amount.to_f }
 
-    #add amount to each category
-    @operations.each do | operation |
-      current_category = Category.find(operation.category_id).name
-      @categories[current_category] += operation.amount.to_f
-    end
-
-    @categories_title = @categories.map { |cat | cat[0]}
-    @categories_sum = @categories.map { |cat | cat[1].round(2)}
-
+    # Just for fun, makes random colors in chart
     @background_colors = []
     @categories.length.times do
       @background_colors.append("rgb(#{rand 255}, #{rand 255}, #{rand 255})")
@@ -37,15 +30,14 @@ class ReportsController < ApplicationController
   end
 
   private
-
   def check_category_id_exists
     if params[:category_id] == ""
-      @operations = Operation.order(:odate).filter_by_start_date(params[:start_date])
-                             .filter_by_final_date(params[:final_date])
+      @operations = Operation.filter_by_start_date(params[:start_date])
+                             .filter_by_final_date(params[:final_date]).order(:odate)
     else
-      @operations = Operation.order(:odate).filter_by_start_date(params[:start_date])
+      @operations = Operation.filter_by_start_date(params[:start_date])
                              .filter_by_final_date(params[:final_date])
-                             .filter_by_category_id(params[:category_id])
+                             .filter_by_category_id(params[:category_id]).order(:odate)
     end
   end
 
