@@ -49,7 +49,7 @@ rand(30...50).times do
   operation = Operation.new(
     amount: rand(5..1000),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
-    description: "For my #{Faker::House.furniture}",
+    description: "#{Faker::House.furniture}",
     category_id: 1,
     created_at: Time.now,
     updated_at: Time.now,
@@ -113,7 +113,7 @@ rand(30...50).times do
   operation = Operation.new(
     amount: rand(100..1000),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
-    description: "For my #{Faker::Game.title}",
+    description: "#{Faker::Game.title}",
     category_id: 5,
     created_at: Time.now,
     updated_at: Time.now,
@@ -129,7 +129,7 @@ rand(30...50).times do
   operation = Operation.new(
     amount: rand(20..300),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
-    description: "For my #{Faker::Coffee.blend_name}",
+    description: "#{Faker::Coffee.blend_name}",
     category_id: 6,
     created_at: Time.now,
     updated_at: Time.now,
@@ -145,7 +145,7 @@ rand(30...50).times do
   operation = Operation.new(
     amount: rand(20..300),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
-    description: "For my #{Faker::Music.album}",
+    description: "#{Faker::Music.album}",
     category_id: 7,
     created_at: Time.now,
     updated_at: Time.now,

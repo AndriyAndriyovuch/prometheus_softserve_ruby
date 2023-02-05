@@ -25,7 +25,7 @@
       <tbody class="table-group-divider">
       <tr>
         <th scope="col">Category</th>
-        <th scope="col">Total Sum</th>
+        <th scope="col">Sum</th>
       </tr>
       </thead>
       <tbody class="table-group-divider">
@@ -35,6 +35,12 @@
           <td><%= category[1] %></td>
         </tr>
       <% end %>
+
+      <tbody class="table-group-divider">
+      <tr>
+        <th scope="col">Total sum</th>
+        <th scope="col"><%= @categories_outlay.map { |category| category[1] }.sum %></th>
+      </tr>
       </table>
   </div>
 
@@ -68,16 +74,25 @@
         <tbody class="table-group-divider">
         <tr>
           <th scope="col">Category</th>
-          <th scope="col">Total Sum</th>
+          <th scope="col">Sum</th>
         </tr>
         </thead>
+
         <tbody class="table-group-divider">
+
         <% @categories_income.each do |category| %>
           <tr>
             <td><%= category[0] %></td>
             <td><%= category[1] %></td>
           </tr>
         <% end %>
+
+        <tbody class="table-group-divider">
+        <tr>
+          <th scope="col">Total sum</th>
+          <th scope="col"><%= @categories_income.map { |category| category[1] }.sum %></th>
+        </tr>
+
         </table>
     </div>
 

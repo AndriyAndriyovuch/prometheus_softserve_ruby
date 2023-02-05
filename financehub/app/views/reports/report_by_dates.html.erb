@@ -1,7 +1,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<% @dataset_outlay = "{ label: 'Outlay', data: #{@operations_outlay_data.values}, fill: false,borderColor: 'rgb(255, 165, 165)',tension: 0.1}" %>
-<% @dataset_income = "{ label: 'Income', data: #{@operations_income_data.values}, fill: false,borderColor: 'rgb(140, 255, 170)',tension: 0.1}" %>
+<% @dataset_outlay = "{ label: 'Outlay', data: #{@operations_outlay_data.values}, fill: true, borderColor: 'rgb(255, 165, 165)',tension: 0.1}" %>
+<% @dataset_income = "{ label: 'Income', data: #{@operations_income_data.values}, fill: true, borderColor: 'rgb(140, 255, 170)',tension: 0.1}" %>
 
 <% @dataset = @operations_income.length > 0 ? "#{@dataset_outlay}, #{@dataset_income}" : "#{@dataset_outlay}" %>
 
