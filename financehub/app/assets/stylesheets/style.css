@@ -1,0 +1,9 @@
+body {
+    background: url('background.jpg');
+    background-size: 100%;
+}
+
+#footer {
+    background-color: white;
+}
+

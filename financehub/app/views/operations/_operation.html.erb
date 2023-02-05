@@ -24,7 +24,7 @@
         </div>
 
         <div class="btn-group me-2" role="group" aria-label="Second group">         
-          <%= button_to "Delete", operation, method: :delete, class:"btn btn-danger"%>
+          <%= button_to "Delete", operation, data: {turbo_confirm: 'Are you sure?'}, method: :delete, class:"btn btn-danger"%>
         </div>
       </div>
 

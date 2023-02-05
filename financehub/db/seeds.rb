@@ -46,7 +46,7 @@ rand(30...50).times do
     category_id: 1,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: rand(1...5),
+    user_id: rand(1..5),
     income: false
   )
 
@@ -62,7 +62,7 @@ rand(30...50).times do
     category_id: 2,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: rand(1...5),
+    user_id: rand(1..5),
     income: false
   )
 
@@ -78,7 +78,7 @@ rand(30...50).times do
     category_id: 3,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: rand(1...5),
+    user_id: rand(1..5),
     income: false
   )
 
@@ -94,7 +94,7 @@ rand(30...50).times do
     category_id: 4,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: rand(1...5),
+    user_id: rand(1..5),
     income: false
   )
 
@@ -110,7 +110,7 @@ rand(30...50).times do
     category_id: 5,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: rand(1...5),
+    user_id: rand(1..5),
     income: false
   )
 
@@ -126,7 +126,7 @@ rand(30...50).times do
     category_id: 6,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: rand(1...5),
+    user_id: rand(1..5),
     income: false
   )
 
@@ -142,7 +142,7 @@ rand(30...50).times do
     category_id: 7,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: rand(1...5),
+    user_id: rand(1..5),
     income: false
   )
 
@@ -158,7 +158,7 @@ rand(30...50).times do
     category_id: 8,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: rand(1...5),
+    user_id: rand(1..5),
     income: true
   )
 
@@ -174,7 +174,7 @@ rand(30...50).times do
     category_id: 9,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: rand(1...5),
+    user_id: rand(1..5),
     income: true
   )
 
