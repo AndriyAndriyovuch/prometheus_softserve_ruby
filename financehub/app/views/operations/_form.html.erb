@@ -18,12 +18,12 @@
       <%= form.text_field :amount, class:"form-control " %>
     </div>
 
-    <div class="col">    
+    <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" >
       <%= form.label :odate, style: "display: block" %>
-      <%= form.datetime_field :odate %>
+      <%= form.datetime_field :odate, class:"form-control" %>
     </div>
 
-    <div class="col">    
+    <div class="col">
       <%= form.label :description, style: "display: block" %>
       <%= form.text_field :description, class:"form-control"   %>
     </div>
