@@ -1,4 +1,15 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script type='text/javascript'>
+    (function(){
+        if(!sessionStorage.getItem('firstLoad')){
+            sessionStorage['firstLoad'] = true;
+            window.location.reload();
+        }else{
+            sessionStorage.removeItem('firstLoad');
+        }})();
+</script>
+
 <div class="d-flex justify-content-center">
   <h1>Report by categories</h1>
 </div>
@@ -18,10 +29,10 @@
       </tr>
       </thead>
       <tbody class="table-group-divider">
-      <% @categories_income.each do |category| %>
+      <% @categories_outlay.each do |category| %>
         <tr>
           <td><%= category[0] %></td>
-          <td><%= category[1].round(2) %></td>
+          <td><%= category[1] %></td>
         </tr>
       <% end %>
       </table>
@@ -33,10 +44,10 @@
         new Chart(document.getElementById('myChart1'), {
             type: 'polarArea',
             data: {
-                labels: <%= raw @categories_income.keys  %>,
+                labels: <%= raw @categories_outlay.keys  %>,
                 datasets: [{
                     label: 'Outlay',
-                    data: <%= @categories_income.values  %>,
+                    data: <%= @categories_outlay.values  %>,
                     backgroundColor: <%= raw @background_colors %>
                 }]
             },
@@ -61,10 +72,10 @@
         </tr>
         </thead>
         <tbody class="table-group-divider">
-        <% @categories_outlay.each do |category| %>
+        <% @categories_income.each do |category| %>
           <tr>
             <td><%= category[0] %></td>
-            <td><%= category[1].round(2) %></td>
+            <td><%= category[1] %></td>
           </tr>
         <% end %>
         </table>
@@ -76,10 +87,10 @@
           new Chart(document.getElementById('myChart2'), {
               type: 'polarArea',
               data: {
-                  labels: <%= raw @categories_outlay.keys  %>,
+                  labels: <%= raw @categories_income.keys  %>,
                   datasets: [{
                       label: 'Income',
-                      data: <%= @categories_outlay.values  %>,
+                      data: <%= @categories_income.values  %>,
                       backgroundColor: <%= raw @background_colors %>
                   }]
               },

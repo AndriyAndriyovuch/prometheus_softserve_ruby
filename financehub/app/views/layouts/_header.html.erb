@@ -12,8 +12,9 @@
             Operations
           </button>
           <ul class="dropdown-menu">
-            <li><%= link_to "Show income operations", operations_path(options = {:o_type => true}), class:"dropdown-item" %></li>
-            <li><%= link_to "Show outlay operations", operations_path(options = {:o_type => false}), class:"dropdown-item" %></li>
+            <li><%= link_to "Show all operations", operations_path, class:"dropdown-item" %></li>
+            <li><%= link_to "Show income operations", operations_path(options = {:o_type => 'income'}), class:"dropdown-item" %></li>
+            <li><%= link_to "Show outlay operations", operations_path(options = {:o_type => 'outlay'}), class:"dropdown-item" %></li>
             <li><hr class="dropdown-divider"></li>
             <li><%= link_to "New operation", new_operation_path, class:"dropdown-item" %></li>
           </ul>

@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Operations</h1>
+<h1 class="text-center">Operations</h1>
 
 <div id="operations">
   <div class="album py-5 bg-light">
@@ -19,5 +19,7 @@
 
 <%= paginate @operations %>
 
-<%= link_to "New operation", new_operation_path %>
+<div class="gap-6 text-center">
+  <%= link_to "New operation", new_operation_path, class:"btn btn-outline-dark" %>
+</div>
 

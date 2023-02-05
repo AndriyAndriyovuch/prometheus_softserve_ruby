@@ -1,9 +1,14 @@
-<h1>New category</h1>
+<h1 class="text-center">New category</h1>
+
+<%= link_to categories_path do %>
+  <%= image_tag("back.svg", width: '30px', class:"ms-3") %>
+<% end %>
+
+
+
 
 <%= render "form", category: @category %>
 
 <br>
 
-<div>
-  <%= link_to "Back to categories", categories_path %>
-</div>
+
