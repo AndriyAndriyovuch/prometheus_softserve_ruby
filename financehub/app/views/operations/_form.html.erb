@@ -18,24 +18,28 @@
       <%= form.text_field :amount, class:"form-control " %>
     </div>
 
-    <div class="col">    
+    <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" >
       <%= form.label :odate, style: "display: block" %>
-      <%= form.datetime_field :odate %>
+      <%= form.datetime_field :odate, class:"form-control" %>
     </div>
 
-    <div class="col">    
+    <div class="col">
       <%= form.label :description, style: "display: block" %>
       <%= form.text_field :description, class:"form-control"   %>
     </div>
 
     <div class="col">
-      <%= form.label :category_id, style: "display: block"%>
+      <%= form.label :income %>
+      <%= form.check_box :income, {}, true %>
     </div>
 
+
     <div class="col">
+      <%= form.label :category_id, style: "display: block"%>
       <% categories_array = Category.all.where('user_id = ?', current_user.id).map { | cat | [cat.name, cat.id]} %>
-      <%= form.select(:category_id, categories_array, {include_blank: 'Choose category'}, {:class => 'btn btn-primary dropdown-toggle'}) %>
+      <%= form.select(:category_id, categories_array, {include_blank: 'Choose category'}, {:class => 'btn btn-secondary dropdown-toggle'}) %>
     </div>
+
     
     <hr class="border border border-3 opacity-100">
 
