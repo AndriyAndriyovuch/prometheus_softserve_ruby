@@ -8,12 +8,18 @@
       new Chart(document.getElementById('myChart'), {
           type: 'line',
           data: {
-              labels: <%= raw @operation_data.keys %>,
+              labels: <%= raw @operations_dates %>,
               datasets: [{
-                  label: 'Report by dates',
-                  data: <%= @operation_data.values %>,
+                  label: 'Outlay',
+                  data: <%= @operations_outlay_data.values %>,
                   fill: false,
-                  borderColor: 'rgb(75, 192, 192)',
+                  borderColor: 'rgb(255, 165, 165)',
+                  tension: 0.1
+              }, {
+                  label: 'Income',
+                  data: <%= @operations_income_data.values %>,
+                  fill: false,
+                  borderColor: 'rgb(140, 255, 170)',
                   tension: 0.1
               }]
           },
@@ -29,6 +35,8 @@
               },
           }
       });
-  </script>
+    </script>
+
+
 </div>
 
