@@ -1,7 +1,7 @@
 class ReportsController < ApplicationController
   before_action :check_signed_in
   before_action :check_category_id_exists, only: %i[report_by_category report_by_dates]
-  before_action :check_income, only: %i[report_by_dates]
+  before_action :check_income, only: %i[report_by_category report_by_dates]
 
   def index
   end
@@ -11,14 +11,21 @@ class ReportsController < ApplicationController
   end
 
   def report_by_category
-    # Hash which contains {category name => sum of all operations in category}
-    @categories = {}
-    @operations.all.map { | oper | @categories[(Category.find(oper.category_id)).name] = 0.0 }
-    @operations.all.map { | oper | @categories[(Category.find(oper.category_id)).name] += oper.amount.to_f }
+    @categories_income = {}
+    @operations_outlay.all.map { | oper | @categories_income[(Category.find(oper.category_id)).name] = 0.0 }
+    @operations_outlay.all.map { | oper | @categories_income[(Category.find(oper.category_id)).name] += oper.amount.to_f }
+
+
+    @categories_outlay = {}
+    if @operations_income.length > 0
+      @operations_income.all.map { | oper | @categories_outlay[(Category.find(oper.category_id)).name] = 0.0 }
+      @operations_income.all.map { | oper | @categories_outlay[(Category.find(oper.category_id)).name] += oper.amount.to_f }
+    end
+
 
     # Just for fun, makes random colors in chart
     @background_colors = []
-    @categories.length.times do
+    (@categories_income.length + @categories_outlay.length).times do
       @background_colors.append("rgb(#{rand 255}, #{rand 255}, #{rand 255})")
     end
 
@@ -47,6 +54,7 @@ class ReportsController < ApplicationController
       @operations_outlay.all.map { | oper | @operations_outlay_data[oper.odate.strftime("%Y-%m-%d")] = 0 }
       @operations_outlay.all.map { | oper | @operations_outlay_data[oper.odate.strftime("%Y-%m-%d")] += oper.amount.to_f }
 
+      @operations_income  = []
       @operations_income_data  = {}
 
     elsif params[:income] == 'true'
