@@ -19,7 +19,7 @@
         <%= form.text_field :amount, class:"form-control" %>
       </div>
 
-      <div id="date-picker-example" class="input-with-post-icon datepicker" >
+      <div class="input-with-post-icon datepicker" >
         <%= form.label :odate, style: "display: block" %>
         <%= form.datetime_field :odate, class:"form-control" %>
       </div>
@@ -29,6 +29,7 @@
         <%= form.text_field :description, class:"form-control"   %>
       </div>
 
+      <br>
       <div>
         <%= form.label :income %>
         <%= form.check_box :income, {}, true %>

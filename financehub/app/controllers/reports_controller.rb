@@ -11,16 +11,19 @@ class ReportsController < ApplicationController
   end
 
   def report_by_category
-    @categories_income = {}
-    @operations_outlay.all.map { | oper | @categories_income[(Category.find(oper.category_id)).name] = 0.0 }
-    @operations_outlay.all.map { | oper | @categories_income[(Category.find(oper.category_id)).name] += oper.amount.to_f }
-
-
     @categories_outlay = {}
+    @operations_outlay.all.map { | oper | @categories_outlay[(Category.find(oper.category_id)).name] = 0.0 }
+    @operations_outlay.all.map { | oper | @categories_outlay[(Category.find(oper.category_id)).name] += oper.amount.to_f }
+
+
+    @categories_income = {}
     if @operations_income.length > 0
-      @operations_income.all.map { | oper | @categories_outlay[(Category.find(oper.category_id)).name] = 0.0 }
-      @operations_income.all.map { | oper | @categories_outlay[(Category.find(oper.category_id)).name] += oper.amount.to_f }
+      @operations_income.all.map { | oper | @categories_income[(Category.find(oper.category_id)).name] = 0.0 }
+      @operations_income.all.map { | oper | @categories_income[(Category.find(oper.category_id)).name] += oper.amount.to_f }
     end
+
+    p @categories_income
+    p @categories_outlay
 
 
     # Just for fun, makes random colors in chart
