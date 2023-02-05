@@ -45,7 +45,7 @@ cats = { 'House' => 'Things to my home',
 end
 
 # House operations
-rand(10...50).times do
+rand(30...50).times do
   operation = Operation.new(
     amount: rand(5..1000),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
@@ -61,7 +61,7 @@ rand(10...50).times do
 end
 
 # Beer operations
-rand(10...50).times do
+rand(30...50).times do
   operation = Operation.new(
     amount: rand(5..100),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
@@ -77,7 +77,7 @@ rand(10...50).times do
 end
 
 # Internet operations
-rand(10...50).times do
+rand(30...50).times do
   operation = Operation.new(
     amount: rand(100..500),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
@@ -93,7 +93,7 @@ rand(10...50).times do
 end
 
 # Restaurants operations
-rand(10...50).times do
+rand(30...50).times do
   operation = Operation.new(
     amount: rand(50..200),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
@@ -109,7 +109,7 @@ rand(10...50).times do
 end
 
 # Games operations
-rand(10...50).times do
+rand(30...50).times do
   operation = Operation.new(
     amount: rand(100..1000),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
@@ -125,7 +125,7 @@ rand(10...50).times do
 end
 
 # Coffee operations
-rand(10...50).times do
+rand(30...50).times do
   operation = Operation.new(
     amount: rand(20..300),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
@@ -141,7 +141,7 @@ rand(10...50).times do
 end
 
 # Music operations
-rand(10...50).times do
+rand(30...50).times do
   operation = Operation.new(
     amount: rand(20..300),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
@@ -157,7 +157,7 @@ rand(10...50).times do
 end
 
 # Business income operations
-rand(10...50).times do
+rand(30...50).times do
   operation = Operation.new(
     amount: rand(1..1500),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
@@ -173,7 +173,7 @@ rand(10...50).times do
 end
 
 # Work income operations
-rand(10...50).times do
+rand(30...50).times do
   operation = Operation.new(
     amount: rand(1000..4500),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
