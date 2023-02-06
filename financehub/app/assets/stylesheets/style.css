@@ -4,6 +4,37 @@ body {
 }
 
 #footer {
-    background-color: white;
+    background-color: rgb(190, 190, 190);;
+    opacity: 0.95;
 }
+
+#form {
+    background-color: white;
+    border-radius: 10px;
+    opacity: 0.95;
+    padding-top: 10px;
+}
+
+#form-report {
+    background-color: white;
+    border-radius: 10px;
+    opacity: 0.95;
+    padding-top: 10px;
+}
+
+#form-signup {
+    background-color: white;
+    border-radius: 10px;
+    opacity: 0.95;
+    padding:10px 10px 0px 10px;
+}
+
+#padding-btns {
+    padding-bottom: 10px;
+}
+
+#margn-btns {
+    margin-bottom: 10px;
+}
+
 

@@ -5,29 +5,30 @@
 
 <% @dataset = @operations_income.length > 0 ? "#{@dataset_outlay}, #{@dataset_income}" : "#{@dataset_outlay}" %>
 
-<h1>Report by dates</h1>
-  <canvas id="myChart" width="2000" height="300"></canvas>
-  <script>
-      new Chart(document.getElementById('myChart'), {
-          type: 'line',
-          data: {
-              labels: <%= raw @operations_dates %>,
-              datasets: [<%= raw @dataset %>]
-          },
-          options: {
-              animations: {
-                  tension: {
-                      duration: 1000,
-                      easing: 'linear',
-                      from: 0.3,
-                      to: 0.2,
-                      loop: true
-                  }
-              },
-          }
-      });
+<h1 class="text-center">Report by dates</h1>
+
+<div id="form-report">
+    <canvas id="myChart" width="2000" height="500"></canvas>
+    <script>
+        new Chart(document.getElementById('myChart'), {
+            type: 'line',
+            data: {
+                labels: <%= raw @operations_dates %>,
+                datasets: [<%= raw @dataset %>]
+            },
+            options: {
+                animations: {
+                    tension: {
+                        duration: 1000,
+                        easing: 'linear',
+                        from: 0.3,
+                        to: 0.2,
+                        loop: true
+                    }
+                },
+            }
+        });
     </script>
-
-
 </div>
+
 
