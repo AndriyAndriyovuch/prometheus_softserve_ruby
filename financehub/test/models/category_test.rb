@@ -1,7 +1,9 @@
 require "test_helper"
 
 class CategoryTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test "test first category" do
+    cat = Category.first
+    assert true
+  end
 end
