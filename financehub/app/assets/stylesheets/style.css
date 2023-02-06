@@ -11,8 +11,15 @@ body {
 #form {
     background-color: white;
     border-radius: 10px;
-    opacity: 0.97;
+    opacity: 0.95;
     padding-top: 10px;
+}
+
+#form-signup {
+    background-color: white;
+    border-radius: 10px;
+    opacity: 0.95;
+    padding:10px 10px 0px 10px;
 }
 
 #padding-btns {
@@ -22,4 +29,5 @@ body {
 #margn-btns {
     margin-bottom: 10px;
 }
+
 
