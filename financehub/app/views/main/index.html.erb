@@ -1,12 +1,11 @@
-<% hash_item = JSON.parse(URI.open('https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11').string) %>
-
-
-    <div class="align-self-center">
+<%hash_item = JSON.parse(URI.open('https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11').string) %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
         <table class="table">
+        <h5 class="text-center">Exchange rate on</h5>
+        <h5 class="text-center"><%= Time.now.strftime('%a %Y / %m / %d') %></h5>
           <thead>
-          <tr>
-            <th scope="col text-center">Exchange rate on <%= Time.now.strftime('%a %Y / %m / %d') %> </th>
-          </tr>
           <tr>
             <th scope="col">Currency</th>
             <th scope="col">Buy</th>
@@ -27,4 +26,39 @@
           </tr>
         </table>
     </div>
+
+    <div class="col-md-6"id="form-report">
+      <div class="align-self-center">
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">My last operations</th>
+          </tr>
+          <tbody class="table-group-divider">
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Sum</th>
+            <th scope="col">Operation</th>
+          </tr>
+          </thead>
+
+          <tbody class="table-group-divider">
+
+          <% @operations.each do |operation| %>
+            <tr>
+              <td><%= operation.odate.strftime("%Y / %m / %d") %></td>
+              <td><%= operation.amount %></td>
+              <td><%= truncate operation.description, length: 40 %></td>
+            </tr>
+          <% end %>
+
+          <tbody class="table-group-divider">
+          <tr>
+            <th scope="col">Total sum</th>
+            <th scope="col"><%= @operations.map { | operation | operation.amount }.sum %></th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
 
