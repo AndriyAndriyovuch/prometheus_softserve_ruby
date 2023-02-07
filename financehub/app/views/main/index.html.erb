@@ -1,2 +1,30 @@
-<h1>Main Page</h1>
-<button type="button" class="btn btn-primary">Primary</button>
+<% hash_item = JSON.parse(URI.open('https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11').string) %>
+
+
+    <div class="align-self-center">
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col text-center">Exchange rate on <%= Time.now.strftime('%a %Y / %m / %d') %> </th>
+          </tr>
+          <tr>
+            <th scope="col">Currency</th>
+            <th scope="col">Buy</th>
+            <th scope="col">Sell</th>
+          </tr>
+          </thead>
+        <tbody class="table-group-divider">
+        <% hash_item.each do | element | %>
+            <tr>
+                <td><%= element['ccy'] %></td>
+                <td><%= element['buy'].to_f.round(2) %></td>
+                <td><%= element['sale'].to_f.round(2) %></td>
+            </tr>
+        <% end %>
+        <tbody class="table-group-divider">
+          <tr>
+            <th scope="col" id="copyright">powered by PrivatBank API</th>
+          </tr>
+        </table>
+    </div>
+

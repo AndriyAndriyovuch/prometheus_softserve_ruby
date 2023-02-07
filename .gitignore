@@ -1,3 +1,4 @@
 financehub/tmp/
 financehub/log/
 financehub/db/*.sqlite3
+.idea/
