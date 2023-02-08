@@ -262,7 +262,6 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   kaminari
-  nokogiri (~> 1.14, >= 1.14.1)
   open-uri (~> 0.3.0)
   puma (~> 5.0)
   rails (~> 7.0.4)

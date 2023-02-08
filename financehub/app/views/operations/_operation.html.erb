@@ -5,6 +5,9 @@
 
       <h2 class="display-6 lh-1 fw-bold"><%= operation.amount %></h2>
       <h3 class="display-6 lh-1 fw-bold"><%= operation.description %></h3>
+      <% if current_page?(operations_path) && params[:o_type] == nil %>
+        <small><%= operation.income? ? "Income" : "Oulay" %></small><br>
+      <% end %>
 
       <ul class="d-flex list-unstyled mt-auto">
         <li class="d-flex align-items-center me-3">
@@ -14,6 +17,7 @@
           <small><%= distance_of_time_in_words((Time.now - operation.odate).to_i) %> ago</small>
         </li>
       </ul>
+
 
       <small><%= Category.find(operation.category_id).name %></small>
     
