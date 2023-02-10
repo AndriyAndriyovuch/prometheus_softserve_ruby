@@ -5,15 +5,10 @@
 
       <h2 class="display-6 lh-1 fw-bold"><%= operation.amount %></h2>
 
-      <% if current_page?(operations_path) && params[:o_type] == nil %>
-        <h3 class="display-6 lh-1 fw-bold"><%= truncate operation.description, length: 20 %></h3>
-      <% else %>
-        <h3 class="display-6 lh-1 fw-bold"><%= operation.description %></h3>
-      <% end %>
 
-      <% if current_page?(operations_path) && params[:o_type] == nil %>
-        <small><%= operation.income? ? "Income" : "Oulay" %></small><br>
-      <% end %>
+      <h3 class='display-6 lh-1 fw-bold'><%= format_description(operation) %></h3>
+      <small><%= show_operation_type(operation) %></small><br>
+
 
       <ul class="d-flex list-unstyled mt-auto">
         <li class="d-flex align-items-center me-3">
