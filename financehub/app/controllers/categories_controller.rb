@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories or /categories.json
   def index
-    @categories = Category.all.where('user_id = ?', current_user.id)
+    @categories = Category.all.where('user_id = ?', current_user.id).order(:id).page params[:page]
   end
 
   # GET /categories/1 or /categories/1.json
