@@ -1,6 +1,6 @@
 # prometheus_softserve_ruby
 
-This is simple finance manager with reports
+This is simple finance manager with reports.
 First of all - please sign up
 
 You can add cattegories, operations to categories, operations can be income or outlay
