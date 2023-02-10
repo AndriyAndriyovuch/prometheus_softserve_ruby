@@ -27,39 +27,43 @@
         </table>
     </div>
 
-    <div class="col-md-6"id="form-report">
-      <div class="align-self-center">
-        <table class="table">
-          <thead>
-          <tr>
-            <th scope="col">My last operations</th>
-          </tr>
-          <tbody class="table-group-divider">
-          <tr>
-            <th scope="col">Date</th>
-            <th scope="col">Sum</th>
-            <th scope="col">Operation</th>
-          </tr>
-          </thead>
+    <% if user_signed_in? %>
 
-          <tbody class="table-group-divider">
-
-          <% @operations.each do |operation| %>
+      <div class="col-md-6"id="form-report">
+        <div class="align-self-center">
+          <table class="table">
+            <thead>
             <tr>
-              <td><%= operation.odate.strftime("%Y / %m / %d") %></td>
-              <td><%= operation.amount %></td>
-              <td><%= truncate operation.description, length: 40 %></td>
+              <th scope="col">My last operations</th>
             </tr>
-          <% end %>
+            <tbody class="table-group-divider">
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Sum</th>
+              <th scope="col">Operation</th>
+            </tr>
+            </thead>
 
-          <tbody class="table-group-divider">
-          <tr>
-            <th scope="col">Total sum</th>
-            <th scope="col"><%= @operations.map { | operation | operation.amount }.sum %></th>
-          </tr>
-        </table>
+            <tbody class="table-group-divider">
+
+            <% @operations.each do |operation| %>
+              <tr>
+                <td><%= operation.odate.strftime("%Y / %m / %d") %></td>
+                <td><%= operation.amount %></td>
+                <td><%= truncate operation.description, length: 40 %></td>
+              </tr>
+            <% end %>
+
+            <tbody class="table-group-divider">
+            <tr>
+              <th scope="col">Total sum</th>
+              <th scope="col"><%= @operations.map { | operation | operation.amount }.sum %></th>
+            </tr>
+          </table>
+        </div>
       </div>
-    </div>
+
+      <% end %>
   </div>
 </div>
 
