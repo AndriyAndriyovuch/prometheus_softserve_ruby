@@ -5,11 +5,11 @@ class OperationsController < ApplicationController
   # GET /operations or /operations.json
   def index()
     if params[:o_type] == 'income'
-      @operations = Operation.all.where("user_id = ? AND income =  true", current_user.id).page params[:page]
+      @operations = Operation.all.where("user_id = ? AND income =  true", current_user.id).order('odate DESC').page params[:page]
     elsif params[:o_type] == 'outlay'
-      @operations = Operation.all.where("user_id = ? AND income = false", current_user.id).page params[:page]
+      @operations = Operation.all.where("user_id = ? AND income = false", current_user.id).order('odate DESC').page params[:page]
     else
-      @operations = Operation.all.where("user_id = ?", current_user.id).page params[:page]
+      @operations = Operation.all.where("user_id = ?", current_user.id).order('odate DESC').page params[:page]
     end
   end
 

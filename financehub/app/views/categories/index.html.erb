@@ -16,7 +16,8 @@
   </div>
 </div>
 
-<hr class="border border-3 opacity-100">
+
+<%= paginate @categories %>
 
 <div class="gap-6 text-center">
 <%= link_to "New category", new_category_path, class:"btn btn-dark", id:"margn-btns"%>
