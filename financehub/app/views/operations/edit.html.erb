@@ -1,10 +1,8 @@
-<h1>Editing operation</h1>
+<h1 class="text-center">Edit operation</h1><div class="gap-6 text-center">
+</div>
+
+<%= link_to operations_path do %>
+  <%= image_tag("back.svg", width: '30px', class:"ms-3") %>
+<% end %>
 
 <%= render "form", operation: @operation %>
-
-<br>
-
-<div>
-  <%= link_to "Show this operation", @operation %> |
-  <%= link_to "Back to operations", operations_path %>
-</div>

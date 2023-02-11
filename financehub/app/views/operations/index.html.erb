@@ -1,13 +1,7 @@
 <p style="color: green"><%= notice %></p>
-<% if params[:o_type] == 'income' %>
-  <% cat_title = "Income operations" %>
-<% elsif params[:o_type] == 'outlay' %>
-  <% cat_title = "Outlay operations" %>
-<% else %>
-  <% cat_title = "Operations" %>
-<% end %>
 
-<h1 class="text-center"><%= cat_title %></h1>
+
+<h1 class="text-center"><%= category_title(params[:o_type]) %></h1>
 
 <div id="operations">
   <div class="album py-5">

@@ -13,4 +13,14 @@ module OperationsHelper
             operation.income? ? "Income" : "Oulay"
         end
     end
+    
+    def category_title(category_type)
+        case category_type
+
+        when 'income' then "Income operations"
+        when 'outlay' then "Outlay operations"
+        else "Operations"
+
+        end
+    end
 end
