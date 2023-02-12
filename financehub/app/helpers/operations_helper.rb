@@ -10,16 +10,16 @@ module OperationsHelper
 
     def show_operation_type(operation)
         if params[:o_type] == nil
-            operation.income? ? "Income" : "Oulay"
+            operation.income? ? t('operations.income') : t('operations.outlay')
         end
     end
     
     def category_title(category_type)
         case category_type
 
-        when 'income' then "Income operations"
-        when 'outlay' then "Outlay operations"
-        else "Operations"
+        when 'income' then t('operations.income') + ' operations'
+        when 'outlay' then t('operations.outlay') + ' operations'
+        else t('header.operations.title')
 
         end
     end

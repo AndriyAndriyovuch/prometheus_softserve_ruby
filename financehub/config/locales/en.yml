@@ -20,6 +20,23 @@ en:
       description: "Description"
       submit: "Create category"
 
+    edit: "Edit category"
+
+  operations:
+    income: "Income"
+    outlay: "Outlay"
+
+    form:
+      amount: 'Amount'
+      odate: "Operation date"
+      description: "Description"
+      category: "Category"
+      choose: "Choose category"
+      submit: "Create operation"
+
+
+    edit: "Edit operation"
+
   confirm: "Are you sure?"
   show: "Show"
   edit: "Edit"
