@@ -14,7 +14,7 @@
 </script>
 
 <div class="d-flex justify-content-center">
-  <h1>Report by categories</h1>
+  <h1><%= t('reports.form.by_category') %></h1>
 </div>
 
 <div id=form-report>
@@ -24,12 +24,12 @@
         <table class="table">
           <thead>
           <tr>
-            <th scope="col">Outlay</th>
+            <th scope="col"><%= t('operations.outlay') %></th>
           </tr>
           <tbody class="table-group-divider">
           <tr>
-            <th scope="col">Category</th>
-            <th scope="col">Sum</th>
+            <th scope="col"><%= t('operations.form.category') %></th>
+            <th scope="col"><%= t('reports.sum') %></th>
           </tr>
           </thead>
           <tbody class="table-group-divider">
@@ -42,7 +42,7 @@
 
           <tbody class="table-group-divider">
           <tr>
-            <th scope="col">Total sum</th>
+            <th scope="col"><%= t('reports.total_sum') %></th>
             <th scope="col"><%= @categories_outlay.map { |category| category[1] }.sum %></th>
           </tr>
         </table>
@@ -57,7 +57,6 @@
               data: {
                   labels: <%= raw @categories_outlay.keys  %>,
                   datasets: [{
-                      label: 'Outlay',
                       data: <%= @categories_outlay.values  %>,
                       backgroundColor: <%= raw @background_colors %>
                   }]
@@ -76,12 +75,12 @@
             <table class="table">
               <thead>
               <tr>
-                <th scope="col">Income</th>
+                <th scope="col"><%= t('operations.income') %></th>
               </tr>
               <tbody class="table-group-divider">
               <tr>
-                <th scope="col">Category</th>
-                <th scope="col">Sum</th>
+                <th scope="col"><%= t('operations.form.category') %></th>
+                <th scope="col"><%= t('reports.sum') %></th>
               </tr>
               </thead>
 
@@ -96,7 +95,7 @@
 
               <tbody class="table-group-divider">
               <tr>
-                <th scope="col">Total sum</th>
+                <th scope="col"><%= t('reports.total_sum') %></th>
                 <th scope="col"><%= @categories_income.map { |category| category[1] }.sum %></th>
               </tr>
             </table>
@@ -111,7 +110,6 @@
                   data: {
                       labels: <%= raw @categories_income.keys  %>,
                       datasets: [{
-                          label: 'Income',
                           data: <%= @categories_income.values  %>,
                           backgroundColor: <%= raw @background_colors %>
                       }]

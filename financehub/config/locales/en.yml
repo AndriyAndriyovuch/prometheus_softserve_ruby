@@ -14,6 +14,12 @@ en:
       all: "Show categories"
       new: "New category"
 
+    user:
+      login: "Log in"
+      sign_up: "Sign up"
+      logout: "Logout"
+      settings: "Settings"
+
   categories:
     form:
       name: 'Name'
@@ -36,6 +42,35 @@ en:
 
 
     edit: "Edit operation"
+
+  reports:
+    form:
+      start_date: "Start date:"
+      end_date: "End date:"
+      income: "Include income"
+      by_category: "Report by category"
+      by_dates: "Report by dates"
+
+    sum: "Sum"
+    total_sum: "Total sum"
+
+  main:
+    exchange:
+      rate: "Exchange rate on"
+      currency: "Currency"
+      buy: "Buy"
+      sell: "Sell"
+
+    operations:
+      title: "My last operations"
+
+
+
+
+
+
+
+
 
   confirm: "Are you sure?"
   show: "Show"

@@ -39,17 +39,17 @@
             </a>
 
             <ul class="dropdown-menu text-small">
-              <li><%= link_to "Settings", edit_user_registration_path, class: "dropdown-item" %></li>
+              <li><%= link_to t('header.user.settings'), edit_user_registration_path, class: "dropdown-item" %></li>
               <li><hr class="dropdown-divider"></li>
               <li>
-              <%= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+              <%= button_to t('header.user.logout'), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
               </li>
             </ul>
           </div>
 
       <%- else %>
-        <%= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
-        <%= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+        <%= link_to t('header.user.login'), new_user_session_path, class: "btn btn-primary me-2" %>
+        <%= link_to t('header.user.signup'), new_user_registration_path, class: "btn btn-warning" %>
       <% end %>
     </div>
 
