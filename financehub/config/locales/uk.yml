@@ -1,0 +1,71 @@
+uk:
+  header:
+    reports: "Звіти"
+
+    operations:
+      title: "Операції"
+      all: "Показати всі операції"
+      income: "Показати доходи"
+      outlay: "Показати витрати"
+      new: "Нова операція"
+
+    categories:
+      title: "Категорії"
+      all: "Показати категорії"
+      new: "Нова категорія"
+
+    user:
+      login: "Увійти"
+      sign_up: "Зареєструватись"
+      logout: "Вийти"
+      settings: "Налаштування"
+
+  categories:
+    form:
+      name: 'Назва'
+      description: "Опис"
+      submit: "Створити категорію"
+
+    edit: "Редагувати категорію"
+
+  operations:
+    income: "Дохід"
+    outlay: "Витрата"
+
+    form:
+      amount: 'Сума'
+      odate: "Дата операції"
+      description: "Опис"
+      category: "Категорія"
+      choose: "Обрати категорію"
+      submit: "Створит операцію"
+
+
+    edit: "Редагувати операція"
+
+  reports:
+    form:
+      start_date: "Початкова дата:"
+      end_date: "Кінцева дата:"
+      income: "Додати доходи"
+      by_category: "Звіт по категорії"
+      by_dates: "Звіт по датам"
+
+    sum: "Сума"
+    total_sum: "Всього"
+
+  main:
+    exchange:
+      rate: "Курс валют на"
+      currency: "Курс"
+      buy: "Покупка"
+      sell: "Продаж"
+
+    operations:
+      title: "Нещодавні операції"
+
+
+  confirm: "Ви впенені?"
+  show: "Показати"
+  edit: "Змінити"
+  delete: "Видалити"
