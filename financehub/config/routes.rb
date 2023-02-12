@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
+
+  
   devise_for :users
   get 'reports', to: "reports#index"
   get 'reports/index'
   get 'reports/report_by_category', to: "reports#report_by_category"
   get 'reports/report_by_dates', to: "reports#report_by_dates"
   get 'main/index'
+
+  get 'locales', to: "locales#set_locale"
 
   resources :operations
   resources :categories
@@ -15,4 +19,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "main#index"
+
+
 end

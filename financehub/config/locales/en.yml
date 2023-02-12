@@ -15,8 +15,8 @@ en:
       new: "New category"
 
     user:
-      login: "Log in"
-      signup: "Sign up"
+      login: "Login"
+      signup: "Signup"
       logout: "Logout"
       settings: "Settings"
 
