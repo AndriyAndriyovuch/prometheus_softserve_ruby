@@ -48,3 +48,16 @@ body {
     font-size:xx-small;
     text-align: left;
 }
+
+#card-button-groups {
+    font-size: small;
+}
+
+.btn-toolbar {
+    position: absolute;
+    bottom: 10px;
+}
+
+.card {
+    margin-bottom: 40px;
+}

@@ -22,10 +22,6 @@ class ReportsController < ApplicationController
       @operations_income.all.map { | oper | @categories_income[(Category.find(oper.category_id)).name] += oper.amount.to_f }
     end
 
-    p @categories_income
-    p @categories_outlay
-
-
     # Just for fun, makes random colors in chart
     @background_colors = []
     (@categories_income.length + @categories_outlay.length).times do
@@ -50,36 +46,28 @@ class ReportsController < ApplicationController
   end
 
   def check_income
-    if params[:income] == '0'
-      @operations_outlay = @operations.all.where('income = false')
+    # Data for outlay chart {operation date => operation amount}
+    @operations_outlay = @operations.all.where('income = false')
 
-      @operations_outlay_data  = {}
-      @operations_outlay.all.map { | oper | @operations_outlay_data[oper.odate.strftime("%Y-%m-%d")] = 0 }
-      @operations_outlay.all.map { | oper | @operations_outlay_data[oper.odate.strftime("%Y-%m-%d")] += oper.amount.to_f }
+    @operations_outlay_data  = {}
+    @operations_outlay.all.map { | oper | @operations_outlay_data[oper.odate.strftime("%Y-%m-%d")] = 0 }
+    @operations_outlay.all.map { | oper | @operations_outlay_data[oper.odate.strftime("%Y-%m-%d")] += oper.amount.to_f }
 
-      @operations_income  = []
-      @operations_income_data  = {}
-
-    elsif params[:income] == 'true'
-      # Data for outlay chart {operation date => operation amount}
-      @operations_outlay = @operations.all.where('income = false')
-      @operations_outlay_data  = {}
-
-      @operations_outlay.all.map { | oper | @operations_outlay_data[oper.odate.strftime("%Y-%m-%d")] = 0 }
-      @operations_outlay.all.map { | oper | @operations_outlay_data[oper.odate.strftime("%Y-%m-%d")] += oper.amount.to_f }
-
-      # Data for income chart {operation date => operation amount}
+    if params[:income] == 'true'
       @operations_income = @operations.all.where('income = true')
       @operations_income_data  = {}
 
       @operations_income.all.map { | oper | @operations_income_data[oper.odate.strftime("%Y-%m-%d")] = 0 }
       @operations_income.all.map { | oper | @operations_income_data[oper.odate.strftime("%Y-%m-%d")] += oper.amount.to_f }
+    else
+      @operations_income  = []
+      @operations_income_data  = {}
     end
 
+    @operations_outlay_dates = @operations_outlay.all.map { | o | o.odate.strftime("%Y-%m-%d")}.uniq
+
     if @operations_income_data.length > 0
-      @operations_dates = @operations.all.map { | o | o.odate.strftime("%Y-%m-%d")}
-    else
-      @operations_dates = @operations_outlay_data.keys
+      @operations_income_dates = @operations_income.all.map { | o | o.odate.strftime("%Y-%m-%d")}.uniq
     end
   end
 

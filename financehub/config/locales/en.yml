@@ -57,7 +57,8 @@ en:
     form:
       name: 'Name'
       description: "Description"
-      submit: "Create category"
+      create: "Create category"
+      update: "Update category"
 
     edit: "Edit category"
 
@@ -71,7 +72,8 @@ en:
       description: "Description"
       category: "Category"
       choose: "Choose category"
-      submit: "Create operation"
+      create: "Create operation"
+      update: "Update operation"
 
 
     edit: "Edit operation"
@@ -95,7 +97,7 @@ en:
       sell: "Sell"
 
     operations:
-      title: "My last operations"
+      title: "My last outlays"
 
 
   confirm: "Are you sure?"
