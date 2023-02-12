@@ -24,6 +24,7 @@ uk:
     edit_user: "Редагувати користувача"
     unhappy: "Незадоволені проєктом?"
     delete_account: "Видалити мій обліковий запис"
+    select_language: "Оберіть мову"
 
     confirmarions:
       resend_instructions: "Повторно надіcлати інструкції для підтвердження"

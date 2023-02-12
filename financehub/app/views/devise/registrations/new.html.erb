@@ -23,6 +23,12 @@
         <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control"  %>
       </div>
 
+      <div>
+        <%= t('user.select_language') %><br>
+        <%= image_tag("locales/uk.png", :alt => " UK ", width: "20px") %>     <%= radio_button("user", "locale", "uk") %> <br>
+        <%= image_tag("locales/en.png", :alt => " EN ", width: "20px") %>     <%= radio_button("user", "locale", "en") %> <br>
+      </div>
+
 
       <div class="container p-3 text-center ">
         <%= f.submit t('header.user.signup'), class:"btn btn-success" %>

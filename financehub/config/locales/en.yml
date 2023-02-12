@@ -24,6 +24,7 @@ en:
     edit_user: "Edit user"
     unhappy: "Unhappy of this project?"
     delete_account: "Delete my account"
+    select_language: "Select language"
 
     confirmarions:
       resend_instructions: "Resend confirmation instructions"
