@@ -90,7 +90,7 @@ uk:
   main:
     exchange:
       rate: "Курс валют на"
-      currency: "Курс"
+      currency: "Валюта"
       buy: "Покупка"
       sell: "Продаж"
 
