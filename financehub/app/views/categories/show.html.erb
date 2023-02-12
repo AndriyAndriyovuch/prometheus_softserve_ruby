@@ -1,7 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="d-grid gap-2 col-6 mx-auto">
-  <%= link_to "Back to categories", categories_path, class:"btn btn-outline-primary"%>
-</div>
+<%= link_to categories_path do %>
+  <%= image_tag("back.svg", width: '30px', class:"ms-3") %>
+<% end %>
 
 <%= render @category %>
