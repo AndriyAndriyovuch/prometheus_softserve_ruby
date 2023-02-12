@@ -15,7 +15,7 @@
           <small><%= operation.odate.strftime("%Y-%m-%d") %></small>
         </li>
         <li class="d-flex align-items-center">
-          <small><%= distance_of_time_in_words((Time.now - operation.odate).to_i) %> ago</small>
+          <small><%= distance_of_time_in_words((Time.now - operation.odate).to_i) %> <%= locale == :en ? 'ago' : 'тому' %></small>
         </li>
       </ul>
 
