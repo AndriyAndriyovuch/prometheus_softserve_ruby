@@ -34,6 +34,12 @@
           <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control" %>
         </div>
 
+
+        <div>
+          <%= f.label :locale, style: "display: block" %>
+          <%= f.text_field :locale, class:"form-control"   %>
+        </div>
+
         <div class="container p-3 text-center ">
           <%= f.submit t('update'), class: "btn btn-success" %>
         </div>
