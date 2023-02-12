@@ -1,4 +1,4 @@
-<div class="container px-4 py-5">
+<div class="container px-4 py-5" id="card">
 
   <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" >
     <div class="d flex-column h-100 p-5 pb-3 text-shadow-1">
@@ -6,7 +6,7 @@
       <h2 class="display-6 lh-1 fw-bold"><%= operation.amount %></h2>
 
 
-      <h3 class='display-6 lh-1 fw-bold'><%= format_description(operation) %></h3>
+      <h3 class='display-6 lh-1'><%= format_description(operation) %></h3>
       <small><%= show_operation_type(operation) %></small><br>
 
 
@@ -22,14 +22,14 @@
 
       <small><%= Category.find(operation.category_id).name %></small>
     
-      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" id="button-groups">
         <div class="btn-group me-2" role="group" aria-label="First group">         
-          <%= link_to t('show'), operation, class:"btn btn-primary"%>
-          <%= link_to t('edit'), edit_operation_path(operation), class:"btn btn-primary"%>
+          <%= link_to t('show'), operation, class:"btn btn-primary", id:"card-button-groups" %>
+          <%= link_to t('edit'), edit_operation_path(operation), class:"btn btn-primary", id:"card-button-groups" %>
         </div>
 
         <div class="btn-group me-2" role="group" aria-label="Second group">         
-          <%= button_to t('delete'), operation, data: {turbo_confirm: t('confirm')}, method: :delete, class:"btn btn-danger"%>
+          <%= button_to t('delete'), operation, data: {turbo_confirm: t('confirm')}, method: :delete, class:"btn btn-danger", id:"card-button-groups" %>
         </div>
       </div>
 

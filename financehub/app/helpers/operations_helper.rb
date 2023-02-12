@@ -1,6 +1,6 @@
 module OperationsHelper
     def format_description(operation)
-        if current_page?(operations_path) 
+        if current_page?(operations_path)
             truncate operation.description, length: 20
         else
             operation.description
@@ -21,6 +21,14 @@ module OperationsHelper
         when 'outlay' then t('operations.outlay') + ' operations'
         else t('header.operations.title')
 
+        end
+    end
+
+    def submit_operation_type
+        if current_page?(new_operation_path)
+            t('operations.form.create')
+        elsif current_page?(edit_operation_path)
+            t('operations.form.update')
         end
     end
 end
