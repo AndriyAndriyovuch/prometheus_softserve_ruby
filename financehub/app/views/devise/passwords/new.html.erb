@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-center">
   <div>
-    <h2 class="text-center">Forgot your password?</h2>
+    <h2 class="text-center"><%= t('user.chared.links.forgot_passwd') %></h2>
     <div class="container" id="form">
       <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
@@ -11,7 +11,7 @@
         </div>
 
         <div>
-          <%= f.submit "Send me reset password instructions", class: "btn btn-dark",  id:"margn-btns" %>
+          <%= f.submit t('user.passwords.send_instructions'), class: "btn btn-dark",  id:"margn-btns" %>
         </div>
       <% end %>
     </div>

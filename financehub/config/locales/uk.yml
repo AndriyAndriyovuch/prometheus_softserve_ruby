@@ -16,9 +16,41 @@ uk:
 
     user:
       login: "Увійти"
-      sign_up: "Зареєструватись"
+      signup: "Зареєструватись"
       logout: "Вийти"
       settings: "Налаштування"
+
+  user:
+    edit_user: "Редагувати користувача"
+    unhappy: "Незадоволені проєктом?"
+    delete_account: "Видалити мій обліковий запис"
+
+    confirmarions:
+      resend_instructions: "Повторно надіcлати інструкції для підтвердження"
+
+    passwords:
+      send_instructions: "Надішліть мені інструкції щодо зміни пароля"
+
+    form:
+      password: "Пароль"
+      password_confirmation: "Підтвердження паролю"
+      current_password: "Поточний пароль"
+      remember_me: "Запам'ятати мене"
+      char_min: " символів мінімум"
+      change_pass_comment: "(залиште пустим якщо не хочете змінювати)"
+      current_pass_comment: "(нам потрібний Ваш поточний пароль для підтвердження змін)"
+
+    shared:
+      links:
+        tap_here: "Тицьни сюди"
+        forgot_passwd: "Забули пароль?"
+        no_account: "Досі немає облікового запису?"
+        no_conf_info: "Не отримали інструкцію з підтвердженням?"
+        no_unlock_instructions: "Не отримали інструкцію з розблокування?"
+        sign_with: "Авторизуватися за допомогою "
+
+    unlocks:
+      resend_instructions: "Повторно надіcлати інструкції для розблокування"
 
   categories:
     form:
@@ -69,3 +101,4 @@ uk:
   show: "Показати"
   edit: "Змінити"
   delete: "Видалити"
+  update: "Оновити"

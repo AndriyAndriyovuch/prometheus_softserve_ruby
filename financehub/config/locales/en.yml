@@ -16,9 +16,41 @@ en:
 
     user:
       login: "Log in"
-      sign_up: "Sign up"
+      signup: "Sign up"
       logout: "Logout"
       settings: "Settings"
+
+  user:
+    edit_user: "Edit user"
+    unhappy: "Unhappy of this project?"
+    delete_account: "Delete my account"
+
+    confirmarions:
+      resend_instructions: "Resend confirmation instructions"
+
+    passwords:
+      send_instructions: "Send me reset password instructions"
+
+    form:
+      password: "Password"
+      password_confirmation: "Confirm password"
+      current_password: "Current password"
+      remember_me: "Remember me"
+      char_min: " characters minimum"
+      change_pass_comment: "(leave blank if you don't want to change it)"
+      current_pass_comment: "(we need your current password to confirm your changes)"
+
+    shared:
+      links:
+        tap_here: "Tap here"
+        forgot_passwd: "Forgot password?"
+        no_account: "Don't have an account yet?"
+        no_conf_info: "Didn't receive confirmation instructions?"
+        no_unlock_instructions: "Didn't receive unlock instructions?"
+        sign_with: "Sign in with "
+
+    unlocks:
+      resend_instructions: "Resend unlock instructions"
 
   categories:
     form:
@@ -65,14 +97,8 @@ en:
       title: "My last operations"
 
 
-
-
-
-
-
-
-
   confirm: "Are you sure?"
   show: "Show"
   edit: "Edit"
   delete: "Delete"
+  update: "Update"
