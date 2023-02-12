@@ -24,12 +24,12 @@
     
       <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
         <div class="btn-group me-2" role="group" aria-label="First group">         
-          <%= link_to "Show", operation, class:"btn btn-primary"%>
-          <%= link_to "Edit", edit_operation_path(operation), class:"btn btn-primary"%>
+          <%= link_to t('show'), operation, class:"btn btn-primary"%>
+          <%= link_to t('edit'), edit_operation_path(operation), class:"btn btn-primary"%>
         </div>
 
         <div class="btn-group me-2" role="group" aria-label="Second group">         
-          <%= button_to "Delete", operation, data: {turbo_confirm: 'Are you sure?'}, method: :delete, class:"btn btn-danger"%>
+          <%= button_to t('delete'), operation, data: {turbo_confirm: t('confirm')}, method: :delete, class:"btn btn-danger"%>
         </div>
       </div>
 

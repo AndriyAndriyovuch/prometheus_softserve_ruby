@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<h1 class="text-center">Categories</h1>
+<h1 class="text-center"><%= t('header.categories.title') %></h1>
 
 <div id="categories">
   <div class="album py-5">
@@ -20,5 +20,5 @@
 <%= paginate @categories %>
 
 <div class="gap-6 text-center">
-<%= link_to "New category", new_category_path, class:"btn btn-dark", id:"margn-btns"%>
+<%= link_to t('header.categories.new') , new_category_path, class:"btn btn-dark", id:"margn-btns"%>
 </div>

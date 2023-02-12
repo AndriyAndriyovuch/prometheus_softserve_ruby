@@ -5,51 +5,67 @@
       <% end %>
 
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><%= link_to "Reports", reports_index_path, class: "nav-link text-white" %></li>
+        <li><%= link_to t("header.reports"), reports_index_path, class: "nav-link text-white" %></li>
 
         <div class="nav-item dropdown">
           <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Operations
+            <%= t('header.operations.title') %>
           </button>
           <ul class="dropdown-menu">
-            <li><%= link_to "Show all operations", operations_path, class:"dropdown-item" %></li>
-            <li><%= link_to "Show income operations", operations_path(options = {:o_type => 'income'}), class:"dropdown-item" %></li>
-            <li><%= link_to "Show outlay operations", operations_path(options = {:o_type => 'outlay'}), class:"dropdown-item" %></li>
+            <li><%= link_to t('header.operations.all'), operations_path, class:"dropdown-item" %></li>
+            <li><%= link_to t('header.operations.income'), operations_path(options = {:o_type => 'income'}), class:"dropdown-item" %></li>
+            <li><%= link_to t('header.operations.outlay'), operations_path(options = {:o_type => 'outlay'}), class:"dropdown-item" %></li>
             <li><hr class="dropdown-divider"></li>
-            <li><%= link_to "New operation", new_operation_path, class:"dropdown-item" %></li>
+            <li><%= link_to t('header.operations.new'), new_operation_path, class:"dropdown-item" %></li>
           </ul>
         </div>
 
         <div class="nav-item dropdown">
           <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Categories
+            <%= t('header.categories.title') %>
           </button>
           <ul class="dropdown-menu">
-            <li><%= link_to "Show categories", categories_path, class:"dropdown-item" %></li>
+            <li><%= link_to t('header.categories.all'), categories_path, class:"dropdown-item" %></li>
             <li><hr class="dropdown-divider"></li>
-            <li><%= link_to "New category", new_category_path, class:"dropdown-item" %></li>
+            <li><%= link_to t('header.categories.new'), new_category_path, class:"dropdown-item" %></li>
           </ul>
         </div>
       </ul>
 
-      <%- if user_signed_in? %>
+
+
+
+      <% if user_signed_in? %>
           <div class="dropdown text-end">
             <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               <img src=<%= "https://randomuser.me/api/portraits/lego/#{rand(1..8)}.jpg" %> alt="mdo" width="32" height="32" class="rounded-circle">
             </a>
 
             <ul class="dropdown-menu text-small">
-              <li><%= link_to "Settings", edit_user_registration_path, class: "dropdown-item" %></li>
+              <li><%= link_to t('header.user.settings'), edit_user_registration_path, class: "dropdown-item" %></li>
               <li><hr class="dropdown-divider"></li>
               <li>
-              <%= button_to t("auth.logout"), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
+              <%= button_to t('header.user.logout'), destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "dropdown-item"%>
               </li>
             </ul>
           </div>
 
       <%- else %>
-        <%= link_to t("auth.login"), new_user_session_path, class: "btn btn-primary me-2" %>
-        <%= link_to t("auth.signup"), new_user_registration_path, class: "btn btn-warning" %>
+        <div class="row">
+          <div class="col">
+            <%= link_to image_tag("locales/en.png", width: '30px', class:"ms-3"),
+                        locales_path(options = {:id => :en}) %>
+          </div>
+          <div class="col">
+            <%= link_to image_tag("locales/uk.png", width: '30px', class:"ms-3"),
+                        locales_path(options = {:id => :uk}) %>
+          </div>
+          <div class="col">
+            <%= link_to t('header.user.login'), new_user_session_path, class: "btn btn-primary me-2" %>
+          </div>
+          <div class="col">
+            <%= link_to t('header.user.signup'), new_user_registration_path, class: "btn btn-warning" %>
+          </div>
       <% end %>
     </div>
 

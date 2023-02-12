@@ -3,13 +3,13 @@
   <div class="row">
     <div class="col-md-4">
         <table class="table">
-        <h5 class="text-center">Exchange rate on</h5>
-        <h5 class="text-center"><%= Time.now.strftime('%a %Y / %m / %d') %></h5>
+        <h5 class="text-center"><%= t('main.exchange.rate') %></h5>
+        <h5 class="text-center"><%= Time.now.strftime('%Y / %m / %d') %></h5>
           <thead>
           <tr>
-            <th scope="col">Currency</th>
-            <th scope="col">Buy</th>
-            <th scope="col">Sell</th>
+            <th scope="col"><%= t('main.exchange.currency') %></th>
+            <th scope="col"><%= t('main.exchange.buy') %></th>
+            <th scope="col"><%= t('main.exchange.sell') %></th>
           </tr>
           </thead>
         <tbody class="table-group-divider">
@@ -34,13 +34,13 @@
           <table class="table">
             <thead>
             <tr>
-              <th scope="col">My last operations</th>
+              <th scope="col"><%= t('main.operations.title') %></th>
             </tr>
             <tbody class="table-group-divider">
             <tr>
-              <th scope="col">Date</th>
-              <th scope="col">Sum</th>
-              <th scope="col">Operation</th>
+              <th scope="col"><%= t('operations.form.date') %></th>
+              <th scope="col"><%= t('reports.sum') %></th>
+              <th scope="col"><%= t('reports.description') %></th>
             </tr>
             </thead>
 
@@ -56,7 +56,7 @@
 
             <tbody class="table-group-divider">
             <tr>
-              <th scope="col">Total sum</th>
+              <th scope="col"><%= t('reports.total_sum') %></th>
               <th scope="col"><%= @operations.map { | operation | operation.amount }.sum %></th>
             </tr>
           </table>

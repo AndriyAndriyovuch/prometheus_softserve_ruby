@@ -5,7 +5,8 @@ require 'faker'
     email: "test#{num + 1}@test.com",
     password: "qwerty",
     created_at: Time.now,
-    updated_at: Time.now
+    updated_at: Time.now,
+    locale: 'en'
   )
 
   user.save!
