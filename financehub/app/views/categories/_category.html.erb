@@ -8,12 +8,12 @@
     
       <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
         <div class="btn-group me-2" role="group" aria-label="First group">         
-          <%= link_to "Show", category, class:"btn btn-primary"%>
-          <%= link_to "Edit", edit_category_path(category), class:"btn btn-primary"%>
+          <%= link_to t('show'), category, class:"btn btn-primary"%>
+          <%= link_to t('edit'), edit_category_path(category), class:"btn btn-primary"%>
         </div>
 
         <div class="btn-group me-2" role="group" aria-label="Second group">         
-          <%= button_to "Delete", category, data: {turbo_confirm: 'Are you sure?'}, method: :delete, class:"btn btn-danger"%>
+          <%= button_to t('delete'), category, data: {turbo_confirm: t('confirm')}, method: :delete, class:"btn btn-danger"%>
         </div>
       </div>
 
