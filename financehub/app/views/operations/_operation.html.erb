@@ -4,7 +4,7 @@
     <div class="d flex-column h-100 p-5 pb-3 text-shadow-1">
 
       <h2 class="display-6 lh-1 fw-bold"><%= operation.amount %></h2>
-      <h3 class='display-6 lh-1'><%= format_description(operation) %></h3>
+      <div id="description-text"><%= format_description(operation) %></div>
       <small><%= show_operation_type(operation) %></small><br>
 
       <ul class="d-flex list-unstyled mt-auto">
@@ -15,8 +15,8 @@
           <small><%= distance_of_time_in_words((Time.now - operation.odate).to_i) %> <%= locale == :en ? 'ago' : 'тому' %></small>
         </li>
       </ul>
-
-      <small><%= Category.find(operation.category_id).name %></small>
+    
+      <div><%= Category.find(operation.category_id).name %></div><br><br>
     
       <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" id="button-groups">
         <div class="btn-group me-2" role="group" aria-label="First group">         

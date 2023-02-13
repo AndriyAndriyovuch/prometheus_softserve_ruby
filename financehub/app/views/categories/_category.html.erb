@@ -4,15 +4,16 @@
     <div class="d flex-column h-100 p-5 pb-3 text-shadow-1">
 
       <h2 class="display-6 lh-1 fw-bold"><%= category.name %></h2>
-      <h3 class="display-6 lh-1"><%= category.description %></h3><br>
+      <div id="description-text"><%= category.description %></div><br><br><br>
 
       <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" id="button-groups">
         <div class="btn-group me-2" role="group" aria-label="First group">
           <%= link_to t('show'), category, class:"btn btn-primary", id:"card-button-groups" %>
-          <%= link_to t('edit'), edit_category_path(category), class:"btn btn-primary", id:"card-button-groups" %>
+          <%= link_to t('edit'), edit_category_path(category), class:"btn btn-primary", id:"card-button-groups" %><br>
+          <%= link_to "Show operations", show_category_operations_path(category), class:"btn btn-primary", id:"card-button-groups" %>
         </div>
 
-        <%= link_to "Show operations", show_category_operations_path(category), class:"btn btn-primary", id:"card-button-groups" %>
+        
 
         <div class="btn-group me-2" role="group" aria-label="Second group">         
           <%= button_to t('delete'), category, data: {turbo_confirm: t('confirm')}, method: :delete, class:"btn btn-danger" , id:"card-button-groups" %>
