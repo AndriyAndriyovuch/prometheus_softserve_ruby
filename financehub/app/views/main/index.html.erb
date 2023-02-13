@@ -49,7 +49,7 @@
             <% @operations.each do |operation| %>
               <tr>
                 <td><%= operation.odate.strftime("%Y / %m / %d") %></td>
-                <td><%= operation.amount %></td>
+                <td><%= ('%.2f' % operation.amount.round(2)) %></td>
                 <td><%= truncate operation.description, length: 40 %></td>
               </tr>
             <% end %>
@@ -57,7 +57,7 @@
             <tbody class="table-group-divider">
             <tr>
               <th scope="col"><%= t('reports.total_sum') %></th>
-              <th scope="col"><%= @operations.map { | operation | operation.amount }.sum %></th>
+              <th scope="col"><%= ('%.2f' % @operations.map { | operation | operation.amount }.sum.round(2)) %></th>
             </tr>
           </table>
         </div>
