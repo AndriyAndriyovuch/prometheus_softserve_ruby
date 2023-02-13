@@ -3,12 +3,12 @@
     <div class="container" id="form">
       <% if operation.errors.any? %>
         <div style="color: red" >
-          <h2><%= pluralize(operation.errors.count, "error") %> prohibited this operation from being saved:</h2>
+          <h2><%= "#{operation.errors.count.to_s} #{t('errors.error', count:operation.errors.count)} "%>
+            <%= t('errors.all_operation_errors', count:operation.errors.count) %></h2>
 
-          <ul>
-            <% operation.errors.each do |error| %>
-              <li><%= error.full_message %></li>
-            <% end %>
+          <% operation.errors.each do |error| %>
+            <li><%= t("errors.attributes.#{error.attribute.to_s}") %> <%= error.message %></li>
+          <% end %>
           </ul>
         </div>
       <% end %>
