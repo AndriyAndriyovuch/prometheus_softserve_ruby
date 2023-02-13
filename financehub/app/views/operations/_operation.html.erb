@@ -1,14 +1,11 @@
-<div class="container px-4 py-5" id="card">
+<div class="container px-4 py-5">
 
   <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" >
     <div class="d flex-column h-100 p-5 pb-3 text-shadow-1">
 
       <h2 class="display-6 lh-1 fw-bold"><%= operation.amount %></h2>
-
-
       <h3 class='display-6 lh-1'><%= format_description(operation) %></h3>
       <small><%= show_operation_type(operation) %></small><br>
-
 
       <ul class="d-flex list-unstyled mt-auto">
         <li class="d-flex align-items-center me-3">
@@ -18,7 +15,6 @@
           <small><%= distance_of_time_in_words((Time.now - operation.odate).to_i) %> <%= locale == :en ? 'ago' : 'тому' %></small>
         </li>
       </ul>
-
 
       <small><%= Category.find(operation.category_id).name %></small>
     
@@ -32,7 +28,6 @@
           <%= button_to t('delete'), operation, data: {turbo_confirm: t('confirm')}, method: :delete, class:"btn btn-danger", id:"card-button-groups" %>
         </div>
       </div>
-
     </div>
   </div>      
 </div>

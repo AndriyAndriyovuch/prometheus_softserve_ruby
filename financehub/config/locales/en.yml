@@ -58,7 +58,7 @@ en:
       name: 'Name'
       description: "Description"
       create: "Create category"
-      update: "Update category"
+      update: "Done"
 
     edit: "Edit category"
 
@@ -73,7 +73,7 @@ en:
       category: "Category"
       choose: "Choose category"
       create: "Create operation"
-      update: "Update operation"
+      update: "Done"
 
 
     edit: "Edit operation"

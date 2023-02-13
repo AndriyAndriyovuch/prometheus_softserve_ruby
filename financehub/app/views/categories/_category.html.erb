@@ -1,19 +1,19 @@
-  <div class="container px-4 py-5" id="card">
+<div class="container px-4 py-5">
 
   <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" >
     <div class="d flex-column h-100 p-5 pb-3 text-shadow-1">
 
       <h2 class="display-6 lh-1 fw-bold"><%= category.name %></h2>
-      <h3 class="display-6 lh-1"><%= category.description %></h3>
-    
+      <h3 class="display-6 lh-1"><%= category.description %></h3><br>
+
       <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" id="button-groups">
         <div class="btn-group me-2" role="group" aria-label="First group">
-          <%= link_to t('show'), category, class:"btn btn-primary", id:"card-button-groups"%>
+          <%= link_to t('show'), category, class:"btn btn-primary", id:"card-button-groups" %>
           <%= link_to t('edit'), edit_category_path(category), class:"btn btn-primary", id:"card-button-groups" %>
         </div>
 
         <div class="btn-group me-2" role="group" aria-label="Second group">         
-          <%= button_to t('delete'), category, data: {turbo_confirm: t('confirm')}, method: :delete, class:"btn btn-danger" , id:"card-button-groups"%>
+          <%= button_to t('delete'), category, data: {turbo_confirm: t('confirm')}, method: :delete, class:"btn btn-danger" , id:"card-button-groups" %>
         </div>
       </div>
 

@@ -27,7 +27,7 @@ module OperationsHelper
     def submit_operation_type
         if current_page?(new_operation_path)
             t('operations.form.create')
-        elsif current_page?(edit_operation_path)
+        else
             t('operations.form.update')
         end
     end
