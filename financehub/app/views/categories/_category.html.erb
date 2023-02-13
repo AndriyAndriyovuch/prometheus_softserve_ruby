@@ -1,6 +1,10 @@
 <div class="container px-4 py-5">
 
   <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" >
+      <%= button_to image_tag("delete-button.png", width: '30px'), 
+                      category, method: :delete, data: {turbo_confirm: t('confirm')}, 
+                      class: 'nav-link bg-transparent border-0 shadow-none position-absolute top-0 end-0 ', id:'delete-button' %>
+
     <div class="d flex-column h-100 p-5 pb-3 text-shadow-1">
 
       <h2 class="display-6 lh-1 fw-bold"><%= category.name %></h2>
@@ -11,12 +15,6 @@
           <%= link_to t('show'), category, class:"btn btn-primary", id:"card-button-groups" %>
           <%= link_to t('edit'), edit_category_path(category), class:"btn btn-primary", id:"card-button-groups" %><br>
           <%= link_to "Show operations", show_category_operations_path(category), class:"btn btn-primary", id:"card-button-groups" %>
-        </div>
-
-        
-
-        <div class="btn-group me-2" role="group" aria-label="Second group">         
-          <%= button_to t('delete'), category, data: {turbo_confirm: t('confirm')}, method: :delete, class:"btn btn-danger" , id:"card-button-groups" %>
         </div>
       </div>
 
