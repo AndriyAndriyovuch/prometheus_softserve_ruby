@@ -2,3 +2,9 @@ financehub/tmp/
 financehub/log/
 financehub/db/*.sqlite3
 .idea/
+financehub/public/
+financehub/.dockerignore
+financehub/Dockerfile
+financehub/bin/docker-entrypoint
+financehub/fly.toml
+financehub/public/assets/.sprockets-manifest-0eab92169aae1e689af2c81003414312.json
