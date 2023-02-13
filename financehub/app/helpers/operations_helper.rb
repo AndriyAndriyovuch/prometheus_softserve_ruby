@@ -1,7 +1,7 @@
 module OperationsHelper
     def format_description(operation)
         if current_page?(operations_path)
-            truncate operation.description, length: 20
+            truncate operation.description, length: 30
         else
             operation.description
         end

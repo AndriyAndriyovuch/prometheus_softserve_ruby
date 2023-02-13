@@ -61,6 +61,7 @@ en:
       update: "Done"
 
     edit: "Edit category"
+    show_operations: "Show operations"
 
   operations:
     income: "Income"
@@ -77,6 +78,7 @@ en:
 
 
     edit: "Edit operation"
+
 
   reports:
     form:
@@ -105,3 +107,20 @@ en:
   edit: "Edit"
   delete: "Delete"
   update: "Update"
+
+
+  errors:
+    error:
+      one: 'error'
+      few: "errors"
+      many: "errors"
+      other: 'errors'
+    all_category_errors: "prohibited this category from being saved:"
+    all_operation_errors: "prohibited this operation from being saved:"
+
+    attributes:
+      name: 'Field "Name"'
+      description: 'Field "Description"'
+      category: 'Field "Category"'
+      amount: 'Field "Amount"'
+      odate: 'Field "Operation date"'

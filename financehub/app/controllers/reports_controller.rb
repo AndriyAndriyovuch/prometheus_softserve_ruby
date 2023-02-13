@@ -51,14 +51,14 @@ class ReportsController < ApplicationController
 
     @operations_outlay_data  = {}
     @operations_outlay.all.map { | oper | @operations_outlay_data[oper.odate.strftime("%Y-%m-%d")] = 0 }
-    @operations_outlay.all.map { | oper | @operations_outlay_data[oper.odate.strftime("%Y-%m-%d")] += oper.amount.to_f }
+    @operations_outlay.all.map { | oper | @operations_outlay_data[oper.odate.strftime("%Y-%m-%d")] += oper.amount.to_f.round(2) }
 
     if params[:income] == 'true'
       @operations_income = @operations.all.where('income = true')
       @operations_income_data  = {}
 
       @operations_income.all.map { | oper | @operations_income_data[oper.odate.strftime("%Y-%m-%d")] = 0 }
-      @operations_income.all.map { | oper | @operations_income_data[oper.odate.strftime("%Y-%m-%d")] += oper.amount.to_f }
+      @operations_income.all.map { | oper | @operations_income_data[oper.odate.strftime("%Y-%m-%d")] += oper.amount.to_f.round(2) }
     else
       @operations_income  = []
       @operations_income_data  = {}
