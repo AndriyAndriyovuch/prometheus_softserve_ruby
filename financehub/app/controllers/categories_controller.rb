@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :check_signed_in
-  before_action :set_category, only: %i[ show edit update destroy ]
+  before_action :set_category, only: %i[ show edit update destroy show_operations ]
 
   # GET /categories or /categories.json
   def index
@@ -57,6 +57,11 @@ class CategoriesController < ApplicationController
       format.html { redirect_to categories_url, notice: "Category was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def show_operations
+    @operations = Operation.all.where("user_id = ? and category_id = ?", current_user.id, @category).order('odate DESC').page params[:page]
+    render "operations/index"
   end
 
   private

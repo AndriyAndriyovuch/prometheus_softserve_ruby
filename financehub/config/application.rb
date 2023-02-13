@@ -22,7 +22,7 @@ module Financehub
     # config.eager_load_paths << Rails.root.join("extras")
 
     config.i18n.available_locales = [:en, :uk]
-    config.i18n.default_locale = :uk
+    config.i18n.default_locale = :en
 
     I18n::Backend::Simple.include(I18n::Backend::Pluralization)
     I18n.backend.store_translations :pt, i18n: { plural: { rule: lambda { |n| [0, 1].include?(n) ? :one : :other } } }

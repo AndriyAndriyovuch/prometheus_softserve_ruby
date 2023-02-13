@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'reports/report_by_category', to: "reports#report_by_category"
   get 'reports/report_by_dates', to: "reports#report_by_dates"
   get 'main/index'
+  get 'categories/:id/show_operations', to: "categories#show_operations", as: :show_category_operations
 
   get 'locales', to: "locales#set_locale"
 
