@@ -17,8 +17,8 @@ module OperationsHelper
     def category_title(category_type)
         case category_type
 
-        when 'income' then t('operations.income') + ' operations'
-        when 'outlay' then t('operations.outlay') + ' operations'
+        when 'income' then t('operations.income')
+        when 'outlay' then t('operations.outlay')
         else t('header.operations.title')
 
         end
