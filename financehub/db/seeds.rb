@@ -1,7 +1,7 @@
 require 'faker'
 
 5.times do |num|
-  user = User.new(
+  user = User.create(
     email: "test#{num + 1}@test.com",
     password: "qwerty",
     created_at: Time.now,
@@ -9,7 +9,6 @@ require 'faker'
     locale: 'en'
   )
 
-  user.save!
 end
 
 cats = { 'House' => 'Things to my home',
@@ -26,7 +25,7 @@ cats = { 'House' => 'Things to my home',
 
 5.times do |num|
   cats.each do |cat_name, cat_desc|
-    cat = Category.new(
+    cat = Category.create(
       name: cat_name,
       description: cat_desc,
       created_at: Time.now,
@@ -34,13 +33,12 @@ cats = { 'House' => 'Things to my home',
       user_id: User.find_by(email: "test#{num + 1}@test.com").id,
     )
 
-    cat.save!
   end
 end
 
 # House operations
 rand(30..50).times do
-  operation = Operation.new(
+  operation = Operation.create(
     amount: rand(5..1000),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
     description: "#{Faker::House.furniture}",
@@ -51,12 +49,11 @@ rand(30..50).times do
     income: false
   )
 
-  operation.save!
 end
 
 # Beer operations
 rand(30..50).times do
-  operation = Operation.new(
+  operation = Operation.create(
     amount: rand(5..100),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
     description: "#{Faker::Beer.name}",
@@ -67,12 +64,11 @@ rand(30..50).times do
     income: false
   )
 
-  operation.save!
 end
 
 # Internet operations
 rand(30..50).times do
-  operation = Operation.new(
+  operation = Operation.create(
     amount: rand(100..500),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
     description: "Buy on #{Faker::Internet.domain_name}",
@@ -83,12 +79,11 @@ rand(30..50).times do
     income: false
   )
 
-  operation.save!
 end
 
 # Restaurants operations
 rand(30..50).times do
-  operation = Operation.new(
+  operation = Operation.create(
     amount: rand(50..200),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
     description: "#{Faker::Food.description}",
@@ -99,12 +94,11 @@ rand(30..50).times do
     income: false
   )
 
-  operation.save!
 end
 
 # Games operations
 rand(30..50).times do
-  operation = Operation.new(
+  operation = Operation.create(
     amount: rand(100..1000),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
     description: "#{Faker::Game.title}",
@@ -115,12 +109,11 @@ rand(30..50).times do
     income: false
   )
 
-  operation.save!
 end
 
 # Coffee operations
 rand(30..50).times do
-  operation = Operation.new(
+  operation = Operation.create(
     amount: rand(20..300),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
     description: "#{Faker::Coffee.blend_name}",
@@ -131,12 +124,11 @@ rand(30..50).times do
     income: false
   )
 
-  operation.save!
 end
 
 # Music operations
 rand(30..50).times do
-  operation = Operation.new(
+  operation = Operation.create(
     amount: rand(20..300),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
     description: "#{Faker::Music.album}",
@@ -147,12 +139,11 @@ rand(30..50).times do
     income: false
   )
 
-  operation.save!
 end
 
 # Business income operations
 rand(30..50).times do
-  operation = Operation.new(
+  operation = Operation.create(
     amount: rand(1..1500),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
     description: "From #{Faker::Business.credit_card_number}",
@@ -163,12 +154,11 @@ rand(30..50).times do
     income: true
   )
 
-  operation.save!
 end
 
 # Work income operations
 rand(30..50).times do
-  operation = Operation.new(
+  operation = Operation.create(
     amount: rand(1000..4500),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
     description: "From #{Faker::Business.credit_card_number}",
@@ -179,5 +169,4 @@ rand(30..50).times do
     income: true
   )
 
-  operation.save!
 end
