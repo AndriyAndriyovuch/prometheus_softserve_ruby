@@ -1,7 +1,7 @@
 require 'faker'
 
 5.times do |num|
-  user = User.create(
+  User.create(
     email: "test#{num + 1}@test.com",
     password: "qwerty",
     created_at: Time.now,
@@ -25,7 +25,7 @@ cats = { 'House' => 'Things to my home',
 
 5.times do |num|
   cats.each do |cat_name, cat_desc|
-    cat = Category.create(
+    Category.create(
       name: cat_name,
       description: cat_desc,
       created_at: Time.now,
@@ -38,7 +38,7 @@ end
 
 # House operations
 rand(30..50).times do
-  operation = Operation.create(
+  Operation.create(
     amount: rand(5..1000),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
     description: "#{Faker::House.furniture}",
@@ -53,7 +53,7 @@ end
 
 # Beer operations
 rand(30..50).times do
-  operation = Operation.create(
+  Operation.create(
     amount: rand(5..100),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
     description: "#{Faker::Beer.name}",
@@ -68,7 +68,7 @@ end
 
 # Internet operations
 rand(30..50).times do
-  operation = Operation.create(
+  Operation.create(
     amount: rand(100..500),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
     description: "Buy on #{Faker::Internet.domain_name}",
@@ -83,7 +83,7 @@ end
 
 # Restaurants operations
 rand(30..50).times do
-  operation = Operation.create(
+  Operation.create(
     amount: rand(50..200),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
     description: "#{Faker::Food.description}",
@@ -98,7 +98,7 @@ end
 
 # Games operations
 rand(30..50).times do
-  operation = Operation.create(
+  Operation.create(
     amount: rand(100..1000),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
     description: "#{Faker::Game.title}",
@@ -113,7 +113,7 @@ end
 
 # Coffee operations
 rand(30..50).times do
-  operation = Operation.create(
+  Operation.create(
     amount: rand(20..300),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
     description: "#{Faker::Coffee.blend_name}",
@@ -128,7 +128,7 @@ end
 
 # Music operations
 rand(30..50).times do
-  operation = Operation.create(
+  Operation.create(
     amount: rand(20..300),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
     description: "#{Faker::Music.album}",
@@ -143,7 +143,7 @@ end
 
 # Business income operations
 rand(30..50).times do
-  operation = Operation.create(
+  Operation.create(
     amount: rand(1..1500),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
     description: "From #{Faker::Business.credit_card_number}",
@@ -158,7 +158,7 @@ end
 
 # Work income operations
 rand(30..50).times do
-  operation = Operation.create(
+  Operation.create(
     amount: rand(1000..4500),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
     description: "From #{Faker::Business.credit_card_number}",
