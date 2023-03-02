@@ -1,8 +1,8 @@
 require 'faker'
 
-5.times do |num|
+1.times do |num|
   User.create(
-    email: "test#{num + 1}@test.com",
+    email: "test1@test.com",
     password: "qwerty",
     created_at: Time.now,
     updated_at: Time.now,
@@ -23,14 +23,14 @@ cats = { 'House' => 'Things to my home',
 
 }
 
-5.times do |num|
+1.times do |num|
   cats.each do |cat_name, cat_desc|
     Category.create(
       name: cat_name,
       description: cat_desc,
       created_at: Time.now,
       updated_at: Time.now,
-      user_id: User.find_by(email: "test#{num + 1}@test.com").id,
+      user_id: User.find_by(email: "test1@test.com").id,
     )
 
   end
@@ -45,7 +45,7 @@ rand(30..50).times do
     category_id: 1,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: User.find_by(email: "test#{rand(1..5)}@test.com").id,
+    user_id: User.find_by(email: "test1@test.com").id,
     income: false
   )
 
@@ -60,7 +60,7 @@ rand(30..50).times do
     category_id: 2,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: User.find_by(email: "test#{rand(1..5)}@test.com").id,
+    user_id: User.find_by(email: "test1@test.com").id,
     income: false
   )
 
@@ -75,7 +75,7 @@ rand(30..50).times do
     category_id: 3,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: User.find_by(email: "test#{rand(1..5)}@test.com").id,
+    user_id: User.find_by(email: "test1@test.com").id,
     income: false
   )
 
@@ -90,7 +90,7 @@ rand(30..50).times do
     category_id: 4,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: User.find_by(email: "test#{rand(1..5)}@test.com").id,
+    user_id: User.find_by(email: "test1@test.com").id,
     income: false
   )
 
@@ -105,7 +105,7 @@ rand(30..50).times do
     category_id: 5,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: User.find_by(email: "test#{rand(1..5)}@test.com").id,
+    user_id: User.find_by(email: "test1@test.com").id,
     income: false
   )
 
@@ -120,7 +120,7 @@ rand(30..50).times do
     category_id: 6,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: User.find_by(email: "test#{rand(1..5)}@test.com").id,
+    user_id: User.find_by(email: "test1@test.com").id,
     income: false
   )
 
@@ -135,7 +135,7 @@ rand(30..50).times do
     category_id: 7,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: User.find_by(email: "test#{rand(1..5)}@test.com").id,
+    user_id: User.find_by(email: "test1@test.com").id,
     income: false
   )
 
@@ -150,7 +150,7 @@ rand(30..50).times do
     category_id: 8,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: User.find_by(email: "test#{rand(1..5)}@test.com").id,
+    user_id: User.find_by(email: "test1@test.com").id,
     income: true
   )
 
@@ -165,7 +165,7 @@ rand(30..50).times do
     category_id: 9,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: User.find_by(email: "test#{rand(1..5)}@test.com").id,
+    user_id: User.find_by(email: "test1@test.com").id,
     income: true
   )
 
