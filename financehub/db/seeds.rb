@@ -24,14 +24,14 @@ cats = { 'House' => 'Things to my home',
 
 }
 
-5.times do |user|
+5.times do |num|
   cats.each do |cat_name, cat_desc|
     cat = Category.new(
       name: cat_name,
       description: cat_desc,
       created_at: Time.now,
       updated_at: Time.now,
-      user_id: user + 1
+      user_id: User.find_by(email: "test#{num + 1}@test.com").id,
     )
 
     cat.save!
@@ -39,7 +39,7 @@ cats = { 'House' => 'Things to my home',
 end
 
 # House operations
-rand(30...50).times do
+rand(30..50).times do
   operation = Operation.new(
     amount: rand(5..1000),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
@@ -47,7 +47,7 @@ rand(30...50).times do
     category_id: 1,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: rand(1..5),
+    user_id: User.find_by(email: "test#{rand(1..5)}@test.com").id,
     income: false
   )
 
@@ -55,7 +55,7 @@ rand(30...50).times do
 end
 
 # Beer operations
-rand(30...50).times do
+rand(30..50).times do
   operation = Operation.new(
     amount: rand(5..100),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
@@ -63,7 +63,7 @@ rand(30...50).times do
     category_id: 2,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: rand(1..5),
+    user_id: User.find_by(email: "test#{rand(1..5)}@test.com").id,
     income: false
   )
 
@@ -71,7 +71,7 @@ rand(30...50).times do
 end
 
 # Internet operations
-rand(30...50).times do
+rand(30..50).times do
   operation = Operation.new(
     amount: rand(100..500),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
@@ -79,7 +79,7 @@ rand(30...50).times do
     category_id: 3,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: rand(1..5),
+    user_id: User.find_by(email: "test#{rand(1..5)}@test.com").id,
     income: false
   )
 
@@ -87,7 +87,7 @@ rand(30...50).times do
 end
 
 # Restaurants operations
-rand(30...50).times do
+rand(30..50).times do
   operation = Operation.new(
     amount: rand(50..200),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
@@ -95,7 +95,7 @@ rand(30...50).times do
     category_id: 4,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: rand(1..5),
+    user_id: User.find_by(email: "test#{rand(1..5)}@test.com").id,
     income: false
   )
 
@@ -103,7 +103,7 @@ rand(30...50).times do
 end
 
 # Games operations
-rand(30...50).times do
+rand(30..50).times do
   operation = Operation.new(
     amount: rand(100..1000),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
@@ -111,7 +111,7 @@ rand(30...50).times do
     category_id: 5,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: rand(1..5),
+    user_id: User.find_by(email: "test#{rand(1..5)}@test.com").id,
     income: false
   )
 
@@ -119,7 +119,7 @@ rand(30...50).times do
 end
 
 # Coffee operations
-rand(30...50).times do
+rand(30..50).times do
   operation = Operation.new(
     amount: rand(20..300),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
@@ -127,7 +127,7 @@ rand(30...50).times do
     category_id: 6,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: rand(1..5),
+    user_id: User.find_by(email: "test#{rand(1..5)}@test.com").id,
     income: false
   )
 
@@ -135,7 +135,7 @@ rand(30...50).times do
 end
 
 # Music operations
-rand(30...50).times do
+rand(30..50).times do
   operation = Operation.new(
     amount: rand(20..300),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
@@ -143,7 +143,7 @@ rand(30...50).times do
     category_id: 7,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: rand(1..5),
+    user_id: User.find_by(email: "test#{rand(1..5)}@test.com").id,
     income: false
   )
 
@@ -151,7 +151,7 @@ rand(30...50).times do
 end
 
 # Business income operations
-rand(30...50).times do
+rand(30..50).times do
   operation = Operation.new(
     amount: rand(1..1500),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
@@ -159,7 +159,7 @@ rand(30...50).times do
     category_id: 8,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: rand(1..5),
+    user_id: User.find_by(email: "test#{rand(1..5)}@test.com").id,
     income: true
   )
 
@@ -167,7 +167,7 @@ rand(30...50).times do
 end
 
 # Work income operations
-rand(30...50).times do
+rand(30..50).times do
   operation = Operation.new(
     amount: rand(1000..4500),
     odate: Faker::Time.between_dates(from: Date.today - 700, to: Date.today, period: :day),
@@ -175,7 +175,7 @@ rand(30...50).times do
     category_id: 9,
     created_at: Time.now,
     updated_at: Time.now,
-    user_id: rand(1..5),
+    user_id: User.find_by(email: "test#{rand(1..5)}@test.com").id,
     income: true
   )
 
