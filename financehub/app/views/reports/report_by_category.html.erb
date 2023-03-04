@@ -1,6 +1,6 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<% @operations_income.length > 0 ? width_data = 400 : width_data = 600%>
+<% @operations_income.length.positive? ? width_data = 400 : width_data = 600%>
 
 
 <script type='text/javascript'>
@@ -68,7 +68,7 @@
       </script>
     </div>
 
-    <% if @operations_income.length > 0 %>
+    <% if @operations_income.length.positive? %>
       <div class="d-flex justify-content-center" >
         <div id="form-report">
           <div class="align-self-center">

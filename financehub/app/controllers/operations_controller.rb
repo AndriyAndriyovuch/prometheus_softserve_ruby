@@ -1,15 +1,18 @@
 class OperationsController < ApplicationController
   before_action :check_signed_in
-  before_action :set_operation, only: %i[ show edit update destroy ]
+  before_action :set_operation, only: %i[show edit update destroy]
 
   # GET /operations or /operations.json
-  def index()
-    if params[:o_type] == 'income'
-      @operations = Operation.all.where("user_id = ? AND income =  true", current_user.id).order('odate DESC').page params[:page]
-    elsif params[:o_type] == 'outlay'
-      @operations = Operation.all.where("user_id = ? AND income = false", current_user.id).order('odate DESC').page params[:page]
+  def index
+    case params[:o_type]
+    when 'income'
+      @operations = Operation.all.where('user_id = ? AND income =  true',
+                                        current_user.id).order('odate DESC').page params[:page]
+    when 'outlay'
+      @operations = Operation.all.where('user_id = ? AND income = false',
+                                        current_user.id).order('odate DESC').page params[:page]
     else
-      @operations = Operation.all.where("user_id = ?", current_user.id).order('odate DESC').page params[:page]
+      @operations = Operation.all.where('user_id = ?', current_user.id).order('odate DESC').page params[:page]
     end
   end
 
@@ -33,7 +36,7 @@ class OperationsController < ApplicationController
 
     respond_to do |format|
       if @operation.save
-        format.html { redirect_to operation_url(@operation), notice: "Operation was successfully created." }
+        format.html { redirect_to operation_url(@operation), notice: 'Operation was successfully created.' }
         format.json { render :show, status: :created, location: @operation }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -46,7 +49,7 @@ class OperationsController < ApplicationController
   def update
     respond_to do |format|
       if @operation.update(operation_params)
-        format.html { redirect_to operation_url(@operation), notice: "Operation was successfully updated." }
+        format.html { redirect_to operation_url(@operation), notice: 'Operation was successfully updated.' }
         format.json { render :show, status: :ok, location: @operation }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -60,23 +63,24 @@ class OperationsController < ApplicationController
     @operation.destroy
 
     respond_to do |format|
-      format.html { redirect_to operations_url, notice: "Operation was successfully destroyed." }
+      format.html { redirect_to operations_url, notice: 'Operation was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_operation
-      @operation = Operation.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def operation_params
-      params.require(:operation).permit(:amount, :odate, :description, :category_id, :income)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_operation
+    @operation = Operation.find(params[:id])
+  end
 
-    def check_signed_in
-      redirect_to new_user_session_path unless signed_in?
-    end
+  # Only allow a list of trusted parameters through.
+  def operation_params
+    params.require(:operation).permit(:amount, :odate, :description, :category_id, :income)
+  end
+
+  def check_signed_in
+    redirect_to new_user_session_path unless signed_in?
+  end
 end

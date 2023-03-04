@@ -13,7 +13,7 @@
 <% @dataset_outlay = "{ label: '#{t('operations.outlay')}', data: #{@operations_outlay_data.values}, fill: true, borderColor: 'rgb(255, 165, 165)',tension: 0.1}" %>
 <% @dataset_income = "{ label: '#{t('operations.income')}', data: #{@operations_income_data.values}, fill: true, borderColor: 'rgb(140, 255, 170)',tension: 0.1}" %>
 
-<% @dataset = @operations_income.length > 0 ? "#{@dataset_outlay}, #{@dataset_income}" : "#{@dataset_outlay}" %>
+<% @dataset = @operations_income.length.positive? ? "#{@dataset_outlay}, #{@dataset_income}" : "#{@dataset_outlay}" %>
 
 <h1 class="text-center"><%= t('reports.form.by_dates') %></h1>
 
@@ -41,7 +41,7 @@
       });
   </script>
 
-  <% if @operations_income.length > 0 %>
+  <% if @operations_income.length.positive? %>
     <canvas id="IncomeChart" width="2000" height="500"></canvas>
     <script>
 
