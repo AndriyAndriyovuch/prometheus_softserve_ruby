@@ -54,6 +54,9 @@ gem "faker"
 # Kaminari (pagination)
 gem 'kaminari'
 
+#Rubocop
+gem 'rubocop'
+
 # Bootstrap
 # gem 'bootstrap-sass'
 # gem 'bootstrap', '~> 5.2.3'
