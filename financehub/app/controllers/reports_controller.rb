@@ -7,7 +7,6 @@ class ReportsController < ApplicationController
   end
 
   def report_by_dates
-    render "report_by_dates"
   end
 
   def report_by_category
@@ -28,7 +27,6 @@ class ReportsController < ApplicationController
       @background_colors.append("rgb(#{rand 255}, #{rand 255}, #{rand 255})")
     end
 
-    render "report_by_category"
   end
 
   private
