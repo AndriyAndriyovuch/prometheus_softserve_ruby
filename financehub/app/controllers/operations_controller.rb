@@ -2,7 +2,6 @@ class OperationsController < ApplicationController
   before_action :check_signed_in
   before_action :set_operation, only: %i[show edit update destroy]
 
-  # GET /operations or /operations.json
   def index
     case params[:o_type]
     when 'income'
@@ -16,20 +15,10 @@ class OperationsController < ApplicationController
     end
   end
 
-  # GET /operations/1 or /operations/1.json
-  def show
-  end
-
-  # GET /operations/new
   def new
     @operation = Operation.new
   end
 
-  # GET /operations/1/edit
-  def edit
-  end
-
-  # POST /operations or /operations.json
   def create
     @operation = Operation.new(operation_params)
     @operation.user_id = current_user.id
@@ -45,7 +34,6 @@ class OperationsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /operations/1 or /operations/1.json
   def update
     respond_to do |format|
       if @operation.update(operation_params)
@@ -58,7 +46,6 @@ class OperationsController < ApplicationController
     end
   end
 
-  # DELETE /operations/1 or /operations/1.json
   def destroy
     @operation.destroy
 
@@ -70,12 +57,10 @@ class OperationsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_operation
     @operation = Operation.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def operation_params
     params.require(:operation).permit(:amount, :odate, :description, :category_id, :income)
   end

@@ -1,0 +1,27 @@
+new Chart(document.getElementById('myChart1'), {
+    type: 'polarArea',
+    data: {
+        labels: <%= raw @categories_outlay.keys  %>,
+        datasets: [{
+            data: <%= @categories_outlay.values  %>,
+            backgroundColor: <%= raw @background_colors %>
+        }]
+    },
+    options: {
+        responsive: false
+    }
+});
+
+new Chart(document.getElementById('myChart2'), {
+    type: 'polarArea',
+    data: {
+        labels: <%= raw @categories_income.keys  %>,
+        datasets: [{
+            data: <%= @categories_income.values  %>,
+            backgroundColor: <%= raw @background_colors %>
+        }]
+    },
+    options: {
+        responsive: false
+    }
+});

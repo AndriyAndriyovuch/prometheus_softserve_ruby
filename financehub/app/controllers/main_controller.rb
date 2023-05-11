@@ -1,5 +1,3 @@
-require 'open-uri'
-
 class MainController < ApplicationController
   def index
     if user_signed_in?
