@@ -4,7 +4,7 @@ class OperationsController < ApplicationController
 
   def index
     @operations = Operation.where(user_id: current_user.id).order('odate DESC').page params[:page]
-    @operations = @operations.where(income: params[:income]) if params[:income].present?
+    check_params_present
   end
 
   def new
@@ -58,5 +58,12 @@ class OperationsController < ApplicationController
 
   def check_signed_in
     redirect_to new_user_session_path unless signed_in?
+  end
+
+  def check_params_present
+    @operations = @operations.where(income: params[:income]) if params[:income].present?
+    @operations = @operations.where(category_id: params[:category]) if params[:category].present?
+
+    @operations
   end
 end

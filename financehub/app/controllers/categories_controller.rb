@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: %i[show edit update destroy show_operations]
 
   def index
-    @categories = Category.all.where('user_id = ?', current_user.id).order(:id).page params[:page]
+    @categories = Category.where(user_id: current_user).order(:id).page params[:page]
   end
 
   def new
@@ -11,8 +11,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.new(category_params)
-    @category.user_id = current_user.id
+    @category = current_user.categories.build(category_params)
 
     respond_to do |format|
       if @category.save
@@ -46,20 +45,12 @@ class CategoriesController < ApplicationController
     end
   end
 
-  def show_operations
-    @operations = Operation.all.where('user_id = ? and category_id = ?', current_user.id,
-                                      @category).order('odate DESC').page params[:page]
-    render 'operations/index'
-  end
-
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_category
     @category = Category.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def category_params
     params.require(:category).permit(:name, :description)
   end
