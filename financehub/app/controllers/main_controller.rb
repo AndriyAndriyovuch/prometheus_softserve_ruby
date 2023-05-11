@@ -1,6 +1,7 @@
 class MainController < ApplicationController
   def index
-      @operations = Operation.where('user_id = ? AND income = ?', current_user.id, false)
-                             .order(:odate).last(10).reverse if user_signed_in?
+    return unless user_signed_in?
+
+    @operations = Operation.where(user_id: current_user, income: false).order(:odate).last(10).reverse
   end
 end
