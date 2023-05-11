@@ -1,6 +1,6 @@
-require_relative "boot"
+require_relative 'boot'
 
-require "rails/all"
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -27,6 +27,5 @@ module Financehub
     I18n::Backend::Simple.include(I18n::Backend::Pluralization)
     I18n.backend.store_translations :pt, i18n: { plural: { rule: lambda { |n| [0, 1].include?(n) ? :one : :other } } }
     I18n.backend.store_translations :pt, apples: { one: 'one or none', other: 'more than one' }
-
   end
 end

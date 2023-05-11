@@ -3,16 +3,8 @@ class OperationsController < ApplicationController
   before_action :set_operation, only: %i[show edit update destroy]
 
   def index
-    case params[:o_type]
-    when 'income'
-      @operations = Operation.all.where('user_id = ? AND income =  true',
-                                        current_user.id).order('odate DESC').page params[:page]
-    when 'outlay'
-      @operations = Operation.all.where('user_id = ? AND income = false',
-                                        current_user.id).order('odate DESC').page params[:page]
-    else
-      @operations = Operation.all.where('user_id = ?', current_user.id).order('odate DESC').page params[:page]
-    end
+    @operations = Operation.where(user_id: current_user.id).order('odate DESC').page params[:page]
+    @operations = @operations.where(income: params[:income]) if params[:income].present?
   end
 
   def new
@@ -20,8 +12,7 @@ class OperationsController < ApplicationController
   end
 
   def create
-    @operation = Operation.new(operation_params)
-    @operation.user_id = current_user.id
+    @operation = current_user.operations.build(operation_params)
 
     respond_to do |format|
       if @operation.save

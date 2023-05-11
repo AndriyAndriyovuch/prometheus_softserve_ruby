@@ -6,11 +6,7 @@ class ApplicationController < ActionController::Base
   private
 
   def set_locale
-    if user_signed_in?
-      I18n.locale = current_user.locale.to_sym
-    else
-      I18n.locale = session[:locale] || I18n.default_locale
-    end
+    I18n.locale = user_signed_in? ? current_user.locale.to_sym : (session[:locale] || I18n.default_locale)
   end
 
   protected
