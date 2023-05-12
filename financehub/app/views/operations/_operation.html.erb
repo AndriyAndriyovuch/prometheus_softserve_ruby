@@ -1,13 +1,13 @@
 <div class="container px-4 py-5">
-
   <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" >
-    <%= button_to image_tag("delete-button.png", width: '30px'), 
-                      operation, method: :delete, data: {turbo_confirm: t('confirm')}, 
-                      class: 'nav-link bg-transparent border-0 shadow-none position-absolute top-0 end-0 ', id:'delete-button' %>
+    <%= button_to operation, method: :delete, data: {turbo_confirm: t('confirm')}, class: 'nav-link bg-transparent border-0 position-absolute top-0 end-0' do %>
+      <%= image_tag("delete-button.png", width: '30px') %>
+    <% end %>
+
     <div class="d flex-column h-100 p-5 pb-3 text-shadow-1">
       <h2 class="display-6 lh-1 fw-bold"><%= ('%.2f' % operation.amount.round(2)) %></h2>
       <div id="description-text"><%= format_description(operation) %></div>
-      <small><%= show_operation_type(operation) %></small><br>
+      <small><%= show_operation_type(operation) %></small>
 
       <ul class="d-flex list-unstyled mt-auto">
         <li class="d-flex align-items-center me-3">
@@ -17,8 +17,8 @@
           <small><%= distance_of_time_in_words((Time.now - operation.odate).to_i) %> <%= locale == :en ? 'ago' : 'тому' %></small>
         </li>
       </ul>
-    
-      <div><%= Category.find(operation.category_id).name %></div><br><br>
+
+      <div class="mb-5"><%= operation.category.name %></div>
     
       <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" id="button-groups">
         <div class="btn-group me-2" role="group" aria-label="First group">         

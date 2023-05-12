@@ -14,7 +14,7 @@
         <div class="btn-group me-2" role="group" aria-label="First group">
           <%= link_to t('show'), category, class:"btn btn-primary", id:"card-button-groups" %>
           <%= link_to t('edit'), edit_category_path(category), class:"btn btn-primary", id:"card-button-groups" %><br>
-          <%= link_to t('categories.show_operations'), show_category_operations_path(category), class:"btn btn-primary", id:"card-button-groups" %>
+          <%= link_to t('categories.show_operations'), operations_path(category:), class:"btn btn-primary", id:"card-button-groups" %>
         </div>
       </div>
 

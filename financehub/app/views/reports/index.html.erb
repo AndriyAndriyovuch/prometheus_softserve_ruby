@@ -8,12 +8,12 @@
 
         <div class="input-with-post-icon datepicker">
           <%= form.label t('reports.form.start_date'), style: "display: block" %>
-          <%= form.date_field :start_date, value: (Time.now - 1209600).strftime('%Y-%m-%d'), class: "form-control" %>
+          <%= form.date_field :start_date, class: "form-control" %>
         </div>
 
         <div class="input-with-post-icon datepicker">
           <%= form.label t('reports.form.end_date'), style: "display: block" %>
-          <%= form.date_field :final_date, value: (Time.now + 86400).strftime('%Y-%m-%d'), class: "form-control" %>
+          <%= form.date_field :final_date, class: "form-control" %>
         </div>
 
         <div class="text-center">

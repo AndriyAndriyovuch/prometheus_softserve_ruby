@@ -2,37 +2,17 @@ class OperationsController < ApplicationController
   before_action :check_signed_in
   before_action :set_operation, only: %i[show edit update destroy]
 
-  # GET /operations or /operations.json
   def index
-    case params[:o_type]
-    when 'income'
-      @operations = Operation.all.where('user_id = ? AND income =  true',
-                                        current_user.id).order('odate DESC').page params[:page]
-    when 'outlay'
-      @operations = Operation.all.where('user_id = ? AND income = false',
-                                        current_user.id).order('odate DESC').page params[:page]
-    else
-      @operations = Operation.all.where('user_id = ?', current_user.id).order('odate DESC').page params[:page]
-    end
+    @operations = Operation.where(user_id: current_user.id).order('odate DESC').page params[:page]
+    check_params_present
   end
 
-  # GET /operations/1 or /operations/1.json
-  def show
-  end
-
-  # GET /operations/new
   def new
     @operation = Operation.new
   end
 
-  # GET /operations/1/edit
-  def edit
-  end
-
-  # POST /operations or /operations.json
   def create
-    @operation = Operation.new(operation_params)
-    @operation.user_id = current_user.id
+    @operation = current_user.operations.build(operation_params)
 
     respond_to do |format|
       if @operation.save
@@ -45,7 +25,6 @@ class OperationsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /operations/1 or /operations/1.json
   def update
     respond_to do |format|
       if @operation.update(operation_params)
@@ -58,7 +37,6 @@ class OperationsController < ApplicationController
     end
   end
 
-  # DELETE /operations/1 or /operations/1.json
   def destroy
     @operation.destroy
 
@@ -70,17 +48,22 @@ class OperationsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_operation
     @operation = Operation.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def operation_params
     params.require(:operation).permit(:amount, :odate, :description, :category_id, :income)
   end
 
   def check_signed_in
     redirect_to new_user_session_path unless signed_in?
+  end
+
+  def check_params_present
+    @operations = @operations.where(income: params[:income]) if params[:income].present?
+    @operations = @operations.where(category_id: params[:category]) if params[:category].present?
+
+    @operations
   end
 end

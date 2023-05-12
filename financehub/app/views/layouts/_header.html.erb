@@ -13,8 +13,8 @@
           </button>
           <ul class="dropdown-menu">
             <li><%= link_to t('header.operations.all'), operations_path, class:"dropdown-item" %></li>
-            <li><%= link_to t('header.operations.income'), operations_path(options = {:o_type => 'income'}), class:"dropdown-item" %></li>
-            <li><%= link_to t('header.operations.outlay'), operations_path(options = {:o_type => 'outlay'}), class:"dropdown-item" %></li>
+            <li><%= link_to t('header.operations.income'), operations_path(income: true), class:"dropdown-item" %></li>
+            <li><%= link_to t('header.operations.outlay'), operations_path(income: false), class:"dropdown-item" %></li>
             <li><hr class="dropdown-divider"></li>
             <li><%= link_to t('header.operations.new'), new_operation_path, class:"dropdown-item" %></li>
           </ul>
@@ -31,9 +31,6 @@
           </ul>
         </div>
       </ul>
-
-
-
 
       <% if user_signed_in? %>
           <div class="dropdown text-end">
